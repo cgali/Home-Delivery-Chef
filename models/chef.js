@@ -3,26 +3,34 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const chefSchema = new Schema({
-    
+
     mail: {
-        String,
+        type: String,
         required: true,
         unique: true
     },
-    hashedPassword: { 
-        String,
+    hashedPassword: {
+        type: String,
         required: true
     },
     image: { type: String },
-    name: { 
-        String,
+    name: {
+        type: String,
         required: true,
     },
-    surname: { 
-        String,
+    surname: {
+        type: String,
         required: true,
     },
-    yearsOfExperience: { Number }
+    yearsOfExperience: {
+        type: Number,
+        required: true,
+    },
+
+    languages: {
+        type: Array,
+        required: true
+    },
 
 });
 
