@@ -9,14 +9,18 @@ const chefSchema = new Schema({
         required: true,
         unique: true
     },
-    password: { 
+    hashedPassword: { 
         String,
         required: true
     },
-    username: { 
+    image: { type: String },
+    name: { 
         String,
         required: true,
-        unique: true
+    },
+    surname: { 
+        String,
+        required: true,
     },
     yearsOfExperience: { Number }
 
@@ -24,4 +28,4 @@ const chefSchema = new Schema({
 
 const Chef = mongoose.model('Chef', chefSchema);
 
-module.exports = Chef image: { type: String },
+module.exports = Chef 
