@@ -44,19 +44,34 @@ Geo Location: - add geolocation of the users to know the location of the house o
 Homepage: - …
 
 ## ROUTES:
-| Method | Endpoint | Description                  |
-| ------ | :------- | ---------------------------- |
-| GET    | /        | HomePage                     |
-| GET    | /login   | Login page                   |
-| POST   | /login   | Send user info and logged in |
-|        |          |                              |
-|        |          |                              |
-|        |          |                              |
-|        |          |                              |
-|        |          |                              |
-|        |          |                              |
+| Method | Endpoint   | Description                      |
+| ------ | :--------- | -------------------------------- |
+| GET    | /          | HomePage                         |
+| GET    | /login     | Login page                       |
+| POST   | /login     | Send user info and logged in     |
+| GET    | /singup    | Signup page                      |
+| POST   | /signup    | Register new normal user or chef |
+| GET    | /menus     | Menus page                       |
+| GET    | /menus/:id | Each menu page                   |
+| GET    | /chefs     | Chefs page                       |
+| GET    | /chefs/:id | Each chef page                   |
+
+| Method | Endpoint      | Description                          |
+| ------ | :------------ | ------------------------------------ |
+| GET    | /cart         | Cart page                            |
+| POST   | /cart         | Confirm menu and options             |
+| GET    | /payment      | Payment and delivery page            |
+| POST   | /payment      | Pay and ready                        |
+| GET    | /how-it-works | Explanation on how the service works |
+|        |               |                                      |
+|        |               |                                      |
+|        |               |                                      |
+|        |               |                                      |
+
+## 
 
 ## Models
+
 User model
 
 ```
