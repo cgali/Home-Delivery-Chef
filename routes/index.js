@@ -6,4 +6,8 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Home Delivery Chef' });
 });
 
+router.get('/login', (req, res, next) => {
+	res.render('auth/login');
+});
+
 module.exports = router;
