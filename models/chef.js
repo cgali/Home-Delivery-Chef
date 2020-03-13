@@ -5,24 +5,24 @@ const { Schema } = mongoose;
 const chefSchema = new Schema({
     
     mail: {
-        String,
+        type: String,
         required: true,
         unique: true
     },
     hashedPassword: { 
-        String,
+        type: String,
         required: true
     },
     image: { type: String },
     name: { 
-        String,
+        type: String,
         required: true,
     },
     surname: { 
-        String,
+        type: String,
         required: true,
     },
-    yearsOfExperience: { Number }
+    yearsOfExperience: { type: Number }
 
 });
 
