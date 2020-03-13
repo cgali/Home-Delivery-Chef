@@ -6,11 +6,13 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Home Delivery Chef' });
 });
 
-router.get('/login', (req, res, next) => {
+/* GET Login page. */
+router.get('/login', (req, res) => {
 	res.render('auth/login');
 });
 
-router.get('/signup', (req, res, next) => {
+/* GET Signup page. */
+router.get('/signup', (req, res) => {
 	res.render('auth/signup');
 });
 
