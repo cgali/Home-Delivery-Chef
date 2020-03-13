@@ -1,9 +1,14 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* GET Chefs page. */
-router.get('/', function(req, res) {
+/* GET /chefs page. */
+router.get('/', (req, res) => {
   res.render('chefs');
+});
+
+/* GET /chefs/:id page. */
+router.get('/:id', (req, res) => {
+  res.render('chefs/');
 });
 
 module.exports = router;
