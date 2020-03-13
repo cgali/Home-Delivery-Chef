@@ -9,11 +9,16 @@ const chefSchema = new Schema({
         required: true,
         unique: true
     },
+<<<<<<< HEAD
     hashedPassword: {
+=======
+    hashedPassword: { 
+>>>>>>> e1c45a016fb338b72d71fc481577792407727e80
         type: String,
         required: true
     },
     image: { type: String },
+<<<<<<< HEAD
     name: {
         type: String,
         required: true,
@@ -31,6 +36,17 @@ const chefSchema = new Schema({
         type: Array,
         required: true
     },
+=======
+    name: { 
+        type: String,
+        required: true,
+    },
+    surname: { 
+        type: String,
+        required: true,
+    },
+    yearsOfExperience: { type: Number }
+>>>>>>> e1c45a016fb338b72d71fc481577792407727e80
 
 });
 
