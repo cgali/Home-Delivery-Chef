@@ -18,69 +18,70 @@ mongoose
 const chefs = [
 	{
 		mail: 'josehernandez@gmail.com',
-		hashedPassword: '',
-		image: '',
-		name: '',
-		surname: '',
-		yearsOfExperience: '',
-    },
-	{
-		mail: '',
-		hashedPassword: '',
-		image: '',
-		name: '',
-		surname: '',
-		yearsOfExperience: '',
+		hashedPassword:
+			image: ''
+			name: 'Jose',
+		surname: 'Hernandez',
+		yearsOfExperience: 5
 	},
 	{
-		mail: '',
-		hashedPassword: '',
-		image: '',
-		name: '',
-		surname: '',
-		yearsOfExperience: '',
+		mail: 'jasonlopez@gmail.com',
+		hashedPassword:
+			image:
+		name: 'Jason' 
+			surname: 'Lopes'
+			yearsOfExperience: 20
 	},
 	{
-		mail: '',
-		hashedPassword: '',
-		image: '',
-		name: '',
-		surname: '',
-		yearsOfExperience: '',
+		mail: 'marcgarcia@gmail.com',
+		hashedPassword:
+			image:
+		name: 'Marc'
+			surname: 'Garcia'
+				yearsOfExperience: 15
 	},
 	{
-		mail: '',
-		hashedPassword: '',
-		image: '',
-		name: '',
-		surname: '',
-		yearsOfExperience: '',
+		mail: 'karolsuarez@gmail.com',
+		hashedPassword:
+			image:
+		name: 'Karol'
+			surname: 'Suarez'
+				yearsOfExperience: 17
 	},
 	{
-		mail: '',
-		hashedPassword: '',
-		image: '',
-		name: '',
-		surname: '',
-		yearsOfExperience: '',
+		mail: 'carlossanchez@gmail.com',
+		hashedPassword:
+			image:
+		name: 'Carlos',
+		surname: 'Sanchez',
+		yearsOfExperience: 7
 	},
 	{
-		mail: '',
-		hashedPassword: '',
-		image: '',
-		name: '',
-		surname: '',
-		yearsOfExperience: '',
+		mail: 'sofielevesque@gmail.com',
+		hashedPassword:
+			image:
+		name: 'Sofie',
+		surname: 'Levesque',
+		yearsOfExperience: 20
 	},
 	{
-		mail: '',
-		hashedPassword: '',
-		image: '',
-		name: '',
-		surname: '',
-		yearsOfExperience: '',
+		mail:
+			hashedPassword:
+		image:
+			name:
+		surname:
+			yearsOfExperience:
+	},
+	{
+		mail:
+			hashedPassword:
+		image:
+			name:
+		surname:
+			yearsOfExperience:
 	}
 ];
+
 Chef.create(chefs, err => {
 	if (err) {
 		throw err;
