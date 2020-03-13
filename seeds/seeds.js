@@ -81,6 +81,7 @@ const chefs = [
 		yearsOfExperience: '',
 	}
 ];
+
 Chef.create(chefs, err => {
 	if (err) {
 		throw err;
