@@ -18,67 +18,67 @@ mongoose
 const chefs = [
 	{
 		mail: 'josehernandez@gmail.com',
-		hashedPassword:
-			image: ''
-			name: 'Jose',
+		hashedPassword: '',
+		image: '/public/images/chefs/JoseHernandez',
+		name: 'Jose',
 		surname: 'Hernandez',
 		yearsOfExperience: 5
 	},
 	{
 		mail: 'jasonlopez@gmail.com',
-		hashedPassword:
-			image:
-		name: 'Jason' 
-			surname: 'Lopes'
-			yearsOfExperience: 20
+		hashedPassword: '',
+		image: '/public/images/chefs/JasonLopez',
+		name: 'Jason',
+		surname: 'Lopes',
+		yearsOfExperience: 20
 	},
 	{
 		mail: 'marcgarcia@gmail.com',
-		hashedPassword:
-			image:
-		name: 'Marc'
-			surname: 'Garcia'
-				yearsOfExperience: 15
+		hashedPassword: '',
+		image: '/public/images/chefs/MarcGarcia',
+		name: 'Marc',
+		surname: 'Garcia',
+		yearsOfExperience: 15
 	},
 	{
 		mail: 'karolsuarez@gmail.com',
-		hashedPassword:
-			image:
-		name: 'Karol'
-			surname: 'Suarez'
-				yearsOfExperience: 17
+		hashedPassword: '',
+		image: '/public/images/chefs/KarolSuarez',
+		name: 'Karol',
+		surname: 'Suarez',
+		yearsOfExperience: 17
 	},
 	{
 		mail: 'carlossanchez@gmail.com',
-		hashedPassword:
-			image:
+		hashedPassword: '',
+		image: '/public/images/chefs/CarlosSanchez',
 		name: 'Carlos',
 		surname: 'Sanchez',
 		yearsOfExperience: 7
 	},
 	{
 		mail: 'sofielevesque@gmail.com',
-		hashedPassword:
-			image:
+		hashedPassword: '',
+		image: '/public/images/chefs/SofieLevesque',
 		name: 'Sofie',
 		surname: 'Levesque',
 		yearsOfExperience: 20
 	},
 	{
-		mail:
-			hashedPassword:
-		image:
-			name:
-		surname:
-			yearsOfExperience:
+		mail: 'sandragamez@gmail.com',
+		hashedPassword: '',
+		image: '/public/images/chefs/SandraGamez',
+		name: 'Sandra',
+		surname: 'Gamez',
+		yearsOfExperience: 4,
 	},
 	{
-		mail:
-			hashedPassword:
-		image:
-			name:
-		surname:
-			yearsOfExperience:
+		mail: 'martagrau@gmail.com',
+		hashedPassword: '',
+		image: '/public/images/chefs/MartaGrau',
+		name: 'Marta',
+		surname: 'Grau',
+		yearsOfExperience: 8,
 	}
 ];
 
