@@ -1,11 +1,20 @@
-<h1>Join us!</h1>
-<form id="form" action="/signup" method="POST">
-  <label for="email">Email</label><br>
-  <input type="text" name="email" placeholder="Your Email">
-
-  <label for="password">Password</label><br>
-  <input type="password" name="password" placeholder="Your Password">
-
-  <button type="submit">Create account</button>
-
-</form>
+<div class="signup-container">
+  <h2>Join us!</h2>
+  <div class="signup-form-box">
+    <form id="form" action="/signup" method="POST">
+      <label for="email">Email</label>
+      <input type="text" name="email" placeholder="hello@helloworld.com">
+      <label for="name">Name</label>
+      <input type="text" name="name" placeholder="Name">
+      <label for="image">Image </label>
+      <input type="text" name="image" placeholder="URL of the image">
+      <label for="surname">Surname</label>
+      <input type="text" name="surname" placeholder="Surname">
+      <label for="yearsOfExperience">Year of experience</label>
+      <input type="number" name="yearsOfExperience" min="0" max="50" placeholder="Min 0 and max 50 years">
+      <label for="hashedPassword">Password</label>
+      <input type="password" name="hashedPassword" placeholder="Insert a password">
+      <button class="create-account-button" type="submit">Create account</button>
+    </form>
+  </div>
+</div>

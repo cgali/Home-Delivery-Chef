@@ -1,13 +1,13 @@
-<h1>Welcome Again!</h1>
-<form id="form" action="/login" method="POST">
-  <label for="email">Email</label><br>
-  <input type="text" name="email" placeholder="Your Email">
-  <br>
-  <label for="password">Password</label><br>
-  <input type="password" name="password" placeholder="Your Password">
-
-  <button type="submit">Login</button>
-  <br>
-  <a href="/signup">I'm new and I want to join</a>
-
-</form>
+<div class="login-container">
+  <h2>Welcome Again!</h2>
+  <div class="login-form-box">
+    <form id="form" action="/login" method="POST">
+      <label for="email">Email</label><br>
+      <input type="text" name="email" placeholder="Your Email">
+      <label for="hashedPassword">Password</label><br>
+      <input type="password" name="hashedPassword" placeholder="Your Password">
+      <button class="login-button" type="submit">Login</button>
+    </form>
+    <button class="join-button"><a href="/signup">I'm new and I want to join</a></button>
+  </div>
+</div>
