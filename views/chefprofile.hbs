@@ -1,1 +1,9 @@
 <h1>Each Chef</h1>
+
+<div>
+  {{#each foundChef }}
+    <img src="{{ this.image }}" alt="">
+    <p>{{ this.name }} {{ this.surname }}</p>
+    <p>Years of Experience: {{ this.yearsOfExperience }}</p>
+  {{/each}}
+</div>
