@@ -1,7 +1,11 @@
 const express = require('express');
-const router = express.Router();
+const bcrypt = require('bcrypt');
+const Chef = require('../models/chef');
 
-/* GET home page. */
+const router = express.Router();
+const saltRounds = 10;
+
+/* GET home page */
 router.get('/', (req, res) => {
 	res.render('index', { title: 'Home Delivery Chef' });
 });
@@ -17,12 +21,42 @@ router.get('/signup', (req, res) => {
 });
 
 /* POST Signup page */
-// router.post('/signup', (req, res) => {
-// 	const { email, password, name, image, surname, yearsOfExperience, languages } = req.body;
-// 	if (email === '' || password === '') {
-// 		res.render('auth/signup', { error: 'Los campos no pueden estar vacíos' });
-// 	} else {
-	
-// });
+router.post('/signup', (req, res, next) => {
+	const { email, password, name, image, surname, yearsOfExperience, languages } = req.body;
+	if (email === '' || password === '' || name === '' || surname === '' || yearsOfExperience === '' || languages === '') {
+		res.render('auth/signup', { error: 'Fields cannot be empty' });
+	} else {
+	Chef.findOne({ email })
+		.then(user => {
+			if (user) {
+				res.render('auth/signup', { error: 'This email is already registered in our database' });
+			} else {
+				const salt = bcrypt.genSaltSync(saltRounds);
+				const hashedPassword = bcrypt.hashSync(password, salt);
+				Chef.create({
+					email,
+					hashedPassword,
+					name,
+					image,
+					surname,
+					yearsOfExperience,
+					languages,
+				})
+					.then(userCreated => {
+						// req.session.currentUser = userCreated;
+						// habria que cambiar el redirect para que pase directamente a su perfil
+						res.redirect('/');
+					})
+					.catch(error => {
+						console.log('error', error);
+						next(error);
+					});
+			}
+		})
+		.catch(error => {
+			next(error);
+		});
+	}
+});
 
 module.exports = router;

@@ -17,7 +17,7 @@ mongoose
 
 const chefs = [
 	{
-		mail: 'josehernandez@gmail.com',
+		email: 'josehernandez@gmail.com',
 		hashedPassword: '',
 		image: '/public/images/chefs/JoseHernandez',
 		name: 'Jose',
@@ -25,7 +25,7 @@ const chefs = [
 		yearsOfExperience: 5
 	},
 	{
-		mail: 'jasonlopez@gmail.com',
+		email: 'jasonlopez@gmail.com',
 		hashedPassword: '',
 		image: '/public/images/chefs/JasonLopez',
 		name: 'Jason',
@@ -33,7 +33,7 @@ const chefs = [
 		yearsOfExperience: 20
 	},
 	{
-		mail: 'marcgarcia@gmail.com',
+		email: 'marcgarcia@gmail.com',
 		hashedPassword: '',
 		image: '/public/images/chefs/MarcGarcia',
 		name: 'Marc',
@@ -41,7 +41,7 @@ const chefs = [
 		yearsOfExperience: 15
 	},
 	{
-		mail: 'karolsuarez@gmail.com',
+		email: 'karolsuarez@gmail.com',
 		hashedPassword: '',
 		image: '/public/images/chefs/KarolSuarez',
 		name: 'Karol',
@@ -49,7 +49,7 @@ const chefs = [
 		yearsOfExperience: 17
 	},
 	{
-		mail: 'carlossanchez@gmail.com',
+		email: 'carlossanchez@gmail.com',
 		hashedPassword: '',
 		image: '/public/images/chefs/CarlosSanchez',
 		name: 'Carlos',
@@ -57,7 +57,7 @@ const chefs = [
 		yearsOfExperience: 7
 	},
 	{
-		mail: 'sofielevesque@gmail.com',
+		email: 'sofielevesque@gmail.com',
 		hashedPassword: '',
 		image: '/public/images/chefs/SofieLevesque',
 		name: 'Sofie',
@@ -65,7 +65,7 @@ const chefs = [
 		yearsOfExperience: 20
 	},
 	{
-		mail: 'sandragamez@gmail.com',
+		email: 'sandragamez@gmail.com',
 		hashedPassword: '',
 		image: '/public/images/chefs/SandraGamez',
 		name: 'Sandra',
@@ -73,7 +73,7 @@ const chefs = [
 		yearsOfExperience: 4,
 	},
 	{
-		mail: 'martagrau@gmail.com',
+		email: 'martagrau@gmail.com',
 		hashedPassword: '',
 		image: '/public/images/chefs/MartaGrau',
 		name: 'Marta',
