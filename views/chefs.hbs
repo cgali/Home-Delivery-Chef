@@ -2,7 +2,7 @@
 
 <div class="chef-box">
   {{#each chefs }}
-    <img src="{{ this.image }}" alt="">
+    <a href="/chefs/{{ this._id }}"><img src="{{ this.image }}" alt=""></a> 
     <p>{{ this.name }} {{ this.surname }}</p>
   {{/each}}
 </div>
