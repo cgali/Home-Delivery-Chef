@@ -3,11 +3,26 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const mongoose = require('mongoose');
 
 const app = express();
 
 const indexRouter = require('./routes/index');
 const chefs = require('./routes/chefs');
+
+mongoose
+	.connect('mongodb+srv://chefapp:1234@module2project-ko7or.gcp.mongodb.net/HomeDeliveryChef?retryWrites=true&w=majority', {
+		useCreateIndex: true,
+		useNewUrlParser: true,
+		useUnifiedTopology: true
+	})
+	.then(x => {
+		console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+		return Chef.insertMany(chefs);
+	})
+	.catch(err => {
+		console.error('Error connecting to mongo', err)
+	});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
