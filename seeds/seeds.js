@@ -1,6 +1,20 @@
 const mongoose = require('mongoose');
 const Chef = require('../models/chef');
 
+mongoose
+	.connect('mongodb+srv://chefapp:1234@module2project-ko7or.gcp.mongodb.net/HomeDeliveryChef?retryWrites=true&w=majority', {
+		useCreateIndex: true,
+		useNewUrlParser: true,
+		useUnifiedTopology: true
+	})
+	.then(x => {
+		console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+		return Chef.insertMany(chefs);
+	})
+	.catch(err => {
+		console.error('Error connecting to mongo', err)
+	});
+
 const chefs = [
 	{
 		mail: 'josehernandez@gmail.com',
@@ -67,21 +81,6 @@ const chefs = [
 		yearsOfExperience: 8,
 	}
 ];
-
-// Link to connect to Database: mongodb+srv://chefapp:1234@module2project-ko7or.gcp.mongodb.net/test?retryWrites=true&w=majority
-mongoose
-	.connect('mongodb+srv://chefapp:1234@module2project-ko7or.gcp.mongodb.net/test?retryWrites=true&w=majority', {
-		useCreateIndex: true,
-		useNewUrlParser: true,
-		useUnifiedTopology: true
-	})
-	.then(x => {
-		console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
-		return Chef.insertMany(chefs);
-	})
-	.catch(err => {
-		console.error('Error connecting to mongo', err)
-	});
 
 Chef.create(chefs, err => {
 	if (err) {

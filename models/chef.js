@@ -11,7 +11,7 @@ const chefSchema = new Schema({
     },
     hashedPassword: {
         type: String,
-        required: true
+        // required: true
     },
     image: { type: String, },
     name: {
