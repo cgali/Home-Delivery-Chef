@@ -11,7 +11,7 @@ const chefSchema = new Schema({
     },
     hashedPassword: {
         type: String,
-        // required: true
+        required: true
     },
     image: { type: String, },
     name: {
@@ -26,7 +26,6 @@ const chefSchema = new Schema({
         type: Number,
         required: true,
     },
-
     languages: {
         type: Array,
         required: true
