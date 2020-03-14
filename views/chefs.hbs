@@ -1,7 +1,9 @@
 <h1>Chefs</h1>
 
-<ul>
+<div class="chef-box">
   {{#each chefs }}
-    <li>{{ this.name }}</li>
+    <img src="{{ this.image }}" alt="">
+    <p>{{ this.name }} {{ this.surname }}</p>
   {{/each}}
-</ul>
+</div>
+
