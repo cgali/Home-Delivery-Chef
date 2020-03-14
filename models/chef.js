@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 
 const chefSchema = new Schema({
 
-    mail: {
+    email: {
         type: String,
         required: true,
         unique: true
