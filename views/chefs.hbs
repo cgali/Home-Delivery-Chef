@@ -1,9 +1,12 @@
-<h1>Chefs</h1>
-
-<div class="chef-box">
-  {{#each chefs }}
-    <img src="{{ this.image }}" alt="">
-    <p>{{ this.name }} {{ this.surname }}</p>
-  {{/each}}
+<div class="chefs-container">
+    <h2>Chefs</h2>
+    <div class="chef-box">
+    {{#each chefs }}
+        <img src="{{ this.image }}" alt="picture of chef">
+        <p>{{ this.name }} {{ this.surname }}</p>
+        <button class="seeMore-chef-button"><a href="/chef/:id">See more</a></button>
+    {{/each}}
+    </div>
 </div>
+
 
