@@ -15,6 +15,32 @@ router.get('/login', (req, res) => {
 	res.render('auth/login');
 });
 
+/* POST Login page */
+router.post('/login', (req, res, next) => {
+	const { email, password } = req.body;
+	if (email === '' || password === '') {
+		res.render('auth/login', { error: 'Fields cannot be empty' });
+	} else {
+		Chef.findOne({ email })
+			.then(user => {
+				if (!user) {
+					res.render('auth/login', { error: 'You are not registered' });
+				} else {
+					console.log(bcrypt.compareSync(password, user.hashedPassword));
+					if (bcrypt.compareSync(password, user.hashedPassword)) {
+						// req.session.currentUser = user;
+						res.redirect('/');
+					} else {
+						res.render('auth/login', { error: 'Incorrect User or Password' });
+					}
+				}
+			})
+			.catch(error => {
+				next(error);
+			});
+	}
+});
+
 /* GET Signup page */
 router.get('/signup', (req, res) => {
 	res.render('auth/signup');

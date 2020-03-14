@@ -4,12 +4,15 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
+const session    = require("express-session");
+const MongoStore = require("connect-mongo")(session);
 
 const app = express();
 
 const indexRouter = require('./routes/index');
 const chefs = require('./routes/chefs');
 
+// Connect to DB
 mongoose
 	.connect('mongodb+srv://chefapp:1234@module2project-ko7or.gcp.mongodb.net/HomeDeliveryChef?retryWrites=true&w=majority', {
 		useCreateIndex: true,
@@ -26,6 +29,22 @@ mongoose
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+app.use(
+	session({
+		store: new MongoStore({
+			mongooseConnection: mongoose.connection,
+			ttl: 24 * 60 * 60, // 1 day
+		}),
+		secret: 'HomeDeliveryChef',
+		resave: true,
+		saveUninitialized: true,
+		name: 'HomeDeliveryChef',
+		cookie: {
+			maxAge: 24 * 60 * 60 * 1000,
+		},
+	})
+);
 
 app.use(logger('dev'));
 app.use(express.json());
