@@ -7,10 +7,10 @@ const Chefs = require('../models/chef');
 router.get('/', (req, res) => {
   Chefs.find()
   .then(chefs => {
+    console.log('listing chefs');
     res.render('chefs', { chefs });
   })
   .catch(err => console.log('Error while listing chefs: ', err));
-  console.log('listing chefs');
 });
 
 module.exports = router;
