@@ -7,6 +7,7 @@ a {
   color: #00B7FF;
 }
 
+/* Error message for login and signup */
 .error-message {
   background: #F02B63;
   box-sizing: border-box;

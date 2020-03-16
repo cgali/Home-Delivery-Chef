@@ -24,14 +24,14 @@ router.post('/login', (req, res, next) => {
 		Chef.findOne({ email })
 			.then(user => {
 				if (!user) {
-					res.render('auth/login', { error: 'You are not registered' });
+					res.render('auth/login', { error: 'You are not registered, please Sign Up first' });
 				} else {
 					console.log(bcrypt.compareSync(password, user.hashedPassword));
 					if (bcrypt.compareSync(password, user.hashedPassword)) {
 						// req.session.currentUser = user;
 						res.redirect('/');
 					} else {
-						res.render('auth/login', { error: 'Incorrect User or Password' });
+						res.render('auth/login', { error: 'Incorrect Email or Password' });
 					}
 				}
 			})
@@ -55,15 +55,15 @@ router.post('/signup', (req, res, next) => {
 	Chef.findOne({ email })
 		.then(user => {
 			if (user) {
-				res.render('auth/signup', { error: 'This email is already registered in our database' });
+				res.render('auth/signup', { error: 'This email is already registered in our database, please Log In' });
 			} else {
 				const salt = bcrypt.genSaltSync(saltRounds);
 				const hashedPassword = bcrypt.hashSync(password, salt);
 				Chef.create({
 					email,
 					hashedPassword,
-					name,
 					image,
+					name,
 					surname,
 					yearsOfExperience,
 					languages,
