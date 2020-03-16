@@ -8,6 +8,7 @@ const saltRounds = 10;
 /* GET home page */
 router.get('/', (req, res) => {
 	res.render('index', { title: 'Home Delivery Chef' });
+	console.log(req.session.currentUser);
 });
 
 /* GET Login page */
@@ -83,6 +84,16 @@ router.post('/signup', (req, res, next) => {
 			next(error);
 		});
 	}
+});
+
+/* GET Logout */
+router.get('/logout', (req, res, next) => {
+	req.session.destroy(err => {
+		if (err) {
+			next(err);
+		}
+		res.redirect('/login');
+	});
 });
 
 module.exports = router;

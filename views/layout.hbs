@@ -14,8 +14,10 @@
       </ul>
 
       <ul class="right-navbar-account">
+          <li><p>Welcome {{ req.session.currentUser.email }} {{ session.currentUser.name }}</p></li>
           <li><a href="/login">My account</a></li>
           <li><a href="">Cart</a></li>
+          <li><a href="/logout">Logout</a></li>
       </ul>
     </nav>
 
