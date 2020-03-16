@@ -71,6 +71,20 @@ a {
   list-style-type: none;
 }
 
+.cart-image {
+  width: 2rem;
+}
+
+.right-navbar-account > li {
+  font-size: 0;
+}
+
+.layout-button-cart > a {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+}
+
 .layout-button-account, .layout-button-cart, .layout-button-logout {
   border: 1px solid black;
   border-radius: 1rem;
