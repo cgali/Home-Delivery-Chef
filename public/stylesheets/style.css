@@ -1,6 +1,8 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  font-size: 10px;
+  height: 100%;
 }
 
 a {
@@ -15,4 +17,94 @@ a {
   margin: 20px auto;
   padding: 20px;
   width: 100%;
+}
+
+/***************
+**** LAYOUT ****
+***************/
+
+/*** NAVBAR ***/
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  height: 6rem;
+  width: 100%;
+  font-family: 'Baloo 2', cursive;
+  border-bottom: 1px solid black;
+}
+
+.layout-image-logo {
+  width: 8rem;
+  margin-top: 0.6rem;
+}
+
+.left-navbar-menu-chef {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 35rem;
+  padding: 0px;
+  margin: 0px;
+}
+
+.right-navbar-account {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20rem;
+  margin: 0px;
+  padding: 0px;
+}
+
+.left-navbar-menu-chef > li > a, .right-navbar-account > li > button > a{
+  text-decoration: none;
+  color: black;
+}
+
+.right-navbar-account > li > button > a {
+  color: white;
+}
+
+.left-navbar-menu-chef > li, .right-navbar-account > li {
+  list-style-type: none;
+}
+
+.layout-button-account, .layout-button-cart {
+  border: 1px solid black;
+  border-radius: 1rem;
+  background-color: rgb(54, 54, 54);
+  padding: 0.3rem;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.3rem;
+}
+
+.layout-button-account:active, .layout-button-cart:active {
+  box-shadow: 2px 4px 2px rgb(141, 141, 141);
+  transform: translateY(2px);
+}
+
+.layout-button-account:focus, .layout-button-cart:focus {
+  outline: 0;
+}
+
+/*** FOOTER ***/
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(54, 54, 54);
+  height: 8rem;
+  font-size: 1.1rem;
+}
+.footer-container > ul {
+  display: flex;
+  justify-content: space-between;
+  width: 40rem;
+  list-style-type: none;
+}
+.footer-container > ul > li >a {
+  text-decoration: none;
+  color: white;
 }
