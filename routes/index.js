@@ -28,7 +28,7 @@ router.post('/login', (req, res, next) => {
 				} else {
 					console.log(bcrypt.compareSync(password, user.hashedPassword));
 					if (bcrypt.compareSync(password, user.hashedPassword)) {
-						// req.session.currentUser = user;
+						req.session.currentUser = user;
 						res.redirect('/');
 					} else {
 						res.render('auth/login', { error: 'Incorrect Email or Password' });
@@ -68,9 +68,9 @@ router.post('/signup', (req, res, next) => {
 					yearsOfExperience,
 					languages,
 				})
-					.then(/*userCreated*/ () => {
-						// req.session.currentUser = userCreated;
-						// habria que cambiar el redirect para que pase directamente a su perfil
+					.then(userCreated => {
+						req.session.currentUser = userCreated;
+						// habria que cambiar el redirect para que pase directamente a su perfil:
 						res.redirect('/');
 					})
 					.catch(error => {
