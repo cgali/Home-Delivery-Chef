@@ -68,7 +68,7 @@ router.post('/signup', (req, res, next) => {
 					yearsOfExperience,
 					languages,
 				})
-					.then(userCreated => {
+					.then(/*userCreated*/ () => {
 						// req.session.currentUser = userCreated;
 						// habria que cambiar el redirect para que pase directamente a su perfil
 						res.redirect('/');
