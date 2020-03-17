@@ -61,10 +61,6 @@ body {
   width: 2rem;
 }
 
-.right-navbar-account > li {
-  font-size: 0;
-}
-
 .layout-button-cart > a {
   display: flex;
   align-items: center;
