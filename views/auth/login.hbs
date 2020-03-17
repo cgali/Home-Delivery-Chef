@@ -1,16 +1,16 @@
-<div class="login-container">
+<section class="login-container">
   <h2>Welcome Again!</h2>
   <div class="login-form-box">
+    {{#if error}}
+      <div class="error-message">{{ error }}</div>
+    {{/if}}    
     <form id="form" action="/login" method="POST">
-      <label for="email">Email</label><br>
+      <label for="email">Email</label>
       <input type="text" name="email" placeholder="Your Email">
-      <label for="password">Password</label><br>
+      <label for="password">Password</label>
       <input type="password" name="password" placeholder="Your Password">
       <button class="login-button" type="submit">Login</button>
     </form>
-    {{#if error}}
-      <div class="error-message">{{ error }}</div>
-    {{/if}}
     <button class="join-button"><a href="/signup">I'm new and I want to join</a></button>
   </div>
-</div>
+</section>

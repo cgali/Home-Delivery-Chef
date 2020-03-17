@@ -5,20 +5,6 @@ body {
   height: 100%;
 }
 
-a {
-  color: #00B7FF;
-}
-
-/* Error message for login and signup */
-.error-message {
-  background: #F02B63;
-  box-sizing: border-box;
-  color: #fff;
-  margin: 20px auto;
-  padding: 20px;
-  width: 100%;
-}
-
 /***************
 **** LAYOUT ****
 ***************/
@@ -111,8 +97,10 @@ a {
   align-items: center;
   justify-content: center;
   background-color: rgb(54, 54, 54);
-  height: 10rem;
-  font-size: 1.1rem;
+  height: 13rem;
+  font-size: 1.3rem;
+  font-family: 'Baloo 2', cursive;
+  border-top: 1px solid white;
 }
 
 .layout-footer-image-logo {
@@ -122,7 +110,7 @@ a {
 .footer-container > ul {
   display: flex;
   justify-content: space-between;
-  width: 40rem;
+  width: 60rem;
   list-style-type: none;
   margin: 1rem 0 0 0;
   padding-left: 4rem;
@@ -134,15 +122,14 @@ a {
 }
 
 .copyright {
-  margin: 0 0 0.5rem 0;
-  font-family: 'Baloo 2', cursive;
+  margin: 0 0 0.7rem 0;
   font-size: 1.2rem;
   color: white;
 }
 
-/***************
-**** INDEX ****
-***************/
+/****************
+***** INDEX *****
+****************/
 
 .index-container {
   display: flex;
@@ -204,4 +191,105 @@ a {
 .index-order-button:active {
   box-shadow: 1px 2px 1px rgb(141, 141, 141);
   transform: translateY(2px);
+}
+
+/****************
+***** LOG IN *****
+****************/
+
+.login-container {
+  height: 49rem;
+  width: 100%;
+  background-image: url('../images/blacktable2.jpeg');
+  background-repeat: space;
+  background-size: 100%;
+  opacity: 0.8;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Baloo 2', cursive;
+}
+
+.login-container > h2 {
+  font-size: 4rem;
+  color: white;
+  text-decoration: underline;
+  margin-top: 2rem;
+}
+
+.login-form-box {
+  margin-top: 1rem;
+  border: 1px solid rgb(54, 54, 54);
+  background-color: rgb(54, 54, 54);
+  border-radius: 3rem;
+  width: 20rem;
+  height: 30rem;
+  font-size: 1.4rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form-box > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.login-form-box > form > label {
+  margin-top: 1rem;
+}
+
+.login-form-box > form > input {
+  margin-top: 0.5rem;
+  width: 14rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.login-button {
+  font-size: 1.2rem;
+  margin: 2rem 0 1rem 0;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+.login-button > a, .join-button > a {
+  text-decoration: none;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.3rem;
+}
+
+.login-button:focus {
+  outline: 0;
+}
+
+.login-button:active {
+  box-shadow: 1px 2px 1px black;
+  transform: translateY(2px);
+}
+
+.join-button > a{
+  color: white;
+}
+
+.join-button {
+  background-color: rgb(54, 54, 54);
+  border-radius: 1rem;
+}
+
+.error-message {
+  background: #F02B63;
+  box-sizing: border-box;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
 }
