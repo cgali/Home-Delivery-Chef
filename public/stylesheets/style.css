@@ -35,6 +35,10 @@ body {
   margin: 0px;
 }
 
+.current-email {
+  color: black;
+}
+
 .right-navbar-account {
   display: flex;
   justify-content: space-around;
