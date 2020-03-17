@@ -35,6 +35,10 @@ body {
   margin: 0px;
 }
 
+.current-email {
+  color: black;
+}
+
 .right-navbar-account {
   display: flex;
   justify-content: space-around;
@@ -59,10 +63,6 @@ body {
 
 .cart-image {
   width: 2rem;
-}
-
-.right-navbar-account > li {
-  font-size: 0;
 }
 
 .layout-button-cart > a {
