@@ -1,18 +1,16 @@
 <div class="chef-profile-container">
 	<div class="chef-profile-box">
-		<div class="chef-profile-image">
-			<img src="{{ foundChef.image }}" alt="Profile image">
-			<button class="chef-profile-edit-button"><a href="/chefs/{{ foundChef._id }}/updatechef">Edit</a></button>
+		<div>
+			<img class="chef-profile-image" src="{{ foundChef.image }}" alt="Profile image">
 		</div>
-
 		<div class="chef-profile-info">
-			<p>{{ foundChef.name }} {{ foundChef.surname }}</p>
+			<p class="chef-name-profile">{{ foundChef.name }} {{ foundChef.surname }}</p>
 			<p>Years of Experience: {{ foundChef.yearsOfExperience }}</p>
 			<p>Languages: {{ foundChef.languages }}</p>
+			<button class="chef-profile-edit-button"><a href="/chefs/{{ foundChef._id }}/updatechef">Edit Profile</a></button>
 		</div>
-
 	</div>
-	<div class="menus-box">
-		<p>menus( 🔜 coming soon 🔜 )</p>
+	<div class="menus-box-profile">
+		<p>Menus ( 🔜 coming soon 🔜 )</p>
 	</div>
 </div>

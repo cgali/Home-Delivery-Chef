@@ -368,3 +368,35 @@ body {
   width: 25%;
   margin-bottom: 10%;
 }
+
+/****************
+** CHEFS PROFILE **
+****************/
+
+.chef-profile-box {
+  display: flex;
+}
+
+.chef-profile-image {
+  width: 300px;
+  height: auto;
+  margin: 3rem;
+  border:0.2em solid #dfe6e9;
+  border-radius: 2px;
+}
+
+.chef-profile-info {
+  margin: 3rem 0;
+  font-family:'Asap', sans-serif;
+  font-size: 1.2rem;
+}
+
+.chef-name-profile {
+  font-size: 2rem;
+  font-family:'Baloo 2', sans-serif;
+  font-weight: bold;
+}
+
+.menus-box-profile {
+  
+}
