@@ -13,6 +13,8 @@ const app = express();
 const indexRouter = require('./routes/index');
 const chefs = require('./routes/chefs');
 const menus = require('./routes/menus');
+const howItWorks = require('./routes/how-it-works')
+const aboutUs = require('./routes/about-us');
 
 // Connect to DB
 mongoose
@@ -58,6 +60,8 @@ app.use(favicon(path.join(__dirname, 'public/images', 'favicon.ico')));
 app.use('/', indexRouter);
 app.use('/chefs', chefs);
 app.use('/menus', menus);
+app.use('/how-it-works', howItWorks);
+app.use('/about-us', aboutUs);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
