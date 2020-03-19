@@ -22,7 +22,7 @@ const chefs = [
 		image: '../images/chefs/JoseHernandez.jpg',
 		name: 'Jose',
 		surname: 'Hernandez',
-		yearsOfExperience: 5
+		yearsOfExperience: 5,
 	},
 	{
 		email: 'jasonlopez@gmail.com',
