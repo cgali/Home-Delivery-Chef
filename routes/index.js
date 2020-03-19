@@ -5,20 +5,20 @@ const Chef = require('../models/chef');
 const router = express.Router();
 const saltRounds = 10;
 
-/* GET home page */
+// GET home page
 router.get('/', (req, res) => {
 	const { currentUser } = req.session;
 	res.render('index', { title: 'Home Delivery Chef', currentUser });
 	console.log(req.session.currentUser);
 });
 
-/* GET Login page */
+// GET Login page
 router.get('/login', (req, res) => {
 	const { currentUser } = req.session;
 	res.render('auth/login', { currentUser });
 });
 
-/* POST Login page */
+// POST Login page
 router.post('/login', (req, res, next) => {
 	const { email, password } = req.body;
 	if (email === '' || password === '') {
@@ -44,13 +44,13 @@ router.post('/login', (req, res, next) => {
 	}
 });
 
-/* GET Signup page */
+// GET Signup page
 router.get('/signup', (req, res) => {
 	const { currentUser } = req.session;
 	res.render('auth/signup', { currentUser });
 });
 
-/* POST Signup page */
+// POST Signup page
 router.post('/signup', (req, res, next) => {
 	const { email, password, name, image, surname, yearsOfExperience, languages } = req.body;
 	if (email === '' || password === '' || name === '' || surname === '' || yearsOfExperience === '' || languages === '') {
@@ -89,7 +89,7 @@ router.post('/signup', (req, res, next) => {
 	}
 });
 
-/* GET Logout */
+// GET Logout
 router.get('/logout', (req, res, next) => {
 	req.session.destroy(err => {
 		if (err) {

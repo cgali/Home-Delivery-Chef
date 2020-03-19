@@ -13,9 +13,9 @@ const app = express();
 const indexRouter = require('./routes/index');
 const chefs = require('./routes/chefs');
 const menus = require('./routes/menus');
-const howItWorks = require('./routes/how-it-works')
+const howItWorks = require('./routes/how-it-works');
 const aboutUs = require('./routes/about-us');
-
+const cart = require('./routes/cart');
 // Connect to DB
 mongoose
 	.connect('mongodb+srv://chefapp:1234@module2project-ko7or.gcp.mongodb.net/HomeDeliveryChef?retryWrites=true&w=majority', {
@@ -62,6 +62,7 @@ app.use('/chefs', chefs);
 app.use('/menus', menus);
 app.use('/how-it-works', howItWorks);
 app.use('/about-us', aboutUs);
+app.use('/cart', cart)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

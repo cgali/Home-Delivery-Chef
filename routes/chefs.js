@@ -3,7 +3,7 @@ const router = express.Router();
 
 const Chefs = require('../models/chef');
 
-/* GET /chefs page. */
+// GET /chefs page.
 router.get('/', (req, res) => {
   const { currentUser } = req.session;
   Chefs.find()
@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
   .catch(err => console.log('Error while listing chefs: ', err));
 });
 
-/* GET /chefs/:id page. */
+// GET /chefs/:id page. 
 router.get('/:id', (req, res) => {
   const { currentUser } = req.session;
   const { id } = req.params;

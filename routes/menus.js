@@ -3,7 +3,7 @@ const router = express.Router();
 
 const Menus = require('../models/menu');
 
-/* GET /menus page. */
+// GET /menus page.
 router.get('/', (req, res) => {
     const { currentUser } = req.session;
     Menus.find()
@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
         .catch(err => console.log('Error while listing chefs: ', err));
 });
 
-/* GET /menus/:id page. */
+// GET /menus/:id page.
 router.get('/:id', (req, res) => {
     const { currentUser } = req.session;
     const { id } = req.params;
