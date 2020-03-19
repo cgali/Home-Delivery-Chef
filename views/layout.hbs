@@ -31,17 +31,11 @@
       {{/unless}}
       
       {{#if currentUser}}
-      <li><button class="layout-button-account"><a href="/login">My account</a></button></li>
+      <li><button class="layout-button-account"><a href="/chefs/{{ currentUser._id }}">My account</a></button></li>
       <li><button class="layout-button-logout"><a href="/logout">Logout</a></button></li>
       <li><button class="layout-button-cart"><a href="/cart"><img class="cart-image"
                 src="/images/cart.png" alt=""></a></button></li>
       {{/if}}
-      {{!-- <li><button class="layout-button-account"><a href="/login">My account</a></button></li>
-      <!De momento no borro el logout para que puedas ir haciendo pruebas pero no debería estar aquí, esto es como se
-        verá en todas las páginas, incluso si no estas loguedado. Miraré de ponerlo en otra página.>
-        <li><button class="layout-button-logout"><a href="/logout">Logout</a></button></li>
-        <li><button class="layout-button-cart"><a href="/cart"><img class="cart-image"
-                src="/images/cart.png" alt=""></a></button></li> --}}
     </ul>
   </nav>
 
