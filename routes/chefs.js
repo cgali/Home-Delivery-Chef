@@ -1,7 +1,7 @@
 const express = require('express');
-const router = express.Router();
+const Chefs   = require('../models/chef');
 
-const Chefs = require('../models/chef');
+const router = express.Router();
 
 // GET /chefs page.
 router.get('/', (req, res) => {

@@ -1,7 +1,7 @@
 const express = require('express');
-const router = express.Router();
+const Menus   = require('../models/menu');
 
-const Menus = require('../models/menu');
+const router = express.Router();
 
 // GET /menus page.
 router.get('/', (req, res) => {

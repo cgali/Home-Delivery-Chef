@@ -1,21 +1,26 @@
-const createError = require('http-errors');
-const express = require('express');
-const path = require('path');
+const createError  = require('http-errors');
+const express      = require('express');
+const path         = require('path');
 const cookieParser = require('cookie-parser');
-const logger = require('morgan');
-const mongoose = require('mongoose');
-const favicon = require('serve-favicon');
-const session = require("express-session");
-const MongoStore = require("connect-mongo")(session);
+const logger       = require('morgan');
+const mongoose     = require('mongoose');
+const favicon      = require('serve-favicon');
+const session      = require("express-session");
+const MongoStore   = require("connect-mongo")(session);
 
 const app = express();
 
 const indexRouter = require('./routes/index');
-const chefs = require('./routes/chefs');
-const menus = require('./routes/menus');
-const howItWorks = require('./routes/how-it-works');
-const aboutUs = require('./routes/about-us');
-const cart = require('./routes/cart');
+const chefs       = require('./routes/chefs');
+const menus       = require('./routes/menus');
+const howItWorks  = require('./routes/how-it-works');
+const aboutUs     = require('./routes/about-us');
+const cart        = require('./routes/cart');
+
+// Example to insert seeds:
+// const Clients  = require('./models/client');
+// const seeds        = require('./seeds/seedsclients');
+
 // Connect to DB
 mongoose
 	.connect('mongodb+srv://chefapp:1234@module2project-ko7or.gcp.mongodb.net/HomeDeliveryChef?retryWrites=true&w=majority', {
@@ -25,6 +30,7 @@ mongoose
 	})
 	.then(x => {
 		console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+		// return Clients.insertMany(seeds);
 	})
 	.catch(err => {
 		console.error('Error connecting to mongo', err)

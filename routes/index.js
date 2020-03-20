@@ -1,6 +1,7 @@
 const express = require('express');
-const bcrypt = require('bcrypt');
-const Chef = require('../models/chef');
+const bcrypt  = require('bcrypt');
+const Chef    = require('../models/chef');
+const Client  = require('../models/client');
 
 const router = express.Router();
 const saltRounds = 10;
@@ -95,14 +96,14 @@ router.post('/signup-client', (req, res, next) => {
 	if (email === '' || password === '') {
 		res.render('auth/signup', { error: 'Fields cannot be empty' });
 	} else {
-	Chef.findOne({ email })
+		Client.findOne({ email })
 		.then(user => {
 			if (user) {
 				res.render('auth/signup', { error: 'This email is already registered in our database, please Log In' });
 			} else {
 				const salt = bcrypt.genSaltSync(saltRounds);
 				const hashedPassword = bcrypt.hashSync(password, salt);
-				Chef.create({
+				Client.create({
 					email,
 					hashedPassword,
 				})
