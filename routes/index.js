@@ -50,7 +50,7 @@ router.get('/signup', (req, res) => {
 	res.render('auth/signup', { currentUser });
 });
 
-// POST Signup page
+// POST Signup page for Chefs
 router.post('/signup', (req, res, next) => {
 	const { email, password, name, image, surname, yearsOfExperience, languages } = req.body;
 	if (email === '' || password === '' || name === '' || surname === '' || yearsOfExperience === '' || languages === '') {
@@ -76,6 +76,39 @@ router.post('/signup', (req, res, next) => {
 						req.session.currentUser = userCreated;
 						// habria que cambiar el redirect para que pase directamente a su perfil:
 						res.redirect('/');
+					})
+					.catch(error => {
+						console.log('error', error);
+						next(error);
+					});
+			}
+		})
+		.catch(error => {
+			next(error);
+		});
+	}
+});
+
+// POST Signup page for Clients
+router.post('/signup-client', (req, res, next) => {
+	const { email, password } = req.body;
+	if (email === '' || password === '') {
+		res.render('auth/signup', { error: 'Fields cannot be empty' });
+	} else {
+	Chef.findOne({ email })
+		.then(user => {
+			if (user) {
+				res.render('auth/signup', { error: 'This email is already registered in our database, please Log In' });
+			} else {
+				const salt = bcrypt.genSaltSync(saltRounds);
+				const hashedPassword = bcrypt.hashSync(password, salt);
+				Chef.create({
+					email,
+					hashedPassword,
+				})
+					.then(userCreated => {
+						req.session.currentUser = userCreated;
+						res.redirect('/menus');
 					})
 					.catch(error => {
 						console.log('error', error);
