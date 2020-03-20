@@ -19,7 +19,7 @@ router.get('/login', (req, res) => {
 	res.render('auth/login', { currentUser });
 });
 
-// POST Login page
+// POST Login page for Chefs
 router.post('/login', (req, res, next) => {
 	const { email, password } = req.body;
 	if (email === '' || password === '') {
@@ -34,6 +34,32 @@ router.post('/login', (req, res, next) => {
 					if (bcrypt.compareSync(password, user.hashedPassword)) {
 						req.session.currentUser = user;
 						res.redirect('/');
+					} else {
+						res.render('auth/login', { error: 'Incorrect Email or Password' });
+					}
+				}
+			})
+			.catch(error => {
+				next(error);
+			});
+	}
+});
+
+// POST Login page for Clients
+router.post('/login-client', (req, res, next) => {
+	const { email, password } = req.body;
+	if (email === '' || password === '') {
+		res.render('auth/login', { error: 'Fields cannot be empty' });
+	} else {
+		Client.findOne({ email })
+			.then(user => {
+				if (!user) {
+					res.render('auth/login', { error: 'You are not registered, please Sign Up first' });
+				} else {
+					console.log(bcrypt.compareSync(password, user.hashedPassword));
+					if (bcrypt.compareSync(password, user.hashedPassword)) {
+						req.session.currentUser = user;
+						res.redirect('/menus');
 					} else {
 						res.render('auth/login', { error: 'Incorrect Email or Password' });
 					}

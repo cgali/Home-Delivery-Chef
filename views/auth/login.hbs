@@ -1,10 +1,16 @@
-<section class="login-container">
+<div class="tab">
+  <button class="tablinks" onclick="openSignup(event, 'Client')">Log In as Client</button>
+  <button class="tablinks" onclick="openSignup(event, 'Chef')">Log In as Chef</button>
+</div>
+
+<div id="Client" class="tabcontent">
+  <section class="login-container">
   <h2>Welcome Again!</h2>
   <div class="login-form-box">
     {{#if error}}
       <div class="error-message">{{ error }}</div>
     {{/if}}    
-    <form id="form" action="/login" method="POST">
+    <form id="form" action="/login-client" method="POST">
       <label for="email">Email</label>
       <input type="text" name="email" placeholder="Your Email">
       <label for="password">Password</label>
@@ -14,3 +20,25 @@
     <button class="join-button"><a href="/signup">I'm new and I want to join</a></button>
   </div>
 </section>
+</div>
+
+<div id="Chef" class="tabcontent">
+  <section class="login-container">
+    <h2>Welcome Again Chef!</h2>
+    <div class="login-form-box">
+      {{#if error}}
+        <div class="error-message">{{ error }}</div>
+      {{/if}}    
+      <form id="form" action="/login" method="POST">
+        <label for="email">Email</label>
+        <input type="text" name="email" placeholder="Your Email">
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Your Password">
+        <button class="login-button" type="submit">Login</button>
+      </form>
+      <button class="join-button"><a href="/signup">I'm new and I want to join</a></button>
+    </div>
+  </section>
+</div>
+
+
