@@ -1,5 +1,5 @@
 const express = require('express');
-const Menus   = require('../models/menu');
+const Menus = require('../models/menu');
 
 const router = express.Router();
 
@@ -21,9 +21,38 @@ router.get('/:id', (req, res) => {
     Menus.findById(id)
         .then(foundMenu => {
             console.log('Rendering ONE Menu');
-            res.render('chefprofile', { foundMenu, currentChef, currentClient });
+            res.render('menu-info', { foundMenu, currentChef, currentClient });
         })
         .catch(err => console.log('Error while listing chefs: ', err));
 });
+
+// // GET /menus/:id/update
+// router.get('/:id/updatechef', (req, res, next) => {
+//     const { id } = req.params;
+//     Chefs.findById(id)
+//         .then(chefInfo => {
+//             res.render('updatechef', { chefInfo })
+//         })
+//         .catch(next);
+// })
+
+// // POST /chefs/:id/update
+// router.post('/:id/', (req, res) => {
+//     const { id } = req.params;
+//     console.log('THIS IS THE ID: ', id)
+//     const { name, surname, image, yearsOfExperience, languages, email } = req.body;
+//     console.log(req.query)
+//     Chefs.findByIdAndUpdate(id, {
+//         name,
+//         surname,
+//         image,
+//         yearsOfExperience,
+//         languages,
+//         email,
+//     })
+//         .then(() => {
+//             res.redirect(`/chefs/${id}`);
+//         })
+// })
 
 module.exports = router;
