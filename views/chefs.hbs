@@ -1,0 +1,13 @@
+<h2 class="chefs-title">Our Chefs</h2>
+<div class="chefs-container">
+		{{#each chefs }}
+			<div class="chef-box">
+				<img class="chef-picture" src="{{ this.image }}" alt="picture of chef">
+				<p class="chef-name">{{ this.name }} {{ this.surname }}</p>
+				<hr class="separator-chef-profile">
+				<button class="see-more-chef-btn"><a href="/chefs/{{ this._id }}">Check Profile</a></button>
+			</div>
+		{{/each}}
+</div>
+
+

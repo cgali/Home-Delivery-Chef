@@ -1,0 +1,59 @@
+<h2>Join us!</h2>
+<p>But first choose your role:</p>
+<div class="tab">
+  <button class="tablinks" onclick="openSignup(event, 'Chef')">I'm a Chef</button>
+  <button class="tablinks" onclick="openSignup(event, 'Client')">I'm a Client</button>
+</div>
+
+<div id="Chef" class="tabcontent">
+  <h3>Welcome Chef! Sign Up here:</h3>
+  <div class="signup-container">
+  <div class="signup-form-box">
+    <form id="form" action="/signup" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" placeholder="Name">
+      <br>
+      <label for="surname">Surname</label>
+      <input type="text" name="surname" placeholder="Surname">
+      <br>
+      <label for="image">Profile Image</label>
+      <input type="text" name="image" placeholder="Image">
+      <br>
+      <label for="yearsOfExperience">Year of experience</label>
+      <input type="number" name="yearsOfExperience" min="0" max="50" placeholder="Min 0 and max 50 years">
+      <br>
+      <label for="languages">Languages that you speak</label>
+      <input type="text" name="languages" placeholder="Languages that you speak">
+      <br>
+      <label for="email">Email</label>
+      <input type="text" name="email" placeholder="hello@helloworld.com">
+      <br>
+      <label for="password">Password</label>
+      <input type="password" name="password" placeholder="Insert a password">
+      <br>
+      <button class="create-account-button" type="submit">Create Account</button>
+    </form>
+    {{#if error}}
+      <div class="error-message">{{ error }}</div>
+    {{/if}}
+  </div>
+</div>
+</div>
+
+<div id="Client" class="tabcontent">
+  <h3>Welcome! You can Sign Up here:</h3>
+  <div class="signup-form-box-client">
+    <form id="form" action="/signup-client" method="POST">
+      <label for="email">Email</label>
+      <input type="text" name="email" placeholder="hello@helloworld.com">
+      <br>
+      <label for="password">Password</label>
+      <input type="password" name="password" placeholder="Insert a password">
+      <br>
+      <button class="create-account-button" type="submit">Create Account</button>
+    </form>
+    {{#if error}}
+      <div class="error-message">{{ error }}</div>
+    {{/if}}
+  </div>
+</div>

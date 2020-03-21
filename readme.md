@@ -6,7 +6,7 @@
 Our app is about home cooks. On this page, the chef will publish his profile and his dishes and the user can register and buy the dishes that he wants with a minimum purchase. And then the chef will come to the user's house and cook all the dishes.
 
 ## User Stories
-***404* -** Make a “404” page for when I go to a page that doesn’t exist, so that I know it’s my fault. As a user I want to see a nice 404 page when I go to a page that doesn’t exist so that I know it was my fault
+***404* -** Make a “404” page for when I go to a page that doesn’t exist, so that I know it’s my fault.
 
 ***500* -** Make a “500” page for when the error isn’t my fault.
 
@@ -44,41 +44,66 @@ Geo Location: - add geolocation of the users to know the location of the house o
 Homepage: - …
 
 ## ROUTES:
-| Method | Endpoint | Description                  |
-| ------ | :------- | ---------------------------- |
-| GET    | /        | HomePage                     |
-| GET    | /login   | Login page                   |
-| POST   | /login   | Send user info and logged in |
-|        |          |                              |
-|        |          |                              |
-|        |          |                              |
-|        |          |                              |
-|        |          |                              |
-|        |          |                              |
+
+### MVP routes
+
+| Method | Endpoint          | Description                      |
+| ------ | :---------------- | -------------------------------- |
+| GET    | /                 | HomePage                         |
+| GET    | /login            | Login page                       |
+| POST   | /login            | Send user info and logged in     |
+| GET    | /singup           | Signup page                      |
+| POST   | /signup           | Register new normal user or chef |
+| GET    | /chefs            | Chefs page                       |
+| GET    | /chefs/:id        | Each chef page                   |
+| GET    | /chefs/:id/update |                                  |
+| POST   | /chefs/:id/update |                                  |
+
+### BACKLOG routes
+
+| Method | Endpoint          | Description                          |
+| ------ | :---------------- | ------------------------------------ |
+| GET    | /cart             | Cart page                            |
+| POST   | /cart             | Confirm menu and options             |
+| GET    | /payment          | Payment and delivery page            |
+| POST   | /payment          | Pay and ready                        |
+| GET    | /how-it-works     | Explanation on how the service works |
+| POST   | /menus/:id/delete |                                      |
+| GET    | /menus/:id/update |                                      |
+| POST   | /menus/:id/update |                                      |
+| GET    | /menus/create     |                                      |
+
+## 
 
 ## Models
-User model
 
-```
-{
-	username: String
-	password: String
-}
-```
+### MVP model
 
 Chef model
 
 ```
 {
-	username: String
+	mail: String
 	password: String
-	typeOfFood: Array
+	username: String
 	yearsOfExperience: String
 }
 ```
 
+### BACKLOG model
 
-Dish model
+User model
+
+```
+{
+	mail: String
+	password: String
+	username: String
+}
+```
+
+
+Menu model
 
 ```
 { 
@@ -96,7 +121,7 @@ Dish model
 [Trello](https://trello.com/b/ljDKitLE/traditional-delivery-food-app)
 
 ### Git
-The url to your repository and to your deployed project
+https://github.com/cgali/Home-Delivery-Chef/tree/dev
 
 
 ### Slides

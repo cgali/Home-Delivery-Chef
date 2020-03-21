@@ -1,10 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    {{{body}}}
-  </body>
+
+
+<head>
+  <title>{{title}}</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bellota&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Asap&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <nav class="navbar-container">
+    <ul class="left-navbar-menu-chef">
+      <a href="/"><img class="layout-image-logo" src="/images/kuisin-logo.png" alt="Logo"></a>
+      <li><a href="/menus">MENUS</a></li>
+      <li><a href="/chefs">CHEFS</a></li>
+      <li><a href="/how-it-works">HOW IT WORKS</a></li>
+    </ul>
+
+    <ul class="right-navbar-account">
+      <li class="current-email">
+        <p>{{ currentUser.email }}</p>
+      </li>
+      
+      {{#unless currentUser}}
+      <li><button class="layout-btn-login"><a href="/login">Log In</a></button></li>
+      <li><button class="layout-btn-signup"><a href="/signup">Sign Up</a></button></li>
+      {{/unless}}
+      
+      {{#if currentUser}}
+      <li><button class="layout-button-account"><a href="/chefs/{{ currentUser._id }}">My account</a></button></li>
+      <li><button class="layout-button-logout"><a href="/logout">Logout</a></button></li>
+      <li><button class="layout-button-cart"><a href="/cart"><img class="cart-image"
+                src="/images/cart.png" alt=""></a></button></li>
+      {{/if}}
+    </ul>
+  </nav>
+
+  {{{body}}}
+
+  <footer>
+    <div class="footer-container">
+      <ul>
+        <li><a href="/menus">Menu</a></li>
+        <li><a href="/chefs">Chefs</a></li>
+        <li><a href="/how-it-works">How it works</a></li>
+        <li><a href="/about-us">About us</a></li>
+      </ul>
+      <a href="/"><img class="layout-footer-image-logo" src="/images/kuisin-logo.png" alt="Logo"></a>
+      <p class="copyright">© 2020, Kuisin. All rights reserved.</p>
+    </div>
+
+  </footer>
+</body>
+<script src="/javascripts/tabs.js"></script>
 </html>
