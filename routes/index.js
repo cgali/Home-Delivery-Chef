@@ -8,15 +8,15 @@ const saltRounds = 10;
 
 // GET home page
 router.get('/', (req, res) => {
-	const { currentUser } = req.session;
-	res.render('index', { title: 'Home Delivery Chef', currentUser });
-	console.log(req.session.currentUser);
+	const { currentChef, currentClient } = req.session;
+	res.render('index', { title: 'Home Delivery Chef', currentChef, currentClient });
+	// console.log(req.session.currentUser);
 });
 
 // GET Login page
 router.get('/login', (req, res) => {
-	const { currentUser } = req.session;
-	res.render('auth/login', { currentUser });
+	const { currentChef, currentClient } = req.session;
+	res.render('auth/login', { currentChef, currentClient });
 });
 
 // POST Login page for Chefs
@@ -32,7 +32,7 @@ router.post('/login', (req, res, next) => {
 				} else {
 					console.log(bcrypt.compareSync(password, user.hashedPassword));
 					if (bcrypt.compareSync(password, user.hashedPassword)) {
-						req.session.currentUser = user;
+						req.session.currentChef = user;
 						res.redirect('/');
 					} else {
 						res.render('auth/login', { error: 'Incorrect Email or Password' });
@@ -58,7 +58,7 @@ router.post('/login-client', (req, res, next) => {
 				} else {
 					console.log(bcrypt.compareSync(password, user.hashedPassword));
 					if (bcrypt.compareSync(password, user.hashedPassword)) {
-						req.session.currentUser = user;
+						req.session.currentClient = user;
 						res.redirect('/menus');
 					} else {
 						res.render('auth/login', { error: 'Incorrect Email or Password' });
@@ -73,8 +73,8 @@ router.post('/login-client', (req, res, next) => {
 
 // GET Signup page
 router.get('/signup', (req, res) => {
-	const { currentUser } = req.session;
-	res.render('auth/signup', { currentUser });
+	const { currentChef, currentClient } = req.session;
+	res.render('auth/signup', { currentChef, currentClient });
 });
 
 // POST Signup page for Chefs
@@ -100,7 +100,7 @@ router.post('/signup', (req, res, next) => {
 					languages,
 				})
 					.then(userCreated => {
-						req.session.currentUser = userCreated;
+						req.session.currentChef = userCreated;
 						// habria que cambiar el redirect para que pase directamente a su perfil:
 						res.redirect('/');
 					})
@@ -134,7 +134,7 @@ router.post('/signup-client', (req, res, next) => {
 					hashedPassword,
 				})
 					.then(userCreated => {
-						req.session.currentUser = userCreated;
+						req.session.currentClient = userCreated;
 						res.redirect('/menus');
 					})
 					.catch(error => {
