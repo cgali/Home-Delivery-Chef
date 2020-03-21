@@ -153,7 +153,7 @@ const menus = [
         title: 'Seansation',
         starter: {
             name: 'Prawn bruschetta',
-            image: '../images/Menus/Marc Garcia/.jpg',
+            image: '../images/Menus/Marc/prawnbruschetta.jpg',
             description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry. Lorem Ipsum has been the industrystandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
             ingredients: ['change1, change2, change3, change4, change5, change6'],
         },
@@ -162,7 +162,6 @@ const menus = [
             image: '../images/Menus/Marc/arrozcalamares.jpg',
             description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry. Lorem Ipsum has been the industrystandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
             ingredients: ['change1, change2, change3, change4, change5, change6'],
-
         },
 
         dessert: {
