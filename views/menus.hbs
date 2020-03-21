@@ -2,8 +2,8 @@
     <h2>Menus</h2>
     <div class="menu-box">
         {{#each menus }}
-        <img src="{{ this.image }}" alt="picture of menu">
-        <p>{{ this.name }} {{ this.surname }}</p>
+        <img src="{{ this.starter.image }}" alt="picture of menu">
+        <p>{{ this.title }} {{ this.price }}</p>
         <button class="seeMore-menu-button"><a href="/menu/{{ this._id }}">See more</a></button>
         {{/each}}
     </div>
