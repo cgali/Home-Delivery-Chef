@@ -30,10 +30,11 @@ router.post('/login', (req, res, next) => {
 				if (!user) {
 					res.render('auth/login', { error: 'You are not registered, please Sign Up first' });
 				} else {
+					const userId = user._id;
 					console.log(bcrypt.compareSync(password, user.hashedPassword));
 					if (bcrypt.compareSync(password, user.hashedPassword)) {
 						req.session.currentChef = user;
-						res.redirect('/');
+						res.redirect('/chefs/' + userId);
 					} else {
 						res.render('auth/login', { error: 'Incorrect Email or Password' });
 					}
@@ -88,6 +89,7 @@ router.post('/signup', (req, res, next) => {
 			if (user) {
 				res.render('auth/signup', { error: 'This email is already registered in our database, please Log In' });
 			} else {
+				const userId = user._id;
 				const salt = bcrypt.genSaltSync(saltRounds);
 				const hashedPassword = bcrypt.hashSync(password, salt);
 				Chef.create({
@@ -101,8 +103,7 @@ router.post('/signup', (req, res, next) => {
 				})
 					.then(userCreated => {
 						req.session.currentChef = userCreated;
-						// habria que cambiar el redirect para que pase directamente a su perfil:
-						res.redirect('/');
+						res.redirect('/chefs/' + userId);
 					})
 					.catch(error => {
 						console.log('error', error);

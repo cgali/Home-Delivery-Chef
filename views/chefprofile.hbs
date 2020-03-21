@@ -7,7 +7,9 @@
 			<p class="chef-name-profile">{{ foundChef.name }} {{ foundChef.surname }}</p>
 			<p>Years of Experience: {{ foundChef.yearsOfExperience }}</p>
 			<p>Languages: {{ foundChef.languages }}</p>
+			{{#if currentChef }}
 			<button class="chef-profile-edit-button"><a href="/chefs/{{ foundChef._id }}/updatechef">Edit Profile</a></button>
+			{{/if }}
 		</div>
 	</div>
 	<div class="menus-box-profile">
