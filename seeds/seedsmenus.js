@@ -40,7 +40,7 @@ const menus = [
         },
         time: 120,
         chef_id: '5e6faddee4c68221b0d1955f',
-        cuisine: [Vegan],
+        cuisine: ['Vegan'],
         price: 60,
 
     },
@@ -68,7 +68,7 @@ const menus = [
         },
         time: 180,
         chef_id: '5e6faddee4c68221b0d1955f',
-        cuisine: [Mediterranean],
+        cuisine: ['Mediterranean'],
         price: 75,
     },
     {
@@ -94,7 +94,7 @@ const menus = [
         },
         time: 180,
         chef_id: '5e6faddee4c68221b0d1955a',
-        cuisine: [Mediterranean],
+        cuisine: ['Mediterranean'],
         price: 90,
     },
     {
