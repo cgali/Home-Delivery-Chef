@@ -4,8 +4,8 @@ const router = express.Router();
 
 // GET How it works page 
 router.get('/', (req, res) => {
-    const { currentUser } = req.session;
-	res.render('how-it-works', { currentUser });
+    const { currentChef, currentClient } = req.session;
+	res.render('how-it-works', { currentChef, currentClient });
 });
 
 module.exports = router;
