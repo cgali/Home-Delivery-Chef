@@ -5,14 +5,17 @@
 		</div>
 		<div class="chef-profile-info">
 			<p class="chef-name-profile">{{ foundChef.name }} {{ foundChef.surname }}</p>
-			<p>Years of Experience: {{ foundChef.yearsOfExperience }}</p>
-			<p>Languages: {{ foundChef.languages }}</p>
+			<p>{{ foundChef.yearsOfExperience }} Years of Experience Cooking</p>
+			<p>Spoken Languages:</p>
+			<ul>
+				{{#each foundChef.languages }}
+				<li>{{ this }}</li>
+				{{/each}}
+			</ul>
 			{{#if currentChef }}
 			<button class="chef-profile-edit-button"><a href="/chefs/{{ foundChef._id }}/updatechef">Edit Profile</a></button>
 			{{/if }}
 		</div>
 	</div>
-	<div class="menus-box-profile">
-		<p class="menus-title-profile">Menus ( 🔜 coming soon 🔜 )</p>
-	</div>
+		<h3 class="menus-title-profile">{{ foundChef.name }}'s Menus</h3>
 </div>
