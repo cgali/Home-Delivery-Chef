@@ -1,10 +1,13 @@
+<h2 class="menus-title">Menus</h2>
 <div class="menus-container">
+
     <h2>Menus</h2>
-    <div class="menu-box">
-        {{#each menus }}
-        <img src="{{ this.starter.image }}" alt="picture of menu">
-        <p>{{ this.title }} {{ this.price }}</p>
-        <button class="seeMore-menu-button"><a href="/menus/{{ this._id }}">See more</a></button>
-        {{/each}}
+    {{#each menus }}
+    <div class="menus-box">
+        <img class="menus-picture" src="{{ this.starter.image }}" alt="picture of menu">
+        <p class="menus-name">{{ this.title }} - {{ this.price }}€</p>
+        <hr class="separator-menus-profile">
+        <button class="see-more-menus-btn"><a href="/menus/{{ this._id }}">See more</a></button>
     </div>
+    {{/each}}
 </div>
