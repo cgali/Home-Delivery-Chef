@@ -9,11 +9,11 @@
 			<p>Spoken Languages:</p>
 			<ul>
 				{{#each foundChef.languages }}
-				<li>{{ this }}</li>
+					<li>{{ this }}</li>
 				{{/each}}
 			</ul>
 			{{#if currentChef }}
-			<button class="chef-profile-edit-button"><a href="/chefs/{{ foundChef._id }}/updatechef">Edit Profile</a></button>
+				<button class="chef-profile-edit-button"><a href="/chefs/{{ foundChef._id }}/updatechef">Edit Profile</a></button>
 			{{/if }}
 		</div>
 	</div>

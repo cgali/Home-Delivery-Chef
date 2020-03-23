@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
             console.log('listing menus');
             res.render('menus', { menus, currentChef, currentClient });
         })
-        .catch(err => console.log('Error while listing chefs: ', err));
+        .catch(err => console.log('Error while listing Menus: ', err));
 });
 
 // GET /menus/:id page.
@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
             console.log('Rendering ONE Menu');
             res.render('menu-info', { foundMenu, currentChef, currentClient });
         })
-        .catch(err => console.log('Error while listing chefs: ', err));
+        .catch(err => console.log('Error while listing Menus Information: ', err));
 });
 
 // // GET /menus/:id/update
