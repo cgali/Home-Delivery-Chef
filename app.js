@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const favicon = require('serve-favicon');
+const hbs = require('hbs');
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 
@@ -39,6 +40,13 @@ mongoose
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+hbs.registerHelper('if_equal', function(a, b, opts) {
+  if(a == b) 
+      return opts.fn(this);
+  else
+      return opts.inverse(this);
+});
 
 app.use(
 	session({

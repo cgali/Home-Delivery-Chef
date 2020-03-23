@@ -28,10 +28,11 @@ router.get('/:id', (req, res) => {
 
 // GET /chefs/:id/update
 router.get('/:id/updatechef', (req, res, next) => {
+  const { currentChef, currentClient } = req.session;
   const { id } = req.params;
   Chefs.findById(id)
   .then(chefInfo => {
-      res.render('updatechef', { chefInfo })
+      res.render('updatechef', { chefInfo, currentChef, currentClient })
   })
   .catch(next);    
 })
