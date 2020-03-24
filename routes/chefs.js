@@ -28,16 +28,17 @@ router.get('/:id', (req, res) => {
 
 // GET /chefs/:id/update
 router.get('/:id/updatechef', (req, res, next) => {
+  const { currentChef, currentClient } = req.session;
   const { id } = req.params;
   Chefs.findById(id)
   .then(chefInfo => {
-      res.render('updatechef', { chefInfo })
+      res.render('updatechef', { chefInfo, currentChef, currentClient })
   })
   .catch(next);    
 })
 
 // POST /chefs/:id/update
-router.post('/:id/', (req, res) => {
+router.post('/:id', (req, res) => {
   const { id } = req.params;
   console.log('THIS IS THE ID: ',id)
   const { name, surname, image, yearsOfExperience, languages, email } = req.body;
