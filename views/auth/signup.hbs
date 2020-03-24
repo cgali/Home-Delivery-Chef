@@ -1,8 +1,8 @@
 <h2>Join us!</h2>
 <p>But first choose your role:</p>
 <div class="tab">
-  <button class="tablinks" onclick="openSignup(event, 'Chef')">I'm a Chef</button>
-  <button class="tablinks" onclick="openSignup(event, 'Client')">I'm a Client</button>
+  <button class="tablinks" onclick="openLoginTwo(event, 'Chef')">I'm a Chef</button>
+  <button class="tablinks" onclick="openLogin(event, 'Client')">I'm a Client</button>
 </div>
 
 <div id="Chef" class="tabcontent">
@@ -33,7 +33,7 @@
   </div>
 </div>
 
-<div id="Client" class="tabcontent">
+<div id="Client" class="tabcontent-two">
   <h3>Welcome! You can Sign Up here:</h3>
   <div class="signup-form-box-client">
     <form id="form" action="/signup-client" method="POST">
