@@ -1,5 +1,6 @@
 const express = require('express');
 const Chefs   = require('../models/chef');
+const Menus = require('../models/menu');
 
 const router = express.Router();
 
@@ -15,11 +16,27 @@ router.get('/', (req, res) => {
 });
 
 // GET /chefs/:id page. 
+// router.get('/:id', (req, res) => {
+//   const { currentChef, currentClient } = req.session;
+//   const { id } = req.params;
+//   Chefs.findById(id)
+//   .then(foundChef => {
+//     console.log('Rendering ONE chef');
+//     // console.log(foundChef);
+//     // Promise all
+//     return Menus.find({ chef_id:id })
+//   }).then(menus => {
+//     console.log(menus);
+//     res.render('chefprofile', { menus, currentChef, currentClient });
+//   })
+//   .catch(err => console.log('Error while listing chefs: ', err));
+// });
+
 router.get('/:id', (req, res) => {
   const { currentChef, currentClient } = req.session;
   const { id } = req.params;
   Chefs.findById(id)
-  .then(foundChef => {
+   .then(foundChef => {
     console.log('Rendering ONE chef');
     res.render('chefprofile', { foundChef, currentChef, currentClient });
   })
