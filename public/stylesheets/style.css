@@ -544,3 +544,88 @@ body {
   width: 25%;
   margin-bottom: 10%;
 }
+
+/*****************
+**** ABOUT US ****
+*****************/
+
+.about-us-container > h2 {
+  text-align: center;
+  font-size: 4rem;
+  margin: 7rem 0 2rem 0;
+  font-family:'Baloo 2', sans-serif;
+}
+
+.about-us-presentation, .about-us-presentation-final {
+  font-size: 1.2rem;
+  margin: 0 2rem;
+  text-align: center;
+  font-family:'Asap', sans-serif;
+}
+
+.about-us-presentation-final {
+  margin: 1rem 0 5rem 0;
+  text-decoration: underline;
+}
+
+.about-us-profiles {
+  display: flex;
+  margin: 2rem 2rem;
+}
+
+.about-us-profile-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.about-us-profile-box-img {
+  width: 20rem;
+}
+
+.about-us-profile-box-name {
+  font-size: 2rem;
+  font-family:'Baloo 2', sans-serif;
+}
+
+.about-us-profile-box > p {
+  font-size: 1.1rem;
+  font-family:'Asap', sans-serif;
+}
+
+/*****************
+** HOW IT WORKS **
+*****************/
+
+.how-it-works-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.how-it-works-container > h2 {
+  text-align: center;
+  font-size: 3.5rem;
+  margin: 1rem 0 2rem 0;
+  font-family:'Baloo 2', sans-serif;
+}
+
+.how-it-works-info-box {
+  display: flex;
+  margin: 2rem 3rem;
+}
+
+.how-it-works-info-box > img {
+  width: 20rem;
+  margin: 0 1rem;
+}
+
+.how-it-works-info-box > p {
+  font-size: 1.1rem;
+  font-family:'Asap', sans-serif;
+}
+
+.how-it-works-info-box:last-child {
+  margin-bottom: 5rem;
+}
