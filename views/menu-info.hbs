@@ -40,7 +40,7 @@
 		<p class="menu-info-properties"><strong>Price</strong>{{ foundMenu.price }}€</p>
 		{{#if @root.currentClient }}
 			<button class="menu-info-buy-button"><a href="<!MISSING CART ROUTE>">Add to Cart</a></button>
-    {{/if}}
+    	{{/if}}
 
 		{{#if_equal foundMenu.chef_id currentChef._id}}
 			<button class="menu-info-edit-button"><a href="/menus/{{ foundMenu._id }}/update-menu">Edit Your Menu</a></button>

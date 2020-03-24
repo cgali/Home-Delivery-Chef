@@ -1,19 +1,42 @@
 <div class="update-menu-container">
   <div class="update-menu-box">
     <form action="/menus/{{ menuInfo._id }}" method="post">
-      <label for="title">Title</label>
+      <label class="update-menu-title" for="title"><h3>Title</h3></label>
       <input type="text" name="title" placeholder="Title" value="{{ menuInfo.title }}">
-      {{!-- <label for="surname">Surname</label>
-      <input type="text" name="surname" placeholder="Surname" value="{{ chefInfo.surname }}">
-      <label for="image">Image </label>
-      <input type="text" name="image" placeholder="Image" value="{{ chefInfo.image }}">
-      <label for="yearsOfExperience">Year of experience</label>
-      <input type="number" name="yearsOfExperience" min="0" max="50" placeholder="Min 0 and max 50 years" value="{{ chefInfo.yearsOfExperience }}">
-      <label for="languages">Languages</label>
-      <input type="text" name="languages" placeholder="Languages that you speak" value="{{ chefInfo.languajes }}">
-      <label for="email">Email</label>
-      <input type="text" name="email" placeholder="hello@helloworld.com" value="{{ chefInfo.email }}">
-      <button class="update-account-button" type="submit">Update</button> --}}
+      <h3>Starter</h3>
+      <label for="starterName">Name of dish</label>
+      <input type="text" name="starter" placeholder="Name" value="{{ menuInfo.starter.name }}">
+      <label for="starterImage">Image </label>
+      <input type="text" name="image" placeholder="Image" value="{{ menuInfo.starter.image }}">
+      <label for="starterDescription">Description</label>
+      <input type="text" name="description" placeholder="Description" value="{{ menuInfo.starter.description }}">
+      <label for="starterIngredients">Ingredients</label>
+      <input type="text" name="ingredients" placeholder="Ingredients" value="{{ menuInfo.starter.ingredients }}">
+      <h3>Main Course</h3>
+      <label for="mainCourseName">Name of dish</label>
+      <input type="text" name="mainCourse" placeholder="Name" value="{{ menuInfo.mainCourse.name }}">
+      <label for="mainCourseImage">Image </label>
+      <input type="text" name="image" placeholder="Image" value="{{ menuInfo.mainCourse.image }}">
+      <label for="mainCourseDescription">Description</label>
+      <input type="text" name="description" placeholder="Description" value="{{ menuInfo.mainCourse.description }}">
+      <label for="mainCourseIngredients">Ingredients</label>
+      <input type="text" name="ingredients" placeholder="Ingredients" value="{{ menuInfo.mainCourse.ingredients }}">
+      <h3>Desserts</h3>
+      <label for="desserts-name">Name of dish</label>
+      <input type="text" name="starter" placeholder="Name" value="{{ menuInfo.dessert.name }}">
+      <label for="dessertsImage">Image </label>
+      <input type="text" name="image" placeholder="Image" value="{{ menuInfo.dessert.image }}">
+      <label for="dessertsDescription">Description</label>
+      <input type="text" name="description" placeholder="Description" value="{{ menuInfo.dessert.description }}">
+      <label for="dessertsIngredients">Ingredients</label>
+      <input type="text" name="ingredients" placeholder="Ingredients" value="{{ menuInfo.dessert.ingredients }}">
+      <label for="time">Time</label>
+      <input type="number" name="time" min="0" max="1500" placeholder="Time" value="{{ menuInfo.time }}">
+      <label for="cuisine">Cuisine</label>
+      <input type="text" name="cuisine" placeholder="Type" value="{{ menuInfo.cuisine }}">
+      <label for="price">Price</label>
+      <input type="number" name="price" min="0" max="1000" placeholder="Price" value="{{ menuInfo.time }}">
+      <button class="update-account-button" type="submit">Update</button>
     </form>
   </div>
 </div>

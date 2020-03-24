@@ -40,18 +40,27 @@ router.get('/:id/update-menu', (req, res, next) => {
 router.post('/:id', (req, res) => {
     const { id } = req.params;
     console.log('THIS IS THE ID: ', id)
-    const { name, surname, image, yearsOfExperience, languages, email } = req.body;
+    const { starterName, starterImage, starterDescription, starterIngredients, mainCourseName, mainCourseImage, mainCourseDescription,
+        mainCourseIngredients, dessertsImage, dessertsDescription, dessertsIngredients, time, cuisine, price } = req.body;
     console.log(req.query)
     Menus.findByIdAndUpdate(id, {
-        name,
-        surname,
-        image,
-        yearsOfExperience,
-        languages,
-        email,
+        starterName,
+        starterImage,
+        starterDescription,
+        starterIngredients,
+        mainCourseName,
+        mainCourseImage,
+        mainCourseDescription,
+        mainCourseIngredients,
+        dessertsImage,
+        dessertsDescription,
+        dessertsIngredients,
+        time,
+        cuisine,
+        price
     })
         .then(() => {
-            res.redirect(`/chefs/${id}`);
+            res.redirect(`/menus/${id}`);
         })
 })
 
