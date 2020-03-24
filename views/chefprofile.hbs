@@ -22,9 +22,13 @@
 </div>
 	<h3 class="menus-title-profile">{{ foundChef.name }}'s Menus</h3>
 
-	{{!-- {{#if_equal foundChef._id }}
+	<h3>{{foundChef._id}}</h3>
+	{{!-- <h3>{{menus.chef_id}}</h3> --}}
+	<h3>{{menus.title}}</h3>
 
-	{{/if_equal}} --}}
+	{{#if_equal foundChef._id menus.chef_id}}
+	<h3> Pruebaaa </h3>
+	{{/if_equal}}
 
 </div>
 

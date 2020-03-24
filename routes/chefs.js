@@ -5,32 +5,33 @@ const Menus = require('../models/menu');
 const router = express.Router();
 
 // GET /chefs page.
-router.get('/', (req, res) => {
-  const { currentChef, currentClient } = req.session;
-  Chefs.find()
-  .then(chefs => {
-    console.log('listing chefs');
-    res.render('chefs', { chefs, currentChef, currentClient });
-  })
-  .catch(err => console.log('Error while listing chefs: ', err));
-});
-
-// GET /chefs/:id page. 
-// router.get('/:id', (req, res) => {
+// router.get('/', (req, res) => {
 //   const { currentChef, currentClient } = req.session;
-//   const { id } = req.params;
-//   Chefs.findById(id)
-//   .then(foundChef => {
-//     console.log('Rendering ONE chef');
-//     // console.log(foundChef);
-//     // Promise all
-//     return Menus.find({ chef_id:id })
-//   }).then(menus => {
-//     console.log(menus);
-//     res.render('chefprofile', { menus, currentChef, currentClient });
+//   Chefs.find()
+//   .then(chefs => {
+//     console.log('listing chefs');
+//     res.render('chefs', { chefs, currentChef, currentClient });
 //   })
 //   .catch(err => console.log('Error while listing chefs: ', err));
 // });
+
+// GET /chefs/:id page. 
+router.get('/:id', (req, res) => {
+  const { currentChef, currentClient } = req.session;
+  const { id } = req.params;
+  let foundChef;
+  Chefs.findById(id)
+  .then(chef => {
+    console.log('Rendering ONE chef');
+    foundChef = chef;
+    console.log(chef);
+    return Menus.find({ chef_id:id })
+  }).then(menus => {
+    console.log(menus);
+    res.render('chefprofile', { foundChef, menus, currentChef, currentClient });
+  })
+  .catch(err => console.log('Error while listing chefs: ', err));
+});
 
 router.get('/:id', (req, res) => {
   const { currentChef, currentClient } = req.session;
