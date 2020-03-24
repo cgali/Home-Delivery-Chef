@@ -38,7 +38,7 @@ router.get('/:id/updatechef', (req, res, next) => {
 })
 
 // POST /chefs/:id/update
-router.post('/:id/', (req, res) => {
+router.post('/:id', (req, res) => {
   const { id } = req.params;
   console.log('THIS IS THE ID: ',id)
   const { name, surname, image, yearsOfExperience, languages, email } = req.body;

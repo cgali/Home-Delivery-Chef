@@ -38,10 +38,17 @@
 		<p class="menu-info-properties"><strong>Chef</strong>{{ foundMenu.chef_id.name }}</p>
 		<p class="menu-info-properties"><strong>Cuisine</strong>{{ foundMenu.cuisine }}</p>
 		<p class="menu-info-properties"><strong>Price</strong>{{ foundMenu.price }}</p>
+<<<<<<< HEAD
 		{{#if @root.currentClient }}
 			<button class="menu-info-buy-button"><a href="<!MISSING CART ROUTE>">Add to Cart</a></button>
     {{/if}}
 
+=======
+		<button class="menu-info-buy-button"><a href="<!MISSING CART ROUTE>">Add to cart</a></button>
+		{{!-- {{#if_equal foundMenu._id currentChef._id}} --}}
+			<button class="menu-info-edit-button"><a href="/menus/{{ foundMenu._id }}/update-menu">Edit menu</a></button>
+		{{!-- {{/if_equal}} --}}
+>>>>>>> 3aa470cf57a320dd043bf42e8e4b4bb1600aee9b
 	</div>
 
 </div>
