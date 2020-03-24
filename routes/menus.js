@@ -26,33 +26,33 @@ router.get('/:id', (req, res) => {
         .catch(err => console.log('Error while listing Menus Information: ', err));
 });
 
-// // GET /menus/:id/update
-// router.get('/:id/updatechef', (req, res, next) => {
-//     const { id } = req.params;
-//     Chefs.findById(id)
-//         .then(chefInfo => {
-//             res.render('updatechef', { chefInfo })
-//         })
-//         .catch(next);
-// })
+// GET /menus/:id/update
+router.get('/:id/update-menu', (req, res, next) => {
+    const { id } = req.params;
+    Menus.findById(id)
+        .then(menuInfo => {
+            res.render('update-menu', { menuInfo })
+        })
+        .catch(next);
+})
 
-// // POST /chefs/:id/update
-// router.post('/:id/', (req, res) => {
-//     const { id } = req.params;
-//     console.log('THIS IS THE ID: ', id)
-//     const { name, surname, image, yearsOfExperience, languages, email } = req.body;
-//     console.log(req.query)
-//     Chefs.findByIdAndUpdate(id, {
-//         name,
-//         surname,
-//         image,
-//         yearsOfExperience,
-//         languages,
-//         email,
-//     })
-//         .then(() => {
-//             res.redirect(`/chefs/${id}`);
-//         })
-// })
+// POST /menu/:id/update
+router.post('/:id', (req, res) => {
+    const { id } = req.params;
+    console.log('THIS IS THE ID: ', id)
+    const { name, surname, image, yearsOfExperience, languages, email } = req.body;
+    console.log(req.query)
+    Menus.findByIdAndUpdate(id, {
+        name,
+        surname,
+        image,
+        yearsOfExperience,
+        languages,
+        email,
+    })
+        .then(() => {
+            res.redirect(`/chefs/${id}`);
+        })
+})
 
 module.exports = router;

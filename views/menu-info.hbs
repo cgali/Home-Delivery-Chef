@@ -39,6 +39,9 @@
 		<p class="menu-info-properties"><strong>Cuisine</strong>{{ foundMenu.cuisine }}</p>
 		<p class="menu-info-properties"><strong>Price</strong>{{ foundMenu.price }}</p>
 		<button class="menu-info-buy-button"><a href="<!MISSING CART ROUTE>">Add to cart</a></button>
+		{{!-- {{#if_equal foundMenu._id currentChef._id}} --}}
+			<button class="menu-info-edit-button"><a href="/menus/{{ foundMenu._id }}/update-menu">Edit menu</a></button>
+		{{!-- {{/if_equal}} --}}
 	</div>
 
 </div>
