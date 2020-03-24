@@ -89,7 +89,6 @@ router.post('/signup', (req, res, next) => {
 			if (user) {
 				res.render('auth/signup', { error: 'This email is already registered in our database, please Log In' });
 			} else {
-				const userId = user._id;
 				const salt = bcrypt.genSaltSync(saltRounds);
 				const hashedPassword = bcrypt.hashSync(password, salt);
 				Chef.create({
@@ -102,6 +101,7 @@ router.post('/signup', (req, res, next) => {
 					languages,
 				})
 					.then(userCreated => {
+						const userId = userCreated._id;
 						req.session.currentChef = userCreated;
 						res.redirect('/chefs/' + userId);
 					})
