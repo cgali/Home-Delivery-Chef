@@ -22,13 +22,21 @@
 </div>
 	<h3 class="menus-title-profile">{{ foundChef.name }}'s Menus</h3>
 
-	<h3>{{foundChef._id}}</h3>
-	{{!-- <h3>{{menus.chef_id}}</h3> --}}
-	<h3>{{menus.title}}</h3>
+<div class="menus-container">
+	{{#each menus }}
+		<div class="menus-box">
+			<img class="menus-picture" src="{{ this.starter.image }}" alt="picture of menu">
+			<p class="menus-name">{{ this.title }}  - {{ this.price }}€</p>
+			<hr class="separator-menus-profile">
+			
+			{{#if @root.currentClient }}
+				<button class="see-more-menus-btn"><a href="">Add to Cart +</a>
+			{{/if}}
 
-	{{#if_equal foundChef._id menus.chef_id}}
-	<h3> Pruebaaa </h3>
-	{{/if_equal}}
+			<button class="see-more-menus-btn"><a href="/menus/{{ this._id }}">See more</a></button>
+		</div>
+	{{/each}}
+</div>
 
 </div>
 
