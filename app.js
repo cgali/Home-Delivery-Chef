@@ -76,7 +76,7 @@ app.use('/chefs', chefs);
 app.use('/menus', menus);
 app.use('/how-it-works', howItWorks);
 app.use('/about-us', aboutUs);
-app.use('/cart', cart)
+app.use('/cart', cart);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

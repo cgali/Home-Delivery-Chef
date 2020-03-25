@@ -1,42 +1,40 @@
 <div class="chef-profile-container">
-<div class="chef-profile-box">
-	<div>
-		<img class="chef-profile-image" src="{{ foundChef.image }}" alt="Profile image">
-	</div>
-	<div class="chef-profile-info">
-		<p class="chef-name-profile">{{ foundChef.name }} {{ foundChef.surname }}</p>
-		<p>{{ foundChef.yearsOfExperience }} Years of Experience Cooking</p>
-		<p>Spoken Languages:</p>
-		<ul>
-			{{#each foundChef.languages }}
-				<li>{{ this }}</li>
-			{{/each}}
-		</ul>
-		{{#if_equal foundChef._id currentChef._id}}
-			<button class="chef-profile-edit-button"><a href="/chefs/{{ foundChef._id }}/updatechef">Edit Your Profile</a></button>
-		{{/if_equal}}
-		{{#if_equal foundChef._id currentChef._id}}
-			<button class="chef-profile-edit-button"><a href="<!MISSING ROUTE>">Add a New Menu</a></button>
-		{{/if_equal}}
-	</div>
-</div>
-	<h3 class="menus-title-profile">{{ foundChef.name }}'s Menus</h3>
-
-<div class="menus-container">
-	{{#each menus }}
-		<div class="menus-box">
-			<img class="menus-picture" src="{{ this.starter.image }}" alt="picture of menu">
-			<p class="menus-name">{{ this.title }}  - {{ this.price }}€</p>
-			<hr class="separator-menus-profile">
-			
-			{{#if @root.currentClient }}
-				<button class="see-more-menus-btn"><a href="">Add to Cart +</a>
-			{{/if}}
-
-			<button class="see-more-menus-btn"><a href="/menus/{{ this._id }}">See more</a></button>
+	<div class="chef-profile-box">
+		<div>
+			<img class="chef-profile-image" src="{{ foundChef.image }}" alt="Profile image">
 		</div>
-	{{/each}}
-</div>
+		<div class="chef-profile-info">
+			<p class="chef-name-profile">{{ foundChef.name }} {{ foundChef.surname }}</p>
+			<p>{{ foundChef.yearsOfExperience }} Years of Experience Cooking</p>
+			<p>Spoken Languages:</p>
+			<ul>
+				{{#each foundChef.languages }}
+					<li>{{ this }}</li>
+				{{/each}}
+			</ul>
+			{{#if_equal foundChef._id currentChef._id}}
+				<button class="chef-profile-edit-button"><a href="/chefs/{{ foundChef._id }}/updatechef">Edit Your Profile</a></button>
+			{{/if_equal}}
+			{{#if_equal foundChef._id currentChef._id}}
+				<button class="chef-profile-edit-button"><a href="<!MISSING ROUTE>">Add a New Menu</a></button>
+			{{/if_equal}}
+		</div>
+	</div>
+	<h3 class="menus-title-profile">{{ foundChef.name }}'s Menus</h3>
+	<div class="menus-container">
+		{{#each menus }}
+			<div class="menus-box">
+				<img class="menus-picture" src="{{ this.starter.image }}" alt="picture of menu">
+				<p class="menus-name">{{ this.title }}  - {{ this.price }}€</p>
+				<hr class="separator-menus-profile">
+				
+				{{#if @root.currentClient }}
+					<button class="see-more-menus-btn"><a href="">Add to Cart +</a>
+				{{/if}}
 
+				<button class="see-more-menus-btn"><a href="/menus/{{ this._id }}">See more</a></button>
+			</div>
+		{{/each}}
+	</div>
 </div>
 
