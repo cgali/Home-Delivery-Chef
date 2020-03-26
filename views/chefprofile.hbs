@@ -16,7 +16,8 @@
 			<button class="chef-profile-edit-button"><a href="/chefs/{{ foundChef._id }}/updatechef">Edit Your Profile</a></button>
 		{{/if_equal}}
 		{{#if_equal foundChef._id currentChef._id}}
-			<button class="chef-profile-create-menu-button"><a href="/menus/add">Create new menu</a></button>	{{/if_equal}}
+			<button class="chef-profile-create-menu-button"><a href="/menus/add">Create new menu</a></button>
+		{{/if_equal}}
 		</div>
 	</div>
 	<h3 class="menus-title-profile">{{ foundChef.name }}'s Menus</h3>
