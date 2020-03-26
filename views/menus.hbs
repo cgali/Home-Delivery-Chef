@@ -7,16 +7,11 @@
 				<p class="menus-name">{{ this.title }}  - {{ this.price }}€</p>
 				<hr class="separator-menus-profile">
 				
-				{{#if @root.currentChef }}
-				<button class="see-more-menus-btn"><a href="/menus/{{ this._id }}">See more</a></button>
-				{{/if}}
-        {{#if @root.currentClient}}
-				<button class="see-more-menus-btn"><a href="">Add to Cart</a>
+        {{#if @root.currentClient }}
+					<button class="see-more-menus-btn"><a href="">Add to Cart +</a>
         {{/if}}
 
-				{{!-- <button class="see-more-menus-btn"><a href="">See more</a></button> --}}
-
+				<button class="see-more-menus-btn"><a href="/menus/{{ this._id }}">See more</a></button>
 			</div>
 		{{/each}}
-
 </div>

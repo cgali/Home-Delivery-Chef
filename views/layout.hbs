@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bellota&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Asap&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -23,25 +22,23 @@
     <ul class="right-navbar-account">
       <li class="current-email">
         {{#if currentChef }}
-        <p>{{ currentChef.email }}</p>
+        	<p>{{ currentChef.email }}</p>
         {{else if currentClient}}
-        <p>{{ currentClient.email }}</p>
+        	<p>{{ currentClient.email }}</p>
         {{else}}
         {{/if}}
       </li>
       
       {{#if currentChef }}
-      <li><button class="layout-button-account"><a href="/chefs/{{ currentUser._id }}">My account</a></button></li>
-      <li><button class="layout-button-logout"><a href="/logout">Logout</a></button></li>
+				<li><button class="layout-button-account"><a href="/chefs/{{ currentChef._id }}">My account</a></button></li>
+				<li><button class="layout-button-logout"><a href="/logout">Logout</a></button></li>
       {{else if currentClient}}
-      <li><button class="layout-button-cart"><a href="/cart"><img class="cart-image"
-                src="/images/cart.png" alt=""></a></button></li>
-      <li><button class="layout-button-logout"><a href="/logout">Logout</a></button></li>
+				<li><button class="layout-button-cart"><a href="/cart"><img class="cart-image" src="/images/cart.png" alt="cart"></a></button></li>
+				<li><button class="layout-button-logout"><a href="/logout">Logout</a></button></li>
       {{else}}
-      <li><button class="layout-btn-login"><a href="/login">Log In</a></button></li>
-      <li><button class="layout-btn-signup"><a href="/signup">Sign Up</a></button></li>
+				<li><button class="layout-btn-login"><a href="/login">Log In</a></button></li>
+				<li><button class="layout-btn-signup"><a href="/signup">Sign Up</a></button></li>
       {{/if}}
-
     </ul>
   </nav>
 
@@ -58,7 +55,6 @@
       <a href="/"><img class="layout-footer-image-logo" src="/images/kuisin-logo.png" alt="Logo"></a>
       <p class="copyright">© 2020, Kuisin. All rights reserved.</p>
     </div>
-
   </footer>
 </body>
 <script src="/javascripts/tabs.js"></script>

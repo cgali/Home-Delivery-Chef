@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const favicon = require('serve-favicon');
+const hbs = require('hbs');
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 
@@ -40,6 +41,13 @@ mongoose
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+hbs.registerHelper('if_equal', function(a, b, opts) {
+  if(a == b) 
+      return opts.fn(this);
+  else
+      return opts.inverse(this);
+});
+
 app.use(
 	session({
 		store: new MongoStore({
@@ -68,7 +76,7 @@ app.use('/chefs', chefs);
 app.use('/menus', menus);
 app.use('/how-it-works', howItWorks);
 app.use('/about-us', aboutUs);
-app.use('/cart', cart)
+app.use('/cart', cart);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

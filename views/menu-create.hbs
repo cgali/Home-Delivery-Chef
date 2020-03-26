@@ -1,0 +1,42 @@
+<div class="create-menu-container">
+  <div class="create-menu-box">
+    <form action="/menus" method="post">
+      <label class="create-menu-title" for="title"><h3>Title</h3></label>
+      <input type="text" name="title" placeholder="Title" value="{{ menuInfo.title }}">
+      <h3>Starter</h3>
+      <label for="starterName">Name of dish</label>
+      <input type="text" name="starterName" placeholder="Name" value="{{ menuInfo.starter.name }}">
+      <label for="starterImage">Image </label>
+      <input type="text" name="image" placeholder="Image" value="{{ menuInfo.starter.image }}">
+      <label for="starterDescription">Description</label>
+      <input type="text" name="description" placeholder="Description" value="{{ menuInfo.starter.description }}">
+      <label for="starterIngredients">Ingredients</label>
+      <input type="text" name="ingredients" placeholder="Ingredients" value="{{ menuInfo.starter.ingredients }}">
+      <h3>Main Course</h3>
+      <label for="mainCourseName">Name of dish</label>
+      <input type="text" name="mainCourse" placeholder="Name" value="{{ menuInfo.mainCourse.name }}">
+      <label for="mainCourseImage">Image </label>
+      <input type="text" name="image" placeholder="Image" value="{{ menuInfo.mainCourse.image }}">
+      <label for="mainCourseDescription">Description</label>
+      <input type="text" name="description" placeholder="Description" value="{{ menuInfo.mainCourse.description }}">
+      <label for="mainCourseIngredients">Ingredients</label>
+      <input type="text" name="ingredients" placeholder="Ingredients" value="{{ menuInfo.mainCourse.ingredients }}">
+      <h3>Desserts</h3>
+      <label for="desserts-name">Name of dish</label>
+      <input type="text" name="starter" placeholder="Name" value="{{ menuInfo.dessert.name }}">
+      <label for="dessertsImage">Image </label>
+      <input type="text" name="image" placeholder="Image" value="{{ menuInfo.dessert.image }}">
+      <label for="dessertsDescription">Description</label>
+      <input type="text" name="description" placeholder="Description" value="{{ menuInfo.dessert.description }}">
+      <label for="dessertsIngredients">Ingredients</label>
+      <input type="text" name="ingredients" placeholder="Ingredients" value="{{ menuInfo.dessert.ingredients }}">
+      <label for="time">Time</label>
+      <input type="number" name="time" min="0" max="1500" placeholder="Time" value="{{ menuInfo.time }}">
+      <label for="cuisine">Cuisine</label>
+      <input type="text" name="cuisine" placeholder="Type" value="{{ menuInfo.cuisine }}">
+      <label for="price">Price</label>
+      <input type="number" name="price" min="0" max="1000" placeholder="Price" value="{{ menuInfo.time }}">
+      <button class="create-menu-button" type="submit">Create</button>
+    </form>
+  </div>
+</div>

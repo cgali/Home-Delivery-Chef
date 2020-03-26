@@ -37,8 +37,15 @@
 		<p class="menu-info-properties"><strong>Time</strong>{{ foundMenu.time }}</p>
 		<p class="menu-info-properties"><strong>Chef</strong>{{ foundMenu.chef_id.name }}</p>
 		<p class="menu-info-properties"><strong>Cuisine</strong>{{ foundMenu.cuisine }}</p>
-		<p class="menu-info-properties"><strong>Price</strong>{{ foundMenu.price }}</p>
-		<button class="menu-info-buy-button"><a href="<!MISSING CART ROUTE>">Add to cart</a></button>
+		<p class="menu-info-properties"><strong>Price</strong>{{ foundMenu.price }}€</p>
+		{{#if @root.currentClient }}
+			<button class="menu-info-buy-button"><a href="<!MISSING CART ROUTE>">Add to Cart</a></button>
+    {{/if}}
+
+		{{#if_equal foundMenu.chef_id currentChef._id}}
+			<button class="menu-info-edit-button"><a href="/menus/{{ foundMenu._id }}/update-menu">Edit Your Menu</a></button>
+			<button class="menu-info-edit-button"><a href="<!MISSING DELETE ROUTE>">Delete Your Menu</a></button>
+		{{/if_equal}}
 	</div>
 
 </div>
