@@ -5,15 +5,15 @@ const Menus = require('../models/menu');
 const router = express.Router();
 
 // GET /chefs page.
-// router.get('/', (req, res) => {
-//   const { currentChef, currentClient } = req.session;
-//   Chefs.find()
-//   .then(chefs => {
-//     console.log('listing chefs');
-//     res.render('chefs', { chefs, currentChef, currentClient });
-//   })
-//   .catch(err => console.log('Error while listing chefs: ', err));
-// });
+router.get('/', (req, res) => {
+  const { currentChef, currentClient } = req.session;
+  Chefs.find()
+  .then(chefs => {
+    console.log('listing chefs');
+    res.render('chefs', { chefs, currentChef, currentClient });
+  })
+  .catch(err => console.log('Error while listing chefs: ', err));
+});
 
 // GET /chefs/:id page. 
 router.get('/:id', (req, res) => {

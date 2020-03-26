@@ -40,10 +40,11 @@ router.get('/:id/update-menu', (req, res, next) => {
 router.post('/:id', (req, res) => {
     const { id } = req.params;
     console.log('THIS IS THE ID: ', id)
-    const { starterName, starterImage, starterDescription, starterIngredients, mainCourseName, mainCourseImage, mainCourseDescription,
+    const { title, starterName, starterImage, starterDescription, starterIngredients, mainCourseName, mainCourseImage, mainCourseDescription,
         mainCourseIngredients, dessertsImage, dessertsDescription, dessertsIngredients, time, cuisine, price } = req.body;
     console.log(req.query)
     Menus.findByIdAndUpdate(id, {
+        title,
         starterName,
         starterImage,
         starterDescription,
@@ -62,6 +63,38 @@ router.post('/:id', (req, res) => {
         .then(() => {
             res.redirect(`/menus/${id}`);
         })
+})
+
+// GET menus form page "add"
+router.get('/add', (req, res) => { 
+    res.render('menu-create')
+})
+
+// POST create new menu
+router.post('/', (req, res, next) => {
+    const { title, starterName, starterImage, starterDescription, starterIngredients, mainCourseName, mainCourseImage, mainCourseDescription,
+        mainCourseIngredients, dessertsImage, dessertsDescription, dessertsIngredients, time, cuisine, price } = req.body;
+    Menus.create({
+        title,
+        starterName,
+        starterImage,
+        starterDescription,
+        starterIngredients,
+        mainCourseName,
+        mainCourseImage,
+        mainCourseDescription,
+        mainCourseIngredients,
+        dessertsImage,
+        dessertsDescription,
+        dessertsIngredients,
+        time,
+        cuisine,
+        price
+    })
+    .then(() => {
+        res.redirect('/menus');
+    })
+    .catch(next);
 })
 
 module.exports = router;

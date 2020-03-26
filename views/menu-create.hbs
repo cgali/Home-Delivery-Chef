@@ -1,7 +1,7 @@
-<div class="update-menu-container">
-  <div class="update-menu-box">
-    <form action="/menus/{{ menuInfo._id }}" method="post">
-      <label class="update-menu-title" for="title"><h3>Title</h3></label>
+<div class="create-menu-container">
+  <div class="create-menu-box">
+    <form action="/menus" method="post">
+      <label class="create-menu-title" for="title"><h3>Title</h3></label>
       <input type="text" name="title" placeholder="Title" value="{{ menuInfo.title }}">
       <h3>Starter</h3>
       <label for="starterName">Name of dish</label>
@@ -36,7 +36,7 @@
       <input type="text" name="cuisine" placeholder="Type" value="{{ menuInfo.cuisine }}">
       <label for="price">Price</label>
       <input type="number" name="price" min="0" max="1000" placeholder="Price" value="{{ menuInfo.time }}">
-      <button class="update-menu-button" type="submit">Update</button>
+      <button class="create-menu-button" type="submit">Create</button>
     </form>
   </div>
 </div>
