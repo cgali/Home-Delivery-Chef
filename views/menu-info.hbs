@@ -5,9 +5,9 @@
 			<img class="menu-info-image" src="{{ foundMenu.starter.image }}" alt="Menu image">
 		</div>
 		<div class="menu-info-info">
-			<p class="menu-info-name">{{ foundMenu.starter.name }}</p>
-			<p class="menu-info-properties"><strong>Description</strong>{{ foundMenu.starter.ingredients }}</p>
-			<p class="menu-info-properties"><strong>Ingredients</strong>{{ foundMenu.starter.description }}</p>
+			<h3 class="menu-info-name">{{ foundMenu.starter.name }}</h3>
+			<p class="menu-info-dish-properties"><strong>Description: </strong>{{ foundMenu.starter.description }}</p>
+			<p class="menu-info-dish-properties"><strong>Ingredients: </strong>{{ foundMenu.starter.ingredients }}.</p>
 		</div>
 	</div>
 
@@ -16,9 +16,9 @@
 			<img class="menu-info-image" src="{{ foundMenu.mainCourse.image }}" alt="Menu image">
 		</div>
 		<div class="menu-info-info">
-			<p class="menu-info-name">{{ foundMenu.mainCourse.name }}</p>
-			<p class="menu-info-properties"><strong>Description</strong>{{ foundMenu.mainCourse.ingredients }}</p>
-			<p class="menu-info-properties"><strong>Ingredients</strong>{{ foundMenu.mainCourse.description }}</p>
+			<h3 class="menu-info-name">{{ foundMenu.mainCourse.name }}</h3>
+			<p class="menu-info-dish-properties"><strong>Description: </strong>{{ foundMenu.mainCourse.description }}</p>
+			<p class="menu-info-dish-properties"><strong>Ingredients: </strong>{{ foundMenu.mainCourse.ingredients }}.</p>
 		</div>
 	</div>
 
@@ -27,17 +27,17 @@
 			<img class="menu-info-image" src="{{ foundMenu.dessert.image }}" alt="Menu image">
 		</div>
 		<div class="menu-info-info">
-			<p class="menu-info-name">{{ foundMenu.dessert.name }}</p>
-			<p class="menu-info-properties"><strong>Description</strong>{{ foundMenu.dessert.ingredients }}</p>
-			<p class="menu-info-properties"><strong>Ingredients</strong>{{ foundMenu.dessert.description }}</p>
+			<h3 class="menu-info-name">{{ foundMenu.dessert.name }}</h3>
+			<p class="menu-info-dish-properties"><strong>Description: </strong>{{ foundMenu.dessert.description }}</p>
+			<p class="menu-info-dish-properties"><strong>Ingredients: </strong>{{ foundMenu.dessert.ingredients }}.</p>
 		</div>
 	</div>
 
-	<div>
-		<p class="menu-info-properties"><strong>Time</strong>{{ foundMenu.time }}</p>
-		<p class="menu-info-properties"><strong>Chef</strong>{{ foundMenu.chef_id.name }}</p>
-		<p class="menu-info-properties"><strong>Cuisine</strong>{{ foundMenu.cuisine }}</p>
-		<p class="menu-info-properties"><strong>Price</strong>{{ foundMenu.price }}€</p>
+	<div class="menu-info-general">
+		<p class="menu-info-properties"><strong>Time: </strong>{{ foundMenu.time }}min</p>
+		<p class="menu-info-properties"><strong>Chef: </strong>{{ foundMenu.chef_id.name }}</p>
+		<p class="menu-info-properties"><strong>Cuisine: </strong>{{ foundMenu.cuisine }}</p>
+		<p class="menu-info-properties"><strong>Price: </strong>{{ foundMenu.price }}€</p>
 		{{#if @root.currentClient }}
 			<button class="menu-info-buy-button"><a href="<!MISSING CART ROUTE>">Add to Cart</a></button>
     {{/if}}
