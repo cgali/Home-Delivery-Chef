@@ -101,8 +101,8 @@ router.post('/signup', (req, res, next) => {
 					languages,
 				})
 					.then(userCreated => {
-						const userId = userCreated._id;
 						req.session.currentChef = userCreated;
+						const userId = userCreated._id;
 						res.redirect('/chefs/' + userId);
 					})
 					.catch(error => {
