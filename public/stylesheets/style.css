@@ -644,3 +644,61 @@ body {
 .how-it-works-info-box:last-child {
   margin-bottom: 5rem;
 }
+
+/****************
+*** MENU INFO ***
+****************/
+
+.menu-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-info-title {
+  text-align: center;
+}
+
+.menu-info-box {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.menu-info-image {
+  width: 15rem;
+  border-radius: 1rem;
+}
+
+.menu-info-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-info-name {
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+.menu-info-info {
+  margin: 1rem;
+}
+
+.menu-info-info > p {
+  font-size: 1.1rem;
+}
+
+.menu-info-container {
+  margin-left: 2rem;
+}
+
+.menu-info-properties {
+  font-size: 1.1rem;
+}
+
+.menu-info-general {
+  background-color: rgb(218, 216, 216);
+  border: 1px solid rgb(218, 216, 216);
+  border-radius: 1rem;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
