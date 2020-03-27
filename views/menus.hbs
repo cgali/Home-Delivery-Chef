@@ -1,10 +1,10 @@
 <h2 class="menus-title">Menus</h2>
 <div class="menus-container">
-
 		{{#each menus }}
 			<div class="menus-box">
 				<img class="menus-picture" src="{{ this.starter.image }}" alt="picture of menu">
-				<p class="menus-name">{{ this.title }}  - {{ this.price }}€</p>
+				<p class="menus-name">{{ this.title }}</p>
+				<p class="menus-price">- {{ this.price }}€ -</p>
 				<hr class="separator-menus-profile">
 				
         {{#if @root.currentClient }}

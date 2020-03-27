@@ -1,6 +1,5 @@
 const express = require('express');
 const Menus = require('../models/menu');
-const split = require('split-string');
 
 const router = express.Router();
 
