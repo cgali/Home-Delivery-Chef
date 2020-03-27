@@ -1,5 +1,6 @@
 const express = require('express');
 const Menus = require('../models/menu');
+const split = require('split-string');
 
 const router = express.Router();
 
@@ -13,6 +14,11 @@ router.get('/', (req, res) => {
         })
         .catch(err => console.log('Error while listing Menus: ', err));
 });
+
+// GET menus form page "add"
+router.get('/add', (req, res) => { 
+    res.render('menu-create')
+})
 
 // GET /menus/:id page.
 router.get('/:id', (req, res) => {
@@ -40,55 +46,97 @@ router.get('/:id/update-menu', (req, res, next) => {
 router.post('/:id', (req, res) => {
     const { id } = req.params;
     console.log('THIS IS THE ID: ', id)
-    const { title, starterName, starterImage, starterDescription, starterIngredients, mainCourseName, mainCourseImage, mainCourseDescription,
-        mainCourseIngredients, dessertsImage, dessertsDescription, dessertsIngredients, time, cuisine, price } = req.body;
-    console.log(req.query)
-    Menus.findByIdAndUpdate(id, {
-        title,
-        starterName,
-        starterImage,
-        starterDescription,
-        starterIngredients,
-        mainCourseName,
-        mainCourseImage,
+    const { 
+        title, 
+        starterName, 
+        starterImage, 
+        starterDescription, 
+        starterIngredients, 
+        mainCourseName, 
+        mainCourseImage, 
         mainCourseDescription,
         mainCourseIngredients,
-        dessertsImage,
-        dessertsDescription,
-        dessertsIngredients,
+        dessertName, 
+        dessertImage, 
+        dessertDescription, 
+        dessertIngredients, 
+        time, 
+        cuisine, 
+        price 
+    } = req.body;
+    console.log('body', req.body)
+    console.log(starterIngredients.split(', '))
+    Menus.findByIdAndUpdate(id, {
+        title,
+        starter: { 
+            name: starterName,
+            image: starterImage,
+            description: starterDescription,
+            ingredients: starterIngredients.split(',')
+        },
+        mainCourse: { 
+            name: mainCourseName,
+            image: mainCourseImage,
+            description: mainCourseDescription,
+            ingredients: mainCourseIngredients.split(',')
+        },
+        dessert: { 
+            name: dessertName,
+            image: dessertImage,
+            description: dessertDescription,
+            ingredients: dessertIngredients.split(',')
+        },
         time,
-        cuisine,
+        cuisine: cuisine.split(','),
         price
     })
-        .then(() => {
-            res.redirect(`/menus/${id}`);
-        })
-})
-
-// GET menus form page "add"
-router.get('/add', (req, res) => { 
-    res.render('menu-create')
+    .then(() => {
+        res.redirect(`/menus/${id}`);
+    })
 })
 
 // POST create new menu
 router.post('/', (req, res, next) => {
-    const { title, starterName, starterImage, starterDescription, starterIngredients, mainCourseName, mainCourseImage, mainCourseDescription,
-        mainCourseIngredients, dessertsImage, dessertsDescription, dessertsIngredients, time, cuisine, price } = req.body;
-    Menus.create({
-        title,
-        starterName,
-        starterImage,
-        starterDescription,
-        starterIngredients,
-        mainCourseName,
-        mainCourseImage,
+    const {
+        title, 
+        starterName, 
+        starterImage, 
+        starterDescription, 
+        starterIngredients, 
+        mainCourseName, 
+        mainCourseImage, 
         mainCourseDescription,
         mainCourseIngredients,
-        dessertsImage,
-        dessertsDescription,
-        dessertsIngredients,
+        dessertName, 
+        dessertImage, 
+        dessertDescription, 
+        dessertIngredients, 
+        time, 
+        cuisine, 
+        price
+    } = req.body;
+    Menus.create({
+        title,
+        starter: { 
+            name: starterName,
+            image: starterImage,
+            description: starterDescription,
+            ingredients: starterIngredients.split(',')
+        },
+        mainCourse: { 
+            name: mainCourseName,
+            image: mainCourseImage,
+            description: mainCourseDescription,
+            ingredients: mainCourseIngredients.split(',')
+        },
+        dessert: { 
+            name: dessertName,
+            image: dessertImage,
+            description: dessertDescription,
+            ingredients: dessertIngredients.split(',')
+        },
         time,
-        cuisine,
+        cuisine: cuisine.split(','),
         price
     })
     .then(() => {

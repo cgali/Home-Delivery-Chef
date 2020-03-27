@@ -66,7 +66,7 @@ router.post('/:id', (req, res) => {
       surname,
       image,
       yearsOfExperience,
-      languages,
+      languages: languages.split(','),
       email,
   })
   .then(() => {
