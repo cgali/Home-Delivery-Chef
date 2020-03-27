@@ -1,6 +1,6 @@
 const express = require('express');
 const Menus = require('../models/menu');
-const Dish = require('../models/dish');
+const split = require('split-string');
 
 const router = express.Router();
 
@@ -56,37 +56,38 @@ router.post('/:id', (req, res) => {
         mainCourseImage, 
         mainCourseDescription,
         mainCourseIngredients,
-        dessertsName, 
-        dessertsImage, 
-        dessertsDescription, 
-        dessertsIngredients, 
+        dessertName, 
+        dessertImage, 
+        dessertDescription, 
+        dessertIngredients, 
         time, 
         cuisine, 
         price 
     } = req.body;
-    console.log(req.query)
+    console.log('body', req.body)
+    console.log(starterIngredients.split(', '))
     Menus.findByIdAndUpdate(id, {
         title,
         starter: { 
             name: starterName,
             image: starterImage,
             description: starterDescription,
-            ingredients: starterIngredients
+            ingredients: starterIngredients.split(',')
         },
         mainCourse: { 
             name: mainCourseName,
             image: mainCourseImage,
             description: mainCourseDescription,
-            ingredients: mainCourseIngredients
+            ingredients: mainCourseIngredients.split(',')
         },
-        desserts: { 
-            name: dessertsName,
-            image: dessertsImage,
-            description: dessertsDescription,
-            ingredients: [ dessertsIngredients ]
+        dessert: { 
+            name: dessertName,
+            image: dessertImage,
+            description: dessertDescription,
+            ingredients: dessertIngredients.split(',')
         },
         time,
-        cuisine,
+        cuisine: cuisine.split(','),
         price
     })
     .then(() => {
@@ -106,10 +107,10 @@ router.post('/', (req, res, next) => {
         mainCourseImage, 
         mainCourseDescription,
         mainCourseIngredients,
-        dessertsName, 
-        dessertsImage, 
-        dessertsDescription, 
-        dessertsIngredients, 
+        dessertName, 
+        dessertImage, 
+        dessertDescription, 
+        dessertIngredients, 
         time, 
         cuisine, 
         price
@@ -120,22 +121,22 @@ router.post('/', (req, res, next) => {
             name: starterName,
             image: starterImage,
             description: starterDescription,
-            ingredients: starterIngredients.split(",")
+            ingredients: starterIngredients.split(',')
         },
         mainCourse: { 
             name: mainCourseName,
             image: mainCourseImage,
             description: mainCourseDescription,
-            ingredients: mainCourseIngredients.split(",")
+            ingredients: mainCourseIngredients.split(',')
         },
-        desserts: { 
-            name: dessertsName,
-            image: dessertsImage,
-            description: dessertsDescription,
-            ingredients: dessertsIngredients.split(",")
+        dessert: { 
+            name: dessertName,
+            image: dessertImage,
+            description: dessertDescription,
+            ingredients: dessertIngredients.split(',')
         },
         time,
-        cuisine: cuisine.split(","),
+        cuisine: cuisine.split(','),
         price
     })
     .then(() => {
