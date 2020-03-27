@@ -5,6 +5,13 @@ body {
   height: 100%;
 }
 
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
 /***************
 **** LAYOUT ****
 ***************/
@@ -381,22 +388,27 @@ body {
 
 .chefs-title {
   font-size: 3rem;
-  font-family: 'Asap', sans-serif;
-  text-align: center;
-  margin-top: 8%;
+  font-family: 'Lato', sans-serif;
+  background-color: black;
+  color: white;
+  padding: 4rem 0px;
+  height: 5rem;
+  width: 100%;
 }
+
 
 .chefs-container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  height: 100%;
-  margin: 0 4rem;
+  height: 80rem;
+  width: 100%;
+  background-color: #dfe6e9;
+  justify-content: center;
 }
 
 .chef-box {
-  border: 2px solid #dfe6e9;
-  border-radius: 3px;
+  background-color: white;
+  border-radius: 8px;
   margin: 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -411,6 +423,8 @@ body {
 }
 
 .chef-picture {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   width: 250px;
   height: auto;
 }
@@ -484,7 +498,6 @@ body {
 ***** MENUS *****
 ****************/
 
-
 .menus-title {
   font-size: 3rem;
   font-family: 'Asap', sans-serif;
@@ -551,14 +564,6 @@ body {
   width: 25%;
   margin-bottom: 10%;
 }
-
-
-/*****************
-** EACH MENU **
-*****************/
-
-
-
 
 /*****************
 **** ABOUT US ****
@@ -643,4 +648,62 @@ body {
 
 .how-it-works-info-box:last-child {
   margin-bottom: 5rem;
+}
+
+/****************
+*** MENU INFO ***
+****************/
+
+.menu-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-info-title {
+  text-align: center;
+}
+
+.menu-info-box {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.menu-info-image {
+  width: 15rem;
+  border-radius: 1rem;
+}
+
+.menu-info-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-info-name {
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+.menu-info-info {
+  margin: 1rem;
+}
+
+.menu-info-info > p {
+  font-size: 1.1rem;
+}
+
+.menu-info-container {
+  margin-left: 2rem;
+}
+
+.menu-info-properties {
+  font-size: 1.1rem;
+}
+
+.menu-info-general {
+  background-color: rgb(218, 216, 216);
+  border: 1px solid rgb(218, 216, 216);
+  border-radius: 1rem;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
 }

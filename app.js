@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -24,7 +26,7 @@ const cart = require('./routes/cart');
 
 //Connect to DB
 mongoose
-	.connect('mongodb+srv://chefapp:1234@module2project-ko7or.gcp.mongodb.net/HomeDeliveryChef?retryWrites=true&w=majority', {
+	.connect(`mongodb+srv://chefapp:${process.env.DBPASSWORD}@module2project-ko7or.gcp.mongodb.net/HomeDeliveryChef?retryWrites=true&w=majority`, {
 		useCreateIndex: true,
 		useNewUrlParser: true,
 		useUnifiedTopology: true
