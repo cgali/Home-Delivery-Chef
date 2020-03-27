@@ -25,26 +25,30 @@ h2 {
   height: 5rem;
   width: 100%;
   font-family: 'Baloo 2', cursive;
-  border-bottom: 1px solid #b2bec3;
   position: fixed;
   top: 0;
   overflow: hidden;
-  background-color: white;
+  background-color: black;
   z-index: 2;
 }
 
 .layout-image-logo {
-  width: 7rem;
+  width: 11rem;
   margin-top: 0.6rem;
+  margin-right: 2.5rem;
 }
 
 .left-navbar-menu-chef {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 35rem;
+  width: 40rem;
   padding: 0px;
   margin: 0px;
+}
+
+.menu-separator {
+  color: #b2bec3;
 }
 
 .current-email {
@@ -62,34 +66,53 @@ h2 {
 
 /*** LOGIN AND SIGNUP BUTTONS ***/
 
+.login-signup-btn-container {
+  display: flex;
+  list-style: none;
+  margin-left: 1rem;
+}
+
 .layout-btn-login, .layout-btn-signup {
 	cursor: pointer;
-	padding: 15px 30px; 
+	padding: 10px 20px; 
 	margin: 15px 30px;
 	text-transform: uppercase;
-	letter-spacing: 1px;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
 	font-weight: 700;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
   transition: all 0.3s;
-  border: 3px solid black;
-  background: #fff;
+  border: 3px solid white;
+  background: black;
+  border-radius: 0.4rem;
 }
 
 .layout-btn-login a, .layout-btn-signup a { 
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 .layout-btn-login:hover,
 .layout-btn-login:active {
-	color: #0e83cd;
-	background: #fff;
+  background: #4b6584;
+}
+
+.layout-btn-signup:hover,
+.layout-btn-signup:active {
+	background: #4b6584;
 }
 
 .left-navbar-menu-chef > li > a {
   text-decoration: none;
-  color: black;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+.left-navbar-menu-chef > li > a:hover,
+.left-navbar-menu-chef > li > a:active {
+  color: #d1d8e0;
 }
 
 .left-navbar-menu-chef > li, .right-navbar-account > li {
@@ -107,8 +130,8 @@ h2 {
 }
 
 .layout-button-account, .layout-button-cart, .layout-button-logout {
-  border: 1px solid black;
-  border-radius: 1rem;
+  border: 1px solid white;
+  border-radius: 0.7rem;
   background-color: rgb(54, 54, 54);
   padding: 0.3rem;
   font-family: 'Baloo 2', cursive;
@@ -389,26 +412,29 @@ h2 {
 .chefs-title {
   font-size: 3rem;
   font-family: 'Lato', sans-serif;
-  background-color: black;
   color: white;
-  padding: 4rem 0px;
+  padding: 4rem 0rem 4rem 5.5rem;
+  margin-bottom: 1.5rem;
   height: 5rem;
   width: 100%;
+  background-image: url(/images/kuisin-chefs1.jpg);
+  background-size: 1600px;
+  opacity: 0.9;
 }
-
 
 .chefs-container {
   display: flex;
   flex-wrap: wrap;
   height: 80rem;
   width: 100%;
-  background-color: #dfe6e9;
+  background-color: white;
   justify-content: center;
 }
 
 .chef-box {
   background-color: white;
-  border-radius: 8px;
+  border-radius: 6px;
+  border: 4px solid #f1f2f6;
   margin: 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -416,16 +442,15 @@ h2 {
 }
 
 .chef-name {
-  font-family: 'Asap', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 3%;
+  margin-bottom: 4%;
+  text-transform: uppercase;
 }
 
 .chef-picture {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  width: 250px;
+  width: 260px;
   height: auto;
 }
 
@@ -437,8 +462,8 @@ h2 {
   border-radius:0.10em;
   box-sizing: border-box;
   text-decoration:none;
-  font-family:'Asap', sans-serif;
-  font-weight:300;
+  font-family:'Lato', sans-serif;
+  font-weight:500;
   color: black;
   text-align:center;
   transition: all 0.2s;
@@ -498,11 +523,18 @@ h2 {
 ***** MENUS *****
 ****************/
 
+
 .menus-title {
   font-size: 3rem;
-  font-family: 'Asap', sans-serif;
-  text-align: center;
-  margin-top: 8%;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  padding: 4rem 0rem 4rem 6rem;
+  margin-bottom: 1.5rem;
+  height: 5rem;
+  width: 100%;
+  background-image: url(/images/kuisin-chefs1.jpg);
+  background-size: 1600px;
+  opacity: 0.9;
 }
 
 .menus-container {
@@ -514,23 +546,31 @@ h2 {
 }
 
 .menus-box {
-  border: 2px solid #dfe6e9;
+  border: 4px solid #dfe6e9;
   border-radius: 3px;
-  margin: 1.5rem 1.5rem;
+  margin: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .menus-name {
-  font-family: 'Asap', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 3%;
+  margin-bottom: 1%;
+  text-transform: uppercase;
+}
+
+.menus-price {
+  font-family: 'Lato', sans-serif;
+  color: grey;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .menus-picture {
-  width: 250px;
+  width: 255px;
   height: auto;
 }
 
