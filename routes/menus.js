@@ -1,6 +1,5 @@
 const express = require('express');
 const Menus = require('../models/menu');
-const split = require('split-string');
 
 const router = express.Router();
 
@@ -31,6 +30,17 @@ router.get('/:id', (req, res) => {
         })
         .catch(err => console.log('Error while listing Menus Information: ', err));
 });
+
+// POST delete menu
+router.post('/:id/delete', (req, res ,next) => {
+    const { id } = req.params;
+    console.log('THE ID IS:', id)
+    Menus.findByIdAndDelete(id)
+    .then(() => {
+        res.redirect('/menus');
+    })
+    .catch(next);
+})
 
 // GET /menus/:id/update
 router.get('/:id/update-menu', (req, res, next) => {
@@ -97,6 +107,7 @@ router.post('/:id', (req, res) => {
 
 // POST create new menu
 router.post('/', (req, res, next) => {
+    const { currentChef } = req.session;
     const {
         title, 
         starterName, 
@@ -136,10 +147,12 @@ router.post('/', (req, res, next) => {
             ingredients: dessertIngredients.split(',')
         },
         time,
+        chef_id: currentChef._id,
         cuisine: cuisine.split(','),
         price
     })
     .then(() => {
+        console.log(currentChef)
         res.redirect('/menus');
     })
     .catch(next);

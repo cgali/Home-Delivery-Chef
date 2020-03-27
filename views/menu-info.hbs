@@ -7,7 +7,11 @@
 		<div class="menu-info-info">
 			<h3 class="menu-info-name">{{ foundMenu.starter.name }}</h3>
 			<p class="menu-info-dish-properties"><strong>Description: </strong>{{ foundMenu.starter.description }}</p>
-			<p class="menu-info-dish-properties"><strong>Ingredients: </strong>{{ foundMenu.starter.ingredients }}.</p>
+			<p class="menu-info-dish-properties"><strong>Ingredients: </strong>
+				{{#each foundMenu.starter.ingredients }}
+					<li>{{ this }}.</li>
+            	{{/each }}
+			</p>
 		</div>
 	</div>
 
@@ -18,7 +22,11 @@
 		<div class="menu-info-info">
 			<h3 class="menu-info-name">{{ foundMenu.mainCourse.name }}</h3>
 			<p class="menu-info-dish-properties"><strong>Description: </strong>{{ foundMenu.mainCourse.description }}</p>
-			<p class="menu-info-dish-properties"><strong>Ingredients: </strong>{{ foundMenu.mainCourse.ingredients }}.</p>
+			<p class="menu-info-dish-properties"><strong>Ingredients: </strong>
+				{{#each foundMenu.mainCourse.ingredients }}
+					<li>{{ this }}.</li>
+            	{{/each }}
+			</p>
 		</div>
 	</div>
 
@@ -29,7 +37,11 @@
 		<div class="menu-info-info">
 			<h3 class="menu-info-name">{{ foundMenu.dessert.name }}</h3>
 			<p class="menu-info-dish-properties"><strong>Description: </strong>{{ foundMenu.dessert.description }}</p>
-			<p class="menu-info-dish-properties"><strong>Ingredients: </strong>{{ foundMenu.dessert.ingredients }}.</p>
+			<p class="menu-info-dish-properties"><strong>Ingredients: </strong>
+				{{#each foundMenu.dessert.ingredients }}
+					<li>{{ this }}.</li>
+            	{{/each }}
+			</p>
 		</div>
 	</div>
 
@@ -44,7 +56,7 @@
 
 		{{#if_equal foundMenu.chef_id currentChef._id}}
 			<button class="menu-info-edit-button"><a href="/menus/{{ foundMenu._id }}/update-menu">Edit Your Menu</a></button>
-			<button class="menu-info-edit-button"><a href="<!MISSING DELETE ROUTE>">Delete Your Menu</a></button>
+			<button class="menu-info-edit-button"><a href="/menus/{{ foundMenu._id }}/delete">Delete Your Menu</a></button>
 		{{/if_equal}}
 	</div>
 
