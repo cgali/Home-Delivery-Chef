@@ -56,7 +56,9 @@
 
 		{{#if_equal foundMenu.chef_id currentChef._id}}
 			<button class="menu-info-edit-button"><a href="/menus/{{ foundMenu._id }}/update-menu">Edit Your Menu</a></button>
-			<button class="menu-info-edit-button"><a href="/menus/{{ foundMenu._id }}/delete">Delete Your Menu</a></button>
+			<form action="/menus/{{ foundMenu._id }}/delete" method="post">
+                <button class="menu-info-edit-button">Delete Your Menu</button>
+            </form>
 		{{/if_equal}}
 	</div>
 
