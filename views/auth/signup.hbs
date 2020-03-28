@@ -6,6 +6,7 @@
 </div> --}}
 
 <div id="Chef" class="tabcontent">
+  
   <div class="signup-container">
     <h2>Welcome Chef! Sign Up here:</h2>
     <div class="tab">
@@ -13,6 +14,9 @@
       <button class="tablinks" onclick="openLogin(event, 'Client')">I'm a Client</button>
     </div>
     <div class="signup-form-box">
+      {{#if error}}
+        <div class="error-message">{{ error }}</div>
+      {{/if}}
       <form id="form" action="/signup" method="POST">
         <label for="name">Name</label>
         <input type="text" name="name" placeholder="Name">
@@ -30,17 +34,21 @@
         <input type="password" name="password" placeholder="Insert a password">
         <button class="create-account-button" type="submit">Create Account</button>
       </form>
-      {{#if error}}
-        <div class="error-message">{{ error }}</div>
-      {{/if}}
     </div>
   </div>
 </div>
 
 <div id="Client" class="tabcontent-two">
   <div class="signup-container">
-    <h3>Welcome! You can Sign Up here:</h3>
+    <h2>Welcome! Sign Up here:</h2>
+    <div class="tab">
+      <button class="tablinks" onclick="openLoginTwo(event, 'Chef')">I'm a Chef</button>
+      <button class="tablinks" onclick="openLogin(event, 'Client')">I'm a Client</button>
+    </div>
     <div class="signup-form-box-client">
+      {{#if error}}
+        <div class="error-message">{{ error }}</div>
+      {{/if}}
       <form id="form" action="/signup-client" method="POST">
         <label for="email">Email</label>
         <input type="text" name="email" placeholder="hello@helloworld.com">
@@ -48,9 +56,6 @@
         <input type="password" name="password" placeholder="Insert a password">
         <button class="create-account-button" type="submit">Create Account</button>
       </form>
-      {{#if error}}
-        <div class="error-message">{{ error }}</div>
-      {{/if}}
     </div>
   </div>
 </div>

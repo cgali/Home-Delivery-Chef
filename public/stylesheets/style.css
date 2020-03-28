@@ -390,6 +390,10 @@ h2 {
   background-color: black;
 }
 
+.join-button:focus {
+  outline: 0;
+}
+
 .error-message {
   background: #F02B63;
   box-sizing: border-box;
@@ -425,7 +429,7 @@ h2 {
   margin-top: 2rem;
 }
 
-.signup-form-box {
+.signup-form-box, .signup-form-box-client {
   margin-top: 1rem;
   border: 1px solid rgb(54, 54, 54);
   background-color: rgb(54, 54, 54);
@@ -440,18 +444,23 @@ h2 {
   justify-content: center;
 }
 
-.signup-form-box > form {
+.signup-form-box-client {
+  width: 20rem;
+  margin-bottom: 5rem;
+}
+
+.signup-form-box > form, .signup-form-box-client > form {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 2rem;
 }
 
-.signup-form-box > form > label {
+.signup-form-box > form > label, .signup-form-box-client > form {
   margin-top: 1rem;
 }
 
-.signup-form-box > form > input {
+.signup-form-box > form > input, .signup-form-box-client > form > input {
   margin-top: 0.5rem;
   width: 14rem;
   height: 2rem;
