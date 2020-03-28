@@ -776,26 +776,27 @@ h2 {
   flex-direction: column;
   align-items: center;
   margin-right: 1rem;
-  border: 2px solid black;
+  border: 3px solid #8395a7;
+  border-radius: 5px;
 }
 
 .about-us-profile-box-description {
-  padding: 2rem;
+  padding: 0rem 1.5rem 1.5rem;
   font-family: 'Lato', sans-serif;
+  text-align: justify;
+  font-size: 1.2rem;
+  width: 20rem;
 }
 
 .about-us-profile-box-img {
+  margin-top: 1.5rem;
   width: 20rem;
+  border-radius: 3px;
 }
 
 .about-us-profile-box-name {
   font-size: 2rem;
   font-family:'Baloo 2', sans-serif;
-}
-
-.about-us-profile-box > p {
-  font-size: 1.1rem;
-  font-family:'Asap', sans-serif;
 }
 
 /*****************

@@ -123,7 +123,7 @@ const menus = [
     },
 
     {
-        title: 'Andale',
+        title: 'Ándale',
         starter: {
             name: 'Tacos',
             image: '../images/Menus/Jason/tacos.jpg',
@@ -138,7 +138,7 @@ const menus = [
         },
         dessert: {
             name: 'Mex fritter ',
-            image: '../images/Menus/Jason/mexicanfritter.jpg',
+            image: '../images/Menus/Jason/mexicanflan.jpg',
             description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry. Lorem Ipsum has been the industrystandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
             ingredients: ['change1', 'change2', 'change3', 'change4', 'change5', 'change6'],
         },
@@ -189,7 +189,7 @@ const menus = [
             ingredients: ['change1', 'change2', 'change3', 'change4', 'change5', 'change6'],
         },
         dessert: {
-            name: 'Chocolate and orange paradise',
+            name: 'Chocolate and red paradise',
             image: '../images/Menus/Karol/chocolatefluff.jpg',
             description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry. Lorem Ipsum has been the industrystandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
             ingredients: ['change1', 'change2', 'change3', 'change4', 'change5', 'change6'],
@@ -256,7 +256,7 @@ const menus = [
         title: 'Catalan bite',
         starter: {
             name: 'Joy salad',
-            image: '../images/Menus/Marta/Redsalad.jpg',
+            image: '../images/Menus/Marta/redsalad.jpg',
             description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry. Lorem Ipsum has been the industrystandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
             ingredients: ['change1', 'change2', 'change3', 'change4', 'change5', 'change6'],
         },
