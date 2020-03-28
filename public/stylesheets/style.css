@@ -324,7 +324,7 @@ h2 {
   background-color: rgb(54, 54, 54);
   border-radius: 3rem;
   width: 20rem;
-  height: 30rem;
+  height: auto;
   font-size: 1.4rem;
   color: white;
   display: flex;
@@ -376,13 +376,18 @@ h2 {
   transform: translateY(2px);
 }
 
+.join-button {
+  background-color: rgb(54, 54, 54);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
 .join-button > a{
   color: white;
 }
 
-.join-button {
-  background-color: rgb(54, 54, 54);
-  border-radius: 1rem;
+.join-button:hover {
+  background-color: black;
 }
 
 .error-message {
@@ -398,11 +403,102 @@ h2 {
 ***** SIGNUP *****
 ****************/
 
+.signup-container {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 1rem;
+  background-image: url('../images/blacktable2.jpeg');
+  background-repeat: space;
+  background-size: 100%;
+  opacity: 0.8;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Baloo 2', cursive;
+}
+
+.signup-container > h2 {
+  font-size: 4rem;
+  color: white;
+  text-decoration: underline;
+  margin-top: 2rem;
+}
+
+.signup-form-box {
+  margin-top: 1rem;
+  border: 1px solid rgb(54, 54, 54);
+  background-color: rgb(54, 54, 54);
+  border-radius: 3rem;
+  width: 26rem;
+  height: auto;
+  font-size: 1.4rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-form-box > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.signup-form-box > form > label {
+  margin-top: 1rem;
+}
+
+.signup-form-box > form > input {
+  margin-top: 0.5rem;
+  width: 14rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.create-account-button {
+  font-size: 1.2rem;
+  margin: 2rem 0 1rem 0;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+.create-account-button > a {
+  text-decoration: none;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.3rem;
+}
+
+.create-account-button:focus {
+  outline: 0;
+}
+
+.create-account-button:active {
+  box-shadow: 1px 2px 1px black;
+  transform: translateY(2px);
+}
+
+
 /* Style the tab */
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  border-radius: 8px;
+  background-color: rgb(54, 54, 54);
+}
+
+.tablinks:last-child {
+  border-left: 1px solid white;
+}
+
+.tablinks {
+  color: white;
+  font-size: 1rem;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -418,27 +514,17 @@ h2 {
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: rgb(172, 172, 172);
+  background-color: black;
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
+
 
 /* Style the tab content */
-.tabcontent {
-  /* display: none; */
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
+
 
 .tabcontent-two {
   display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
 }
 
 
@@ -582,7 +668,6 @@ h2 {
   justify-content: center;
   flex-wrap: wrap;
   height: 100%;
-  margin: 0 4rem;
 }
 
 .menus-box {
