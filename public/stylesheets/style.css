@@ -28,7 +28,7 @@ h2 {
   position: fixed;
   top: 0;
   overflow: hidden;
-  background-color: black;
+  background: linear-gradient(180deg, black, black, rgb(12, 12, 12), rgb(24, 24, 24), rgb(36, 36, 36), rgb(37, 37, 37));
   z-index: 2;
 }
 
@@ -52,7 +52,7 @@ h2 {
 }
 
 .current-email {
-  color: #F79F1F;
+  color: rgb(255, 153, 0);
   font-family: 'Lato', sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
@@ -106,6 +106,10 @@ h2 {
 	background: #4b6584;
 }
 
+.layout-btn-login:focus, .layout-btn-signup:focus {
+  outline: 0;
+}
+
 .left-navbar-menu-chef > li > a {
   text-decoration: none;
   color: white;
@@ -157,6 +161,8 @@ h2 {
   border-radius: 0.4rem;
 }
 
+
+
 .layout-button-cart {
   cursor: pointer;
 	padding: 10px 0px 10px 20px; 
@@ -184,7 +190,11 @@ h2 {
   margin-left: 7px;
 }
 
-.layout-button-account:active, .layout-button-cart:active {
+.layout-button-logout:focus, .layout-button-cart:focus, .layout-button-account:focus {
+  outline: 0;
+}
+
+.layout-button-account:active, .layout-button-logout:active, .layout-button-cart:active {
   box-shadow: 2px 4px 2px rgb(141, 141, 141);
   transform: translateY(2px);
 }
@@ -196,11 +206,10 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(54, 54, 54);
+  background: linear-gradient(0deg, black, black, rgb(12, 12, 12), rgb(24, 24, 24), rgb(36, 36, 36), rgb(37, 37, 37));
   height: 13rem;
   font-size: 1.3rem;
   font-family: 'Baloo 2', cursive;
-  border-top: 1px solid white;
 }
 
 .layout-footer-image-logo {
@@ -426,15 +435,15 @@ h2 {
   font-size: 4rem;
   color: white;
   text-decoration: underline;
-  margin-top: 2rem;
+  margin-top: 2rem 0 2rem 0;
 }
 
 .signup-form-box, .signup-form-box-client {
-  margin-top: 1rem;
+  margin: 1rem 0 5rem 0;
   border: 1px solid rgb(54, 54, 54);
   background-color: rgb(54, 54, 54);
   border-radius: 3rem;
-  width: 26rem;
+  width: 39rem;
   height: auto;
   font-size: 1.4rem;
   color: white;
@@ -446,23 +455,46 @@ h2 {
 
 .signup-form-box-client {
   width: 20rem;
-  margin-bottom: 5rem;
 }
 
-.signup-form-box > form, .signup-form-box-client > form {
+.signup-form-box-client > form {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 2rem;
 }
 
-.signup-form-box > form > label, .signup-form-box-client > form {
-  margin-top: 1rem;
+.signup-form-box > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.signup-form-box > form > input, .signup-form-box-client > form > input {
-  margin-top: 0.5rem;
+.signup-form-label-input-box {
+  margin: 0.5rem;
+}
+
+.signup-form-label-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.signup-form-box-client > form {
+  margin: 1rem 1rem 0 0;
+}
+
+.signup-form-box-client > form > input {
+  margin: 0.5rem 0.5rem 0 0;
   width: 14rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.signup-form-label-input-box > input {
+  margin: 0.5rem 0.5rem 0 0;
+  width: 12rem;
   height: 2rem;
   border-radius: 0.5rem;
   font-size: 1rem;
@@ -510,6 +542,11 @@ h2 {
   font-size: 1rem;
 }
 
+.tablinks:focus {
+  outline: 0;
+  background-color: black;
+}
+
 /* Style the buttons that are used to open the tab content */
 .tab button {
   background-color: inherit;
@@ -526,16 +563,10 @@ h2 {
   background-color: black;
 }
 
-/* Create an active/current tablink class */
-
-
 /* Style the tab content */
-
-
 .tabcontent-two {
   display: none;
 }
-
 
 /****************
 ***** CHEFS *****
@@ -613,6 +644,10 @@ h2 {
 .see-more-chef-btn:hover{
   color:#000000;
   background-color:#dfe6e9;
+}
+
+.see-more-chef-btn:focus {
+  outline: 0;
 }
 
 .separator-chef-profile {
@@ -736,6 +771,10 @@ h2 {
 .see-more-menus-btn:hover{
   color:#000000;
   background-color:#dfe6e9;
+}
+
+.see-more-menus-btn:focus {
+  outline: 0;
 }
 
 .separator-menus-profile {

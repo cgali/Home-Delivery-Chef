@@ -18,20 +18,36 @@
         <div class="error-message">{{ error }}</div>
       {{/if}}
       <form id="form" action="/signup" method="POST">
-        <label for="name">Name</label>
-        <input type="text" name="name" placeholder="Name">
-        <label for="surname">Surname</label>
-        <input type="text" name="surname" placeholder="Surname">
-        <label for="image">Profile Image</label>
-        <input type="text" name="image" placeholder="URL of your profile image">
-        <label for="yearsOfExperience">Year of experience</label>
-        <input type="number" name="yearsOfExperience" min="0" max="50" placeholder="Min 0 and max 50 years">
-        <label for="languages">Languages that you speak</label>
-        <input type="text" name="languages" placeholder="Languages that you speak">
-        <label for="email">Email</label>
-        <input type="text" name="email" placeholder="hello@helloworld.com">
-        <label for="password">Password</label>
-        <input type="password" name="password" placeholder="Insert a password">
+        <div class="signup-form-label-input-container">
+            <div class="signup-form-label-input-box">
+              <label for="name">Name:</label>
+              <input type="text" name="name" placeholder="Name">
+            </div>
+            <div class="signup-form-label-input-box">
+              <label for="surname">Surname:</label>
+              <input type="text" name="surname" placeholder="Surname">
+            </div>
+            <div class="signup-form-label-input-box">
+              <label for="image">Profile Image:</label>
+              <input type="text" name="image" placeholder="URL of your profile image">
+            </div>
+            <div class="signup-form-label-input-box">
+              <label for="yearsOfExperience">Year of experience:</label>
+              <input type="number" name="yearsOfExperience" min="0" max="60">
+            </div>
+            <div class="signup-form-label-input-box">
+              <label for="languages">Languages that you speak:</label>
+              <input type="text" name="languages" placeholder="Languages that you speak">
+            </div>
+            <div class="signup-form-label-input-box">
+              <label for="email">Email:</label>
+              <input type="text" name="email" placeholder="hello@helloworld.com">
+            </div>
+            <div class="signup-form-label-input-box">
+              <label for="password">Password:</label>
+              <input type="password" name="password" placeholder="Insert a password">
+            </div>
+        </div> 
         <button class="create-account-button" type="submit">Create Account</button>
       </form>
     </div>
