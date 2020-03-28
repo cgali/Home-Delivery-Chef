@@ -18,7 +18,7 @@ mongoose
 const chefs = [
 	{
 		email: 'josehernandez@gmail.com',
-		hashedPassword: '1',
+		hashedPassword: '$2b$10$IXz/ETka.Jk2l6t3py/L1.dkWRVadSaZg41Utnl5zYcOMfvSY7AQ6',
 		image: '../images/chefs/JoseHernandez.jpg',
 		name: 'Jose',
 		surname: 'Hernandez',
@@ -26,7 +26,7 @@ const chefs = [
 	},
 	{
 		email: 'jasonlopez@gmail.com',
-		hashedPassword: '2',
+		hashedPassword: '$2b$10$IXz/ETka.Jk2l6t3py/L1.dkWRVadSaZg41Utnl5zYcOMfvSY7AQ6',
 		image: '../images/chefs/JasonLopez.jpg',
 		name: 'Jason',
 		surname: 'Lopes',
@@ -34,7 +34,7 @@ const chefs = [
 	},
 	{
 		email: 'marcgarcia@gmail.com',
-		hashedPassword: '3',
+		hashedPassword: '$2b$10$IXz/ETka.Jk2l6t3py/L1.dkWRVadSaZg41Utnl5zYcOMfvSY7AQ6',
 		image: '../images/chefs/MarcGarcia.jpg',
 		name: 'Marc',
 		surname: 'Garcia',
@@ -42,7 +42,7 @@ const chefs = [
 	},
 	{
 		email: 'karolsuarez@gmail.com',
-		hashedPassword: '4',
+		hashedPassword: '$2b$10$IXz/ETka.Jk2l6t3py/L1.dkWRVadSaZg41Utnl5zYcOMfvSY7AQ6',
 		image: '../images/chefs/KarolSuarez.jpg',
 		name: 'Karol',
 		surname: 'Suarez',
@@ -50,7 +50,7 @@ const chefs = [
 	},
 	{
 		email: 'carlossanchez@gmail.com',
-		hashedPassword: '5',
+		hashedPassword: '$2b$10$IXz/ETka.Jk2l6t3py/L1.dkWRVadSaZg41Utnl5zYcOMfvSY7AQ6',
 		image: '../images/chefs/CarlosSanchez.jpg',
 		name: 'Carlos',
 		surname: 'Sanchez',
@@ -58,7 +58,7 @@ const chefs = [
 	},
 	{
 		email: 'sofielevesque@gmail.com',
-		hashedPassword: '6',
+		hashedPassword: '$2b$10$IXz/ETka.Jk2l6t3py/L1.dkWRVadSaZg41Utnl5zYcOMfvSY7AQ6',
 		image: '../images/chefs/SofieLevesque.jpg',
 		name: 'Sofie',
 		surname: 'Levesque',
@@ -66,7 +66,7 @@ const chefs = [
 	},
 	{
 		email: 'sandragamez@gmail.com',
-		hashedPassword: '7',
+		hashedPassword: '$2b$10$IXz/ETka.Jk2l6t3py/L1.dkWRVadSaZg41Utnl5zYcOMfvSY7AQ6',
 		image: '../images/chefs/SandraGamez.jpg',
 		name: 'Sandra',
 		surname: 'Gamez',
@@ -74,7 +74,7 @@ const chefs = [
 	},
 	{
 		email: 'martagrau@gmail.com',
-		hashedPassword: '8',
+		hashedPassword: '$2b$10$IXz/ETka.Jk2l6t3py/L1.dkWRVadSaZg41Utnl5zYcOMfvSY7AQ6',
 		image: '../images/chefs/MartaGrau.jpg',
 		name: 'Marta',
 		surname: 'Grau',

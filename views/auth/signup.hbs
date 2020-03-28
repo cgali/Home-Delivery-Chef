@@ -13,13 +13,13 @@
       <button class="tablinks" onclick="openLogin(event, 'Client')">I'm a Client</button>
     </div>
     <div class="signup-form-box">
-      <form id="form" action="/signup" method="POST" enctype="multipart/form-data">
+      <form id="form" action="/signup" method="POST">
         <label for="name">Name</label>
         <input type="text" name="name" placeholder="Name">
         <label for="surname">Surname</label>
         <input type="text" name="surname" placeholder="Surname">
         <label for="image">Profile Image</label>
-        <input type="file" name="image">
+        <input type="text" name="image" placeholder="URL of your profile image">
         <label for="yearsOfExperience">Year of experience</label>
         <input type="number" name="yearsOfExperience" min="0" max="50" placeholder="Min 0 and max 50 years">
         <label for="languages">Languages that you speak</label>
