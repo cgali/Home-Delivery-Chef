@@ -1,41 +1,99 @@
 <div class="create-menu-container">
+  <h2>Create a Menu</h2>
   <div class="create-menu-box">
     <form action="/menus" method="post">
       <label class="create-menu-title" for="title"><h3>Title</h3></label>
       <input type="text" name="title" placeholder="Title" value="{{ menuInfo.title }}">
+
       <h3>Starter</h3>
-      <label for="starterName">Name of dish</label>
-      <input type="text" name="starterName" placeholder="Name" value="{{ menuInfo.starter.name }}">
-      <label for="starterImage">Image </label>
-      <input type="text" name="starterImage" placeholder="Image" value="{{ menuInfo.starter.image }}">
-      <label for="starterDescription">Description</label>
-      <input type="text" name="starterDescription" placeholder="Description" value="{{ menuInfo.starter.description }}">
-      <label for="starterIngredients">Ingredients</label>
-      <input type="text" name="starterIngredients" placeholder="Ingredients" value="{{ menuInfo.starter.ingredients }}">
+      <div class="create-menu-starter-box">
+        <div class="create-menu-dish-box-left">
+          <div>
+            <label for="starterName">Name of dish:</label>
+            <input type="text" name="starterName" placeholder="Name" value="{{ menuInfo.starter.name }}">
+          </div>
+          <div>
+            <label for="starterImage">Image:</label>
+            <input type="text" name="starterImage" placeholder="Url of image" value="{{ menuInfo.starter.image }}">
+          </div>
+        </div>
+        <div class="create-menu-dish-box-right">
+          <div>
+            <label for="starterDescription">Description:</label>
+            <input type="text" name="starterDescription" placeholder="Description" value="{{ menuInfo.starter.description }}">
+          </div>
+          <div>
+            <label for="starterIngredients">Ingredients:</label>
+            <input type="text" name="starterIngredients" placeholder="Ingredients" value="{{ menuInfo.starter.ingredients }}">
+          </div>
+        </div>
+      </div>
+      
       <h3>Main Course</h3>
-      <label for="mainCourseName">Name of dish</label>
-      <input type="text" name="mainCourseName" placeholder="Name" value="{{ menuInfo.mainCourse.name }}">
-      <label for="mainCourseImage">Image </label>
-      <input type="text" name="mainCourseImage" placeholder="Image" value="{{ menuInfo.mainCourse.image }}">
-      <label for="mainCourseDescription">Description</label>
-      <input type="text" name="mainCourseDescription" placeholder="Description" value="{{ menuInfo.mainCourse.description }}">
-      <label for="mainCourseIngredients">Ingredients</label>
-      <input type="text" name="mainCourseIngredients" placeholder="Ingredients" value="{{ menuInfo.mainCourse.ingredients }}">
+      <div class="create-menu-mainCourse-box">
+        <div class="create-menu-dish-box-left">
+          <div>
+            <label for="mainCourseName">Name of dish:</label>
+            <input type="text" name="mainCourseName" placeholder="Name" value="{{ menuInfo.mainCourse.name }}">
+          </div>
+          <div>
+            <label for="mainCourseImage">Image:</label>
+          <input type="text" name="mainCourseImage" placeholder="Url of image" value="{{ menuInfo.mainCourse.image }}">
+          </div>
+        </div>
+        <div class="create-menu-dish-box-right">
+          <div>
+            <label for="mainCourseDescription">Description:</label>
+            <input type="text" name="mainCourseDescription" placeholder="Description" value="{{ menuInfo.mainCourse.description }}">
+          </div>
+          <div>
+            <label for="mainCourseIngredients">Ingredients:</label>
+            <input type="text" name="mainCourseIngredients" placeholder="Ingredients" value="{{ menuInfo.mainCourse.ingredients }}">
+          </div>
+        </div>
+      </div>
+      
       <h3>Desserts</h3>
-      <label for="dessertName">Name of dish</label>
-      <input type="text" name="dessertName" placeholder="Name" value="{{ menuInfo.dessert.name }}">
-      <label for="dessertImage">Image </label>
-      <input type="text" name="dessertImage" placeholder="Image" value="{{ menuInfo.dessert.image }}">
-      <label for="dessertDescription">Description</label>
-      <input type="text" name="dessertDescription" placeholder="Description" value="{{ menuInfo.dessert.description }}">
-      <label for="dessertIngredients">Ingredients</label>
-      <input type="text" name="dessertIngredients" placeholder="Ingredients" value="{{ menuInfo.dessert.ingredients }}">
-      <label for="time">Time</label>
-      <input type="number" name="time" min="0" max="1500" placeholder="Time" value="{{ menuInfo.time }}">
-      <label for="cuisine">Cuisine</label>
-      <input type="text" name="cuisine" placeholder="Type" value="{{ menuInfo.cuisine }}">
-      <label for="price">Price</label>
-      <input type="number" name="price" min="0" max="1000" placeholder="Price" value="{{ menuInfo.time }}">
+      <div class="create-menu-dessert-box">
+        <div class="create-menu-dish-box-left">
+          <div>
+            <label for="dessertName">Name of dish:</label>
+            <input type="text" name="dessertName" placeholder="Name" value="{{ menuInfo.dessert.name }}">
+          </div>
+          <div>
+            <label for="dessertImage">Image:</label>
+            <input type="text" name="dessertImage" placeholder="Url of image" value="{{ menuInfo.dessert.image }}">
+          </div>
+        </div>
+        <div class="create-menu-dish-box-right">
+          <div>
+            <label for="dessertDescription">Description:</label>
+            <input type="text" name="dessertDescription" placeholder="Description" value="{{ menuInfo.dessert.description }}">
+          </div>
+          <div>
+            <label for="dessertIngredients">Ingredients:</label>
+            <input type="text" name="dessertIngredients" placeholder="Ingredients" value="{{ menuInfo.dessert.ingredients }}">
+          </div>
+        </div>
+      </div>
+        
+
+      <h3>Information</h3>
+      <div class="create-menu-information-box">
+        <div class="create-menu-dish-box">
+          <label for="time">Time:</label>
+          <input type="number" name="time" min="0" max="1500" placeholder="Time" value="{{ menuInfo.time }}">
+        </div>
+        <div class="create-menu-dish-box">
+          <label for="cuisine">Cuisine:</label>
+          <input type="text" name="cuisine" placeholder="Type" value="{{ menuInfo.cuisine }}">
+        </div>
+        <div class="create-menu-dish-box">
+          <label for="price">Price:</label>
+          <input type="number" name="price" min="0" max="1000" placeholder="Price" value="{{ menuInfo.time }}">
+        </div>
+      </div>
+      
       <button class="create-menu-button" type="submit">Create</button>
     </form>
   </div>

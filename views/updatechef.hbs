@@ -1,4 +1,5 @@
 <div class="update-chef-container">
+  <h2>Update information</h2>
   <div class="update-chef-box">
     <form action="/chefs/{{ chefInfo._id }}" method="post">
       <label for="name">Name</label>
@@ -7,7 +8,7 @@
       <input type="text" name="surname" placeholder="Surname" value="{{ chefInfo.surname }}">
       <label for="image">Image </label>
       <input type="text" name="image" placeholder="Image" value="{{ chefInfo.image }}">
-      <label for="yearsOfExperience">Year of experience</label>
+      <label for="yearsOfExperience">Years of experience</label>
       <input type="number" name="yearsOfExperience" min="0" max="50" placeholder="Min 0 and max 50 years" value="{{ chefInfo.yearsOfExperience }}">
       <label for="languages">Languages</label>
       <input type="text" name="languages" placeholder="Languages that you speak" value="{{ chefInfo.languajes }}">

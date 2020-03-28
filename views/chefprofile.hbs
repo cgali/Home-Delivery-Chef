@@ -4,7 +4,7 @@
 		<img class="chef-profile-image" src="{{ foundChef.image }}" alt="Profile image">
 	</div>
 	<div class="chef-profile-info">
-		<p class="chef-name-profile">{{ foundChef.name }} {{ foundChef.surname }}</p>
+		<h2 class="chef-name-profile">{{ foundChef.name }} {{ foundChef.surname }}</h2>
 		<p>{{ foundChef.yearsOfExperience }} Years of cooking experience.</p>
 		<p>Spoken languages:</p>
 		<ul>
@@ -25,7 +25,7 @@
 		{{#each menus }}
 			<div class="menus-box">
 				<img class="menus-picture" src="{{ this.starter.image }}" alt="picture of menu">
-				<p class="menus-name">{{ this.title }}  - {{ this.price }}€</p>
+				<p class="menus-name">{{ this.title }} - {{ this.price }}€</p>
 				<hr class="separator-menus-profile">
 				
 				{{#if @root.currentClient }}

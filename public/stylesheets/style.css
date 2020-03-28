@@ -435,7 +435,7 @@ h2 {
   font-size: 4rem;
   color: white;
   text-decoration: underline;
-  margin-top: 2rem 0 2rem 0;
+  margin: 2rem 0 2rem 0;
 }
 
 .signup-form-box, .signup-form-box-client {
@@ -655,20 +655,20 @@ h2 {
   margin-bottom: 10%;
 }
 
-/****************
-** CHEFS PROFILE **
-****************/
+/********************
+*** CHEFS PROFILE ***
+********************/
 
 .chef-profile-box {
   display: flex;
 }
 
 .chef-profile-image {
-  width: 300px;
+  width: 23rem;
   height: auto;
   margin: 3rem;
-  border:0.2em solid #dfe6e9;
-  border-radius: 2px;
+  border:0.3em solid rgb(54, 54, 54);
+  border-radius: 10px;
 }
 
 .chef-profile-info {
@@ -678,15 +678,118 @@ h2 {
 }
 
 .chef-name-profile {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  text-decoration: underline;
   font-family:'Baloo 2', sans-serif;
   font-weight: bold;
+}
+
+.chef-profile-info > p {
+  font-size: 1.7rem;
 }
 
 .menus-title-profile {
   font-size: 2rem;
   font-family:'Baloo 2', sans-serif;
   text-align: center;
+}
+
+.chef-profile-edit-button, .chef-profile-create-menu-button {
+  border-radius: 0.5rem;
+  border: 2px solid black;
+  margin: 2rem;
+  background-color: rgb(54, 54, 54);
+}
+
+.chef-profile-edit-button > a, .chef-profile-create-menu-button > a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+}
+
+.chef-profile-edit-button:active, .chef-profile-create-menu-button:active {
+  box-shadow: 1px 2px 1px gray;
+  transform: translateY(2px);
+}
+
+.chef-profile-edit-button:focus, .chef-profile-create-menu-button:focus {
+  outline: 0;
+}
+
+/*******************
+*** CHEFS UPDATE ***
+*******************/
+
+.update-chef-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Baloo 2', cursive;
+}
+
+.update-chef-container > h2 {
+  font-size: 4rem;
+  text-decoration: underline;
+  margin: 2rem 0 2rem 0;
+}
+
+.update-chef-box {
+  margin: 1rem 0 3rem 0;
+  border: 1px solid rgb(54, 54, 54);
+  background-color: rgb(54, 54, 54);
+  border-radius: 3rem;
+  width: 22rem;
+  height: auto;
+  font-size: 1.4rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.update-chef-box > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.update-chef-box > form > label {
+  margin-top: 1rem;
+}
+
+.update-chef-box > form > input {
+  margin-top: 0.5rem;
+  width: 14rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.update-account-button {
+  font-size: 1.2rem;
+  margin: 2rem 0 1rem 0;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+.update-account-button > a {
+  text-decoration: none;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.3rem;
+}
+
+.update-account-button:focus {
+  outline: 0;
+}
+
+.update-account-button:active {
+  box-shadow: 1px 2px 1px black;
+  transform: translateY(2px);
 }
 
 /****************
@@ -780,6 +883,98 @@ h2 {
 .separator-menus-profile {
   width: 25%;
   margin-bottom: 10%;
+}
+
+/******************
+*** CREATE MENU ***
+******************/
+
+.create-menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Baloo 2', cursive;
+}
+
+.create-menu-container > h2 {
+  margin: 4rem 0;
+  font-size: 4rem;
+  text-decoration: underline;
+}
+
+.create-menu-box {
+  margin: 1rem 0 5rem 0;
+  border: 1px solid rgb(54, 54, 54);
+  background-color: rgb(54, 54, 54);
+  border-radius: 3rem;
+  width: 60rem;
+  height: auto;
+  font-size: 1.4rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-menu-box  h3 {
+  font-size: 2rem;
+  margin-top: 4rem;
+  text-decoration: underline;
+}
+
+.create-menu-box > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-menu-starter-box, .create-menu-mainCourse-box, .create-menu-dessert-box, .create-menu-information-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.create-menu-dish-box-left, .create-menu-dish-box-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 3rem;
+}
+
+.create-menu-dish-box {
+  margin: 0 0.5rem;
+}
+
+.create-menu-dish-box > label {
+  margin-top: 1rem;
+}
+
+.create-menu-box > form > input, .create-menu-starter-box input, .create-menu-mainCourse-box  input, .create-menu-dessert-box  input, .create-menu-information-box  input {
+  margin-top: 0.5rem;
+  width: 14rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.create-menu-button {
+  font-size: 1.2rem;
+  margin: 4rem 0;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 2rem;
+  background-color: white;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.4rem;
+}
+
+.create-menu-button:focus {
+  outline: 0;
+}
+
+.create-menu-button:active {
+  box-shadow: 1px 2px 1px black;
+  transform: translateY(2px);
 }
 
 /*****************
