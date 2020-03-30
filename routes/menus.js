@@ -14,9 +14,10 @@ router.get('/', (req, res) => {
         .catch(err => console.log('Error while listing Menus: ', err));
 });
 
-// GET menus form page "add"
-router.get('/add', (req, res) => { 
-    res.render('menu-create')
+// GET menus form page "create"
+router.get('/add', (req, res) => {
+    const { currentChef } = req.session;
+    res.render('menu-create', { currentChef })
 })
 
 // GET /menus/:id page.
@@ -44,10 +45,11 @@ router.post('/:id/delete', (req, res ,next) => {
 
 // GET /menus/:id/update
 router.get('/:id/update-menu', (req, res, next) => {
+    const { currentChef } = req.session;
     const { id } = req.params;
     Menus.findById(id)
         .then(menuInfo => {
-            res.render('update-menu', { menuInfo })
+            res.render('update-menu', { menuInfo, currentChef })
         })
         .catch(next);
 })
