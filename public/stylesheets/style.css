@@ -34,8 +34,8 @@ h1 {
   position: fixed;
   top: 0;
   overflow: hidden;
-  background-color: #232b2b;
-  /* background: linear-gradient(180deg, #232b2b, #232b2b, rgb(12, 12, 12), rgb(24, 24, 24), rgb(36, 36, 36), rgb(37, 37, 37)); */
+  background-color: black;
+  opacity: 0.9;
   z-index: 2;
 }
 
@@ -82,7 +82,54 @@ h1 {
   margin-left: 10rem;
 }
 
-.layout-btn-login, .layout-btn-signup {
+
+.layout-btn-signup {
+  font-family: Arial, Helvetica, sans-serif;
+	cursor: pointer;
+	padding: 12px 20px; 
+	margin: 15px 10px;
+	text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+	font-weight: 700;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 1px solid white;
+  background: black;
+  color:white;
+  border-radius: 2px;
+}
+
+.layout-btn-login {
+  font-family: Arial, Helvetica, sans-serif;
+	cursor: pointer;
+	padding: 12px 20px; 
+	margin: 15px 10px;
+	text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+	font-weight: 700;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 1px solid white;
+  background: white;
+  color:black;
+  border-radius: 2px;
+}
+
+.layout-btn-login:hover {
+  background-color: black;
+  color: white;
+}
+
+.layout-btn-signup:hover {
+  background-color: white;
+  color: black;
+}
+
+/* .layout-btn-login, .layout-btn-signup {
 	cursor: pointer;
 	padding: 10px 20px; 
 	margin: 15px 10px;
@@ -96,9 +143,9 @@ h1 {
   border: 2px solid white;
   background: #4b4b4b;
   border-radius: 0.4rem;
-}
+} */
 
-.layout-btn-login a, .layout-btn-signup a { 
+/* .layout-btn-login a, .layout-btn-signup a { 
   color: white;
   text-decoration: none;
 }
@@ -115,7 +162,7 @@ h1 {
 
 .layout-btn-login:focus, .layout-btn-signup:focus {
   outline: 0;
-}
+} */
 
 .left-navbar-menu-chef > li > a {
   text-decoration: none;
@@ -257,11 +304,12 @@ h1 {
 }
 
 .footer-div-title {
-  font-weight: 700;
-  font-size: 1.4rem;
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 1px;
   text-align: center;
   color: white;
-  font-family: 'Asap', sans-serif;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .layout-footer-image-logo {
@@ -293,7 +341,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* background-image: url('../images/black-background.jpg'); */
+  background-image: url('../images/homepage-background1.jpg');
   background-color: white;
   background-repeat: space;
   background-size: 100%;
@@ -305,10 +353,11 @@ h1 {
 }
 
 .homepage-title-box {
-  width: 40rem;
+  width: 32rem;
   height: auto;
   background-color: black;
-  margin: 6rem 0 0 8rem;
+  opacity: 0.8;
+  margin: 4rem 0 0 6rem;
   padding: 4rem 0 2rem 6rem;
 }
 
@@ -329,8 +378,8 @@ h1 {
 
 .homepage-order-button {
 	cursor: pointer;
-	padding: 10px 20px; 
-	margin: 15px 10px;
+	padding: 15px 20px; 
+	margin: 45px 0px;
 	text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.9rem;
@@ -338,36 +387,16 @@ h1 {
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
   transition: all 0.3s;
-  border: 2px solid white;
-  background: #4b4b4b;
-  border-radius: 0.4rem;
+  border: 1px solid white;
+  background: black;
+  color:white;
 }
 
-/* 
-.homepage-order-button {
-  font-size: 1.2rem;
-  margin: 8rem 0 3rem 17%;
-  width: 13rem;
-  height: 3rem;
-  border-radius: 2rem;
-  background-color: rgb(54, 54, 54);
+.homepage-order-button:hover {
+  background-color: white;
+  color: black;
 }
 
-.homepage-order-button > a {
-  text-decoration: none;
-  color: white;
-  font-family: 'Baloo 2', cursive;
-  font-size: 1.3rem;
-}
-
-.homepage-order-button:focus {
-  outline: 0;
-}
-
-.homepage-order-button:active {
-  box-shadow: 1px 2px 1px rgb(141, 141, 141);
-  transform: translateY(2px);
-} */
 
 /****************
 ***** LOG IN *****
