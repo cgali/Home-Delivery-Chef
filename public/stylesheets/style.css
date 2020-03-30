@@ -43,6 +43,7 @@ h1 {
   width: 11rem;
   margin-top: 0.6rem;
   margin-right: 2.5rem;
+  margin-left: 1rem;
 }
 
 .left-navbar-menu-chef {
@@ -60,9 +61,10 @@ h1 {
 
 .current-email {
   color: rgb(255, 153, 0);
-  font-family: 'Lato', sans-serif;
+  font-family: 'bebas', sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
+  margin-left: 2.5rem;
 }
 
 .right-navbar-account {
@@ -129,48 +131,12 @@ h1 {
   color: black;
 }
 
-/* .layout-btn-login, .layout-btn-signup {
-	cursor: pointer;
-	padding: 10px 20px; 
-	margin: 15px 10px;
-	text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.9rem;
-	font-weight: 700;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-  transition: all 0.3s;
-  border: 2px solid white;
-  background: #4b4b4b;
-  border-radius: 0.4rem;
-} */
-
-/* .layout-btn-login a, .layout-btn-signup a { 
-  color: white;
-  text-decoration: none;
-}
-
-.layout-btn-login:hover,
-.layout-btn-login:active {
-  background: #4b6584;
-}
-
-.layout-btn-signup:hover,
-.layout-btn-signup:active {
-	background: #4b6584;
-}
-
-.layout-btn-login:focus, .layout-btn-signup:focus {
-  outline: 0;
-} */
-
 .left-navbar-menu-chef > li > a {
   text-decoration: none;
   color: white;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .left-navbar-menu-chef > li > a:hover,
@@ -192,7 +158,7 @@ h1 {
 	font-weight: 700;
   border: 2px solid white;
   background: black;
-  border-radius: 0.6rem;
+  border-radius: 2px;
   width: 11rem;
 }
 
@@ -202,9 +168,10 @@ h1 {
 }
 
 .layout-button-logout {
+  font-family: Arial, Helvetica, sans-serif;
 	cursor: pointer;
-	padding: 10px 20px; 
-	margin: 15px 30px;
+	padding: 12px 20px; 
+	margin: 15px 25px 15px 0;
 	text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.9rem;
@@ -212,33 +179,38 @@ h1 {
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
   transition: all 0.3s;
-  border: 2px solid white;
-  background: black;
-  border-radius: 0.6rem;
+  border: 1px solid white;
+  background: white;
+  color:black;
+  border-radius: 2px;
 }
 
-
+.layout-button-logout:hover {
+  background-color: black;
+  color: white;
+}
 
 .layout-button-cart {
-  cursor: pointer;
-	padding: 10px 0px 10px 20px; 
-  margin: 15px 0px 15px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+	cursor: pointer;
+	padding: 11px 20px; 
+	margin: 15px 0px 15px 35px;
 	text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.9rem;
 	font-weight: 700;
-  border: 2px solid white;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 1px solid white;
   background: black;
-  border-radius: 0.6rem;
-  width: 8rem;
+  color:white;
+  border-radius: 2px;
 }
 
-.layout-button-cart > a {
-  color: white;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  margin: 0px;
+.layout-button-cart:hover {
+  background-color: white;
+  color: black;
 }
 
 .cart-image {
@@ -258,7 +230,7 @@ h1 {
 /*** FOOTER ***/
 
 .footer {
-  background: linear-gradient(0deg, black, black, rgb(12, 12, 12), rgb(24, 24, 24), rgb(36, 36, 36), rgb(37, 37, 37));
+  /* background: linear-gradient(0deg, black, black, rgb(12, 12, 12), rgb(24, 24, 24), rgb(36, 36, 36), rgb(37, 37, 37)); */
   height: 30rem;
   width: auto;
   color: #d1d8e0;
@@ -269,10 +241,13 @@ h1 {
 }
 
 .footer-section {
+  background-color: black;
+  opacity: 0.8;
   display: flex;
   font-size: 1.1rem;
   justify-content: center;
   font-family: 'Asap', sans-serif;
+  padding-bottom: 1.5rem;
 }
 
 .footer-div {
@@ -310,6 +285,17 @@ h1 {
   text-align: center;
   color: white;
   font-family: 'Bebas Neue', cursive;
+}
+
+.subfooter {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 9rem;
+  width: 99vw;
+  padding-top: 1.2rem;
+  opacity: 0.9;
 }
 
 .layout-footer-image-logo {

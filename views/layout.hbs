@@ -32,11 +32,11 @@
       </li>
       
       {{#if currentChef }}
-				<li><button class="layout-button-account"><a href="/chefs/{{ currentChef._id }}">My account</a></button></li>
+				<li><button class="layout-button-account"><a href="/chefs/{{ currentChef._id }}"></a>My account</a></button></li>
 				<li><button class="layout-button-logout"><a href="/logout">Logout</a></button></li>
       {{else if currentClient}}
-				<li><button class="layout-button-cart"><a href="/cart">Cart <img class="cart-image" src="/images/cart.png" alt="cart"></a></button></li>
-				<li><button class="layout-button-logout"><a href="/logout">Logout</a></button></li>
+				<li><a href="/cart"><button class="layout-button-cart">Cart <img class="cart-image" src="/images/cart.png" alt="cart"></button></a></li>
+				<li><a href="/logout"><button class="layout-button-logout">Logout</button></a></li>
       {{else}}
         <div class="login-signup-btn-container">
           <li><a href="/login"><button class="layout-btn-login">Log In</button></a></li>
@@ -79,8 +79,10 @@
         <img class="payment-method-img" src="/images/credit-card.png" alt="payment-methods">
       </div>
     </section>
-    <a href="/"><img class="layout-footer-image-logo" src="/images/kuisin-logo.png" alt="Logo"></a>
-    <p class="copyright">© 2020, Kuisin. All Rights Reserved.</p> 
+    <div class="subfooter">
+      <a href="/"><img class="layout-footer-image-logo" src="/images/kuisin-logo.png" alt="Logo"></a>
+      <p class="copyright">© 2020, Kuisin. All Rights Reserved.</p> 
+    </div>
   </footer>
 </body>
 <script src="/javascripts/tabs.js"></script>
