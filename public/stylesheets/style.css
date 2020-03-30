@@ -12,6 +12,12 @@ h2 {
   margin-block-end: 0em;
 }
 
+h1 {
+  font-size: 1.5em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
 /***************
 **** LAYOUT ****
 ***************/
@@ -28,7 +34,8 @@ h2 {
   position: fixed;
   top: 0;
   overflow: hidden;
-  background: linear-gradient(180deg, black, black, rgb(12, 12, 12), rgb(24, 24, 24), rgb(36, 36, 36), rgb(37, 37, 37));
+  background-color: #232b2b;
+  /* background: linear-gradient(180deg, #232b2b, #232b2b, rgb(12, 12, 12), rgb(24, 24, 24), rgb(36, 36, 36), rgb(37, 37, 37)); */
   z-index: 2;
 }
 
@@ -72,13 +79,13 @@ h2 {
 .login-signup-btn-container {
   display: flex;
   list-style: none;
-  margin-left: 1rem;
+  margin-left: 10rem;
 }
 
 .layout-btn-login, .layout-btn-signup {
 	cursor: pointer;
 	padding: 10px 20px; 
-	margin: 15px 30px;
+	margin: 15px 10px;
 	text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.9rem;
@@ -87,8 +94,8 @@ h2 {
 	-moz-transition: all 0.3s;
   transition: all 0.3s;
   border: 2px solid white;
-  background: black;
-  border-radius: 0.6rem;
+  background: #4b4b4b;
+  border-radius: 0.4rem;
 }
 
 .layout-btn-login a, .layout-btn-signup a { 
@@ -115,11 +122,13 @@ h2 {
   color: white;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.1rem;
 }
 
 .left-navbar-menu-chef > li > a:hover,
 .left-navbar-menu-chef > li > a:active {
-  color: #d1d8e0;
+  color: #dfe6e9;
 }
 
 .left-navbar-menu-chef > li, .right-navbar-account > li {
@@ -216,7 +225,7 @@ h2 {
   display: flex;
   font-size: 1.1rem;
   justify-content: center;
-  font-family: 'Lato', monospace;
+  font-family: 'Asap', sans-serif;
 }
 
 .footer-div {
@@ -252,6 +261,7 @@ h2 {
   font-size: 1.4rem;
   text-align: center;
   color: white;
+  font-family: 'Asap', sans-serif;
 }
 
 .layout-footer-image-logo {
@@ -262,7 +272,7 @@ h2 {
   margin: 0 0 1.7rem 0;
   font-size: 0.9rem;
   color: white;
-  font-family: 'Baloo', sans-serif;
+  font-family: 'Asap', sans-serif;
 }
 
 .payment-method-img {
@@ -279,44 +289,62 @@ h2 {
 ***** INDEX *****
 ****************/
 
-.index-container {
+.homepage-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-image: url('../images/black-background.jpg');
+  /* background-image: url('../images/black-background.jpg'); */
+  background-color: white;
   background-repeat: space;
   background-size: 100%;
   margin-top: 0;
   width: 100%;
-  height: 49rem;
+  height: 70rem;
   color: rgba(255, 255, 255, 0.849);
   font-family: 'Baloo 2', cursive;
 }
 
-.index-title-box {
-  margin-left: 2rem;
+.homepage-title-box {
+  width: 40rem;
+  height: auto;
+  background-color: black;
+  margin: 6rem 0 0 8rem;
+  padding: 4rem 0 2rem 6rem;
 }
 
-.index-container > div > h1 {
-  font-family: 'Bellota', cursive;
-  font-size: 8rem;
-  margin: 0;
-  padding-top: 2.7rem;
-  font-style: oblique;
+.homepage-title {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  font-size: 6rem;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
-.index-container > div > h2 {
-  font-size: 2.8rem;
-  font-weight: 100;
-  margin-top: 4.6rem;
+.homepage-description {
+  font-family: 'Lora', serif;
+  font-size: 1.4rem;
+  margin-right: 7rem;
 }
 
-.index-container > div > p {
-  font-size: 1.8rem;
-  margin-top: 5.5rem;
+.homepage-order-button {
+	cursor: pointer;
+	padding: 10px 20px; 
+	margin: 15px 10px;
+	text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+	font-weight: 700;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 2px solid white;
+  background: #4b4b4b;
+  border-radius: 0.4rem;
 }
 
-.index-order-button {
+/* 
+.homepage-order-button {
   font-size: 1.2rem;
   margin: 8rem 0 3rem 17%;
   width: 13rem;
@@ -325,21 +353,21 @@ h2 {
   background-color: rgb(54, 54, 54);
 }
 
-.index-order-button > a {
+.homepage-order-button > a {
   text-decoration: none;
   color: white;
   font-family: 'Baloo 2', cursive;
   font-size: 1.3rem;
 }
 
-.index-order-button:focus {
+.homepage-order-button:focus {
   outline: 0;
 }
 
-.index-order-button:active {
+.homepage-order-button:active {
   box-shadow: 1px 2px 1px rgb(141, 141, 141);
   transform: translateY(2px);
-}
+} */
 
 /****************
 ***** LOG IN *****
