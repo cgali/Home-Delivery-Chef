@@ -615,7 +615,7 @@ h2 {
   font-size: 3rem;
   font-family: 'Lato', sans-serif;
   color: white;
-  padding: 4rem 0rem 4rem 5.5rem;
+  padding: 4rem 0;
   margin-bottom: 1.5rem;
   height: 5rem;
   width: 100%;
@@ -851,7 +851,7 @@ h2 {
   font-size: 3rem;
   font-family: 'Lato', sans-serif;
   color: white;
-  padding: 4rem 0rem 4rem 6rem;
+  padding: 4rem 0;
   margin-bottom: 1.5rem;
   height: 5rem;
   width: 100%;
