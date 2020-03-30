@@ -4,8 +4,10 @@
 			<div class="menus-box">
 				<img class="menus-picture" src="{{ this.starter.image }}" alt="picture of menu">
 				<p class="menus-name">{{ this.title }}</p>
-				<p class="menus-price">- {{ this.price }}€ -</p>
+				<p class="menus-cuisine">{{ this.cuisine }}</p>
 				<hr class="separator-menus-profile">
+				<p class="menus-price">- {{ this.price }}€ -</p>
+				<hr class="separator-menus-profile final">
         		{{#if @root.currentClient }}
 					<button class="see-more-menus-btn"><a href="">Add to Cart +</a>
         		{{/if}}

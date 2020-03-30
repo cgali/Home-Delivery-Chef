@@ -1,47 +1,49 @@
 <div class="menu-info-container">
-	<h2 class="menu-info-title">{{ foundMenu.title }}</h2>
-	<div class="menu-info-box">
-		<div class="menu-info.image-box">
-			<img class="menu-info-image" src="{{ foundMenu.starter.image }}" alt="Menu image">
-		</div>
-		<div class="menu-info-info">
-			<h3 class="menu-info-name">{{ foundMenu.starter.name }}</h3>
-			<p class="menu-info-dish-properties"><strong>Description: </strong>{{ foundMenu.starter.description }}</p>
-			<p class="menu-info-dish-properties"><strong>Ingredients: </strong>
+	<div class="menu-info-background-box">
+		<h2 class="menu-info-title">{{ foundMenu.title }}</h2>
+		<div class="menu-info-box">
+			<div class="menu-info-image-box">
+				<img class="menu-info-image" src="{{ foundMenu.starter.image }}" alt="Menu image">
+			</div>
+			<div class="menu-info-info">
+				<h3 class="menu-info-name">{{ foundMenu.starter.name }}</h3>
+				<p class="menu-info-dish-properties"><strong class="strong-title">Description: </strong>{{ foundMenu.starter.description }}</p>
+				<p class="menu-info-dish-properties"><strong class="strong-title">Ingredients: </strong>
 				{{#each foundMenu.starter.ingredients }}
 					<li>{{ this }}.</li>
-            	{{/each }}
-			</p>
+				{{/each }}
+				</p>
+			</div>
 		</div>
-	</div>
 
-	<div class="menu-info-box">
-		<div class="menu-info.image-box">
-			<img class="menu-info-image" src="{{ foundMenu.mainCourse.image }}" alt="Menu image">
-		</div>
-		<div class="menu-info-info">
-			<h3 class="menu-info-name">{{ foundMenu.mainCourse.name }}</h3>
-			<p class="menu-info-dish-properties"><strong>Description: </strong>{{ foundMenu.mainCourse.description }}</p>
-			<p class="menu-info-dish-properties"><strong>Ingredients: </strong>
+		<div class="menu-info-box">
+			<div class="menu-info-image-box">
+				<img class="menu-info-image" src="{{ foundMenu.mainCourse.image }}" alt="Menu image">
+			</div>
+			<div class="menu-info-info">
+				<h3 class="menu-info-name">{{ foundMenu.mainCourse.name }}</h3>
+				<p class="menu-info-dish-properties"><strong class="strong-title">Description: </strong>{{ foundMenu.mainCourse.description }}</p>
+				<p class="menu-info-dish-properties"><strong class="strong-title">Ingredients: </strong>
 				{{#each foundMenu.mainCourse.ingredients }}
 					<li>{{ this }}.</li>
-            	{{/each }}
-			</p>
+				{{/each }}
+				</p>
+			</div>
 		</div>
-	</div>
 
-	<div class="menu-info-box">
-		<div class="menu-info.image-box">
-			<img class="menu-info-image" src="{{ foundMenu.dessert.image }}" alt="Menu image">
-		</div>
-		<div class="menu-info-info">
-			<h3 class="menu-info-name">{{ foundMenu.dessert.name }}</h3>
-			<p class="menu-info-dish-properties"><strong>Description: </strong>{{ foundMenu.dessert.description }}</p>
-			<p class="menu-info-dish-properties"><strong>Ingredients: </strong>
+		<div class="menu-info-box">
+			<div class="menu-info-image-box">
+				<img class="menu-info-image" src="{{ foundMenu.dessert.image }}" alt="Menu image">
+			</div>
+			<div class="menu-info-info">
+				<h3 class="menu-info-name">{{ foundMenu.dessert.name }}</h3>
+				<p class="menu-info-dish-properties"><strong class="strong-title">Description: </strong>{{ foundMenu.dessert.description }}</p>
+				<p class="menu-info-dish-properties"><strong class="strong-title">Ingredients: </strong>
 				{{#each foundMenu.dessert.ingredients }}
 					<li>{{ this }}.</li>
-            	{{/each }}
-			</p>
+				{{/each }}
+				</p>
+			</div>
 		</div>
 	</div>
 
@@ -50,16 +52,16 @@
 		<p class="menu-info-properties"><strong>Chef: </strong>{{ foundMenu.chef_id.name }}</p>
 		<p class="menu-info-properties"><strong>Cuisine: </strong>{{ foundMenu.cuisine }}</p>
 		<p class="menu-info-properties"><strong>Price: </strong>{{ foundMenu.price }}€</p>
-		{{#if @root.currentClient }}
-			<button class="menu-info-buy-button"><a href="<!MISSING CART ROUTE>">Add to Cart</a></button>
-    {{/if}}
-
-		{{#if_equal foundMenu.chef_id currentChef._id}}
-			<button class="menu-info-edit-button"><a href="/menus/{{ foundMenu._id }}/update-menu">Edit Your Menu</a></button>
-			<form action="/menus/{{ foundMenu._id }}/delete" method="post">
-                <button class="menu-info-edit-button">Delete Your Menu</button>
-            </form>
-		{{/if_equal}}
+		<div class="menu-info-general-buttons">
+			{{#if @root.currentClient }}
+				<a class="menu-info-buy-button" href="<!MISSING CART ROUTE>">Add to Cart</a>
+			{{/if}}
+			{{#if_equal foundMenu.chef_id currentChef._id}}
+			<a class="menu-info-edit-button" href="/menus/{{ foundMenu._id }}/update-menu">Edit Your Menu</a>
+				<form action="/menus/{{ foundMenu._id }}/delete" method="post">
+					<button class="menu-info-delete-button">Delete Your Menu</button>
+				</form>
+			{{/if_equal}}
+		</div>
 	</div>
-
 </div>

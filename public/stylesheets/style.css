@@ -838,6 +838,13 @@ h2 {
   align-items: center;
 }
 
+.menus-picture {
+  width: 16rem;
+  height: auto;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
 .menus-name {
   font-family: 'Lato', sans-serif;
   font-size: 1.2rem;
@@ -853,11 +860,19 @@ h2 {
   font-weight: bold;
 }
 
-.menus-picture {
-  width: 16rem;
-  height: auto;
-  border-top-right-radius: 6px;
-  border-top-left-radius: 6px;
+.menus-cuisine {
+  font-family: 'Lato', sans-serif;
+  color: rgb(54, 54, 54);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.separator-menus-profile {
+  width: 25%;
+}
+
+.final {
+  margin-bottom: 5%;
 }
 
 .see-more-menus-btn {
@@ -891,11 +906,119 @@ h2 {
   outline: 0;
 }
 
-.separator-menus-profile {
-  width: 25%;
-  margin-bottom: 10%;
+/****************
+*** MENU INFO ***
+****************/
+
+.menu-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.menu-info-background-box {
+  background-image: url('../images/blackboard.jpg');
+  background-repeat: round;
+  background-size: 100%;
+  margin: 2% 6% 2% 6%;
+  border-radius: 2rem;
+  height: auto;
+  color: white;
+}
+
+.menu-info-title {
+  text-align: center;
+  font-size: 5rem;
+  font-family:'Baloo 2', sans-serif;
+  font-weight: bold;
+  text-decoration: underline;
+  font-style: oblique;
+  margin-top: 3rem;
+}
+
+.menu-info-box {
+  display: flex;
+  margin: 2rem 10%;
+  font-family:'Asap', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+
+.strong-title {
+  font-style: oblique;
+  text-decoration: underline;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.menu-info-image {
+  width: 24rem;
+  border-radius: 1rem;
+}
+
+.menu-info-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 1rem;
+}
+
+.menu-info-name {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+.menu-info-general {
+  background-color: rgb(54, 54, 54);
+  border: 1px solid rgb(54, 54, 54);
+  border-radius: 1rem;
+  padding: 0 2.5rem;
+  margin-bottom: 3rem;
+  font-family:'Asap', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.menu-info-general-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8% 0 8% 6%;
+}
+
+.menu-info-edit-button, .menu-info-delete-button, .menu-info-buy-button {
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:0.15em solid white;
+  margin-bottom: 1.5em;
+  border-radius:0.4em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Lato', sans-serif;
+  font-size: 1rem;
+  font-weight:500;
+  color: white;
+  text-align:center;
+  transition: all 0.2s;
+  background-color: rgb(54, 54, 54);
+}
+
+.menu-info-edit-button > a, .menu-info-delete-button > a, .menu-info-buy-button > a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-info-edit-button:hover, .menu-info-delete-button:hover, .menu-info-buy-button:hover {
+  color:#000000;
+  background-color:#dfe6e9;
+}
+
+.menu-info-edit-button:focus, .menu-info-delete-button:focus, .menu-info-buy-button:focus {
+  outline: 0;
+}
 /******************
 *** CREATE MENU ***
 *** UPDATE MENU ***
@@ -1028,7 +1151,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   margin-right: 1rem;
-  border: 3px solid #8395a7;
+  border: 3px solid rgb(54, 54, 54);
   border-radius: 5px;
 }
 
@@ -1092,62 +1215,4 @@ h2 {
 
 .how-it-works-info-box:last-child {
   margin-bottom: 5rem;
-}
-
-/****************
-*** MENU INFO ***
-****************/
-
-.menu-info-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.menu-info-title {
-  text-align: center;
-}
-
-.menu-info-box {
-  display: flex;
-  margin-bottom: 2rem;
-}
-
-.menu-info-image {
-  width: 15rem;
-  border-radius: 1rem;
-}
-
-.menu-info-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.menu-info-name {
-  font-size: 1.3rem;
-  text-decoration: underline;
-}
-
-.menu-info-info {
-  margin: 1rem;
-}
-
-.menu-info-info > p {
-  font-size: 1.1rem;
-}
-
-.menu-info-container {
-  margin-left: 2rem;
-}
-
-.menu-info-properties {
-  font-size: 1.1rem;
-}
-
-.menu-info-general {
-  background-color: rgb(218, 216, 216);
-  border: 1px solid rgb(218, 216, 216);
-  border-radius: 1rem;
-  padding: 0 1rem;
-  margin-bottom: 3rem;
 }
