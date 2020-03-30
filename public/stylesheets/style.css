@@ -201,39 +201,78 @@ h2 {
 
 /*** FOOTER ***/
 
-.footer-container {
+.footer {
+  background: linear-gradient(0deg, black, black, rgb(12, 12, 12), rgb(24, 24, 24), rgb(36, 36, 36), rgb(37, 37, 37));
+  height: 30rem;
+  width: auto;
+  color: #d1d8e0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background: linear-gradient(0deg, black, black, rgb(12, 12, 12), rgb(24, 24, 24), rgb(36, 36, 36), rgb(37, 37, 37));
-  height: 13rem;
+  align-items: center;
+}
+
+.footer-section {
+  display: flex;
+  font-size: 1.1rem;
+  justify-content: center;
+  font-family: 'Lato', monospace;
+}
+
+.footer-div {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  width: 50%;
+  padding: 0 2rem;
+  line-height: 1.5em;
+}
+
+.footer-contact-us {
+  margin-left: 2rem;
+}
+
+.footer-how-works {
+  margin-right: 2rem;
+}
+
+.sitemap-list {
+  list-style-type: none;
+  text-align: center;
+  padding-right: 2.2rem;
+}
+
+.sitemap-list a {
+  text-decoration: none;
+  color: #d1d8e0;
   font-size: 1.3rem;
-  font-family: 'Baloo 2', cursive;
+}
+
+.footer-div-title {
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-align: center;
+  color: white;
 }
 
 .layout-footer-image-logo {
-  width: 6rem;
-}
-
-.footer-container > ul {
-  display: flex;
-  justify-content: space-between;
-  width: 60rem;
-  list-style-type: none;
-  margin: 1rem 0 0 0;
-  padding-left: 4rem;
-}
-
-.footer-container > ul > li >a {
-  text-decoration: none;
-  color: white;
+  width: 5rem;
 }
 
 .copyright {
-  margin: 0 0 0.7rem 0;
-  font-size: 1.2rem;
+  margin: 0 0 1.7rem 0;
+  font-size: 0.9rem;
   color: white;
+  font-family: 'Baloo', sans-serif;
+}
+
+.payment-method-img {
+  width: 16rem;
+  margin-left: 1.2rem;
+  margin-top: 0.3rem;
+}
+
+.secure-payment-img {
+  width: 15rem;
 }
 
 /****************
