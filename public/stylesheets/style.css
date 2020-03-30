@@ -316,6 +316,14 @@ h1 {
   font-family: 'Bebas Neue', cursive;
 }
 
+.social-buttons {
+  margin-top: 2.5rem;
+}
+
+.social-buttons img {
+  margin-right: 0.5rem;
+}
+
 .subfooter {
   background-color: black;
   display: flex;
