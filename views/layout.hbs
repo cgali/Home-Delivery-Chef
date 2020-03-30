@@ -32,8 +32,8 @@
       </li>
       
       {{#if currentChef }}
-				<li><button class="layout-button-account"><a href="/chefs/{{ currentChef._id }}"></a>My account</a></button></li>
-				<li><button class="layout-button-logout"><a href="/logout">Logout</a></button></li>
+				<li><a href="/chefs/{{ currentChef._id }}"><button class="layout-button-account">My account</button></a></li>
+				<li><a href="/logout"><button class="layout-button-logout-chef">Logout</button></a></li>
       {{else if currentClient}}
 				<li><a href="/cart"><button class="layout-button-cart">Cart <img class="cart-image" src="/images/cart.png" alt="cart"></button></a></li>
 				<li><a href="/logout"><button class="layout-button-logout">Logout</button></a></li>
