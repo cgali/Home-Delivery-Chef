@@ -52,10 +52,13 @@
 		<p class="menu-info-properties"><strong>Chef: </strong>{{ foundMenu.chef_id.name }}</p>
 		<p class="menu-info-properties"><strong>Cuisine: </strong>{{ foundMenu.cuisine }}</p>
 		<p class="menu-info-properties"><strong>Price: </strong>{{ foundMenu.price }}€</p>
-		<div class="menu-info-general-buttons">
+		<div class="menu-info-general-button-user">
 			{{#if @root.currentClient }}
-				<a class="menu-info-buy-button" href="<!MISSING CART ROUTE>">Add to Cart</a>
+				<a class="menu-info-buy-button" href="<!MISSING CART ROUTE>">Add to Cart +</a>
 			{{/if}}
+		</div>
+			
+		<div class="menu-info-general-buttons-chef">	
 			{{#if_equal foundMenu.chef_id currentChef._id}}
 			<a class="menu-info-edit-button" href="/menus/{{ foundMenu._id }}/update-menu">Edit Your Menu</a>
 				<form action="/menus/{{ foundMenu._id }}/delete" method="post">
