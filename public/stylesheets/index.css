@@ -98,7 +98,7 @@
 }
 
 .third-section-description {
-	margin: 3rem 6rem 1rem 1rem;
+	margin: 0rem 6rem 0rem 1rem;
 	font-family: 'Lora', sans-serif;
 	font-size: 3rem;
 	font-weight: 500;
@@ -107,4 +107,9 @@
 .third-section-signature {
 	width: 12rem;
 	margin-left: 15rem;
+}
+
+.third-section-quotation {
+	width: 8rem;
+	margin: 3rem 0 0 0;
 }
