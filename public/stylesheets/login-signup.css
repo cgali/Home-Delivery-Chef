@@ -1,0 +1,265 @@
+/****************
+***** LOG IN *****
+****************/
+
+.login-container {
+	height: 49rem;
+	width: 100%;
+	background-image: url('../images/blacktable2.jpeg');
+	background-repeat: space;
+	background-size: 100%;
+	opacity: 0.8;
+	padding-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Baloo 2', cursive;
+}
+
+.login-container > h2 {
+	font-size: 4rem;
+	color: white;
+	text-decoration: underline;
+	margin-top: 2rem;
+}
+
+.login-form-box {
+	margin-top: 1rem;
+	border: 1px solid rgb(54, 54, 54);
+	background-color: rgb(54, 54, 54);
+	border-radius: 3rem;
+	width: 20rem;
+	height: auto;
+	font-size: 1.4rem;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.login-form-box > form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 2rem;
+}
+
+.login-form-box > form > label {
+	margin-top: 1rem;
+}
+
+.login-form-box > form > input {
+	margin-top: 0.5rem;
+	width: 14rem;
+	height: 2rem;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+}
+
+.login-button {
+	font-size: 1.2rem;
+	margin: 2rem 0 1rem 0;
+	width: 10rem;
+	height: 3rem;
+	border-radius: 2rem;
+	background-color: white;
+}
+
+.login-button > a, .join-button > a {
+	text-decoration: none;
+	font-family: 'Baloo 2', cursive;
+	font-size: 1.3rem;
+}
+
+.login-button:focus {
+	outline: 0;
+}
+
+.login-button:active {
+	box-shadow: 1px 2px 1px black;
+	transform: translateY(2px);
+}
+
+.join-button {
+	background-color: rgb(54, 54, 54);
+	border-radius: 1rem;
+	margin-bottom: 2rem;
+}
+
+.join-button > a{
+	color: white;
+}
+
+.join-button:hover {
+	background-color: black;
+}
+
+.join-button:focus {
+	outline: 0;
+}
+
+.error-message {
+	background: #F02B63;
+	box-sizing: border-box;
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	margin-top: 3rem;
+}
+
+/****************
+***** SIGNUP *****
+****************/
+
+.signup-container {
+	height: 100%;
+	width: 100%;
+	padding-bottom: 1rem;
+	background-image: url('../images/blacktable2.jpeg');
+	background-repeat: space;
+	background-size: 100%;
+	opacity: 0.8;
+	padding-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Baloo 2', cursive;
+}
+
+.signup-container > h2 {
+	font-size: 4rem;
+	color: white;
+	text-decoration: underline;
+	margin: 2rem 0 2rem 0;
+}
+
+.signup-form-box, .signup-form-box-client {
+	margin: 1rem 0 5rem 0;
+	border: 1px solid rgb(54, 54, 54);
+	background-color: rgb(54, 54, 54);
+	border-radius: 3rem;
+	width: 39rem;
+	height: auto;
+	font-size: 1.4rem;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.signup-form-box-client {
+	width: 20rem;
+}
+
+.signup-form-box-client > form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 2rem;
+}
+
+.signup-form-box > form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.signup-form-label-input-box {
+	margin: 0.5rem;
+}
+
+.signup-form-label-input-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.signup-form-box-client > form {
+	margin: 1rem 1rem 0 0;
+}
+
+.signup-form-box-client > form > input {
+	margin: 0.5rem 0.5rem 0 0;
+	width: 14rem;
+	height: 2rem;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+}
+
+.signup-form-label-input-box > input {
+	margin: 0.5rem 0.5rem 0 0;
+	width: 12rem;
+	height: 2rem;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+}
+
+.create-account-button {
+	font-size: 1.2rem;
+	margin: 2rem 0 1rem 0;
+	width: 10rem;
+	height: 3rem;
+	border-radius: 2rem;
+	background-color: white;
+}
+
+.create-account-button > a {
+	text-decoration: none;
+	font-family: 'Baloo 2', cursive;
+	font-size: 1.3rem;
+}
+
+.create-account-button:focus {
+	outline: 0;
+}
+
+.create-account-button:active {
+	box-shadow: 1px 2px 1px black;
+	transform: translateY(2px);
+}
+
+
+/* Style the tab */
+.tab {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	background-color: rgb(54, 54, 54);
+}
+
+.tablinks:last-child {
+	border-left: 1px solid white;
+}
+
+.tablinks {
+	color: white;
+	font-size: 1rem;
+}
+
+.tablinks:focus {
+	outline: 0;
+	background-color: black;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+	background-color: black;
+}
+
+/* Style the tab content */
+.tabcontent-two {
+	display: none;
+}
