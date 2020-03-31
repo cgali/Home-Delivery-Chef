@@ -95,6 +95,7 @@
 .third-section-img {
 	width: 37rem;
 	margin: 3rem 3rem 5rem 5rem;
+	border-radius: 4px;
 }
 
 .third-section-description {
@@ -112,4 +113,58 @@
 .third-section-quotation {
 	width: 8rem;
 	margin: 3rem 0 0 0;
+}
+
+.homepage-fourth-section {
+	margin-top: 1rem;
+	margin-bottom: 9rem;
+	position: relative;
+}
+
+.homepage-fourth-title-box {
+	position: absolute;
+	opacity: 0.9;
+	width: 32rem;
+	height: auto;
+	background-color: black;
+	margin: 0rem 0 0rem 5rem;
+	padding: 4rem 0 2rem 6rem;
+	top: 8rem;
+}
+
+.homepage-fourth-title {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: 400;
+	font-size: 6rem;
+	color: white;
+	line-height: 1.2;
+	margin-bottom: 1rem;
+}
+
+.homepage-fourth-description {
+	font-family: 'Lora', serif;
+	font-size: 1.4rem;
+	margin-right: 7rem;
+	color: white;
+}
+
+.homepage-fourth-order-button {
+		cursor: pointer;
+		padding: 15px 20px; 
+		margin: 45px 0px;
+		text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 0.9rem;
+		font-weight: 700;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	border: 1px solid white;
+	background: black;
+	color:white;
+}
+
+.homepage-fourth-order-button:hover {
+	background-color: white;
+	color: black;
 }
