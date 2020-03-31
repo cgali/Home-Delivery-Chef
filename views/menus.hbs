@@ -1,17 +1,19 @@
 <div class="menus-title"><h2>Menus</h2></div>
 <div class="menus-container">
-		{{#each menus }}
-			<div class="menus-box">
-				<a href="/menus/{{ this._id }}"><img class="menus-picture" src="{{ this.starter.image }}" alt="picture of menu"></a>
-				<p class="menus-name">{{ this.title }}</p>
-				<p class="menus-cuisine">{{ this.cuisine }}</p>
-				<hr class="separator-menus-profile">
-				<p class="menus-price">- {{ this.price }}€ -</p>
-				<hr class="separator-menus-profile final">
-        		{{#if @root.currentClient }}
-					<button class="see-more-menus-btn"><a href="">Add to Cart +</a>
-        		{{/if}}
-				<button class="see-more-menus-btn"><a href="/menus/{{ this._id }}">See more</a></button>
-			</div>
-		{{/each}}
+	{{#each menus }}
+		<div class="menus-box">
+			<a href="/menus/{{ this._id }}"><img class="menus-picture" src="{{ this.starter.image }}" alt="picture of menu"></a>
+			<p class="menus-name">{{ this.title }}</p>
+			<p class="menus-cuisine">{{ this.cuisine }}</p>
+			<hr class="separator-menus-profile">
+			<p class="menus-price">- {{ this.price }}€ -</p>
+			<hr class="separator-menus-profile final">
+					{{#if @root.currentClient }}
+			<form action="/cart/{{ this._id }}/addToCart" method="post">
+				<button class="menu-info-buy-button" type="submit">Add to Cart +</button>
+			</form>
+					{{/if}}
+			<button class="see-more-menus-btn"><a href="/menus/{{ this._id }}">See more</a></button>
+		</div>
+	{{/each}}
 </div>

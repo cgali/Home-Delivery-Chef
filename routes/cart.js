@@ -6,20 +6,29 @@ const router = express.Router();
 
 // GET Cart page 
 router.get('/', (req, res) => {
-	const { currentUser } = req.session;
-	res.render('cart', { currentUser });
+	const { currentClient } = req.session;
+	res.render('cart', { currentClient });
 });
 
 // POST add to cart
 router.post('/:id/addToCart', (req, res) => {
-	const { currentUser } = req.session;
+	const { currentClient } = req.session;
 	const { id } = req.params;
-	const {
-		menu, 
-	} = req.body;
-	Client.update({
-		menu,
-	})
+
+
+
+
+	Client.findById(currentClient._id)
+		.then((client) => {
+      client.cart.push(id)
+      return client.save()
+    })
+    .then(() => {
+      res.redirect('/cart');
+    })
+		.catch(() => {
+
+		})
 })
 
 
