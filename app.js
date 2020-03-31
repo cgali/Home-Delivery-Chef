@@ -26,7 +26,7 @@ const cart = require('./routes/cart');
 
 //Connect to DB
 mongoose
-	.connect(`mongodb+srv://chefapp:${process.env.DBPASSWORD}@module2project-ko7or.gcp.mongodb.net/HomeDeliveryChef?retryWrites=true&w=majority`, {
+	.connect(`${process.env.DBURL}`, {
 		useCreateIndex: true,
 		useNewUrlParser: true,
 		useUnifiedTopology: true

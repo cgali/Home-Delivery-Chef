@@ -121,15 +121,19 @@
 	position: relative;
 }
 
+.fourth-section-img {
+	width: 100vw;
+}
+
 .homepage-fourth-title-box {
 	position: absolute;
 	opacity: 0.9;
-	width: 32rem;
+	width: 31rem;
 	height: auto;
 	background-color: black;
 	margin: 0rem 0 0rem 5rem;
 	padding: 4rem 0 2rem 6rem;
-	top: 8rem;
+	top: 2rem;
 }
 
 .homepage-fourth-title {
