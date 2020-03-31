@@ -1,0 +1,239 @@
+/****************
+***** CHEFS *****
+****************/
+
+.chefs-title {
+	font-size: 2.5rem;
+	font-family: 'Lato', sans-serif;
+	color: white;
+	padding: 4rem 0;
+	margin-bottom: 1.5rem;
+	height: 5rem;
+	width: 100%;
+	background-image: url(/images/kuisin-chefs1.jpg);
+	background-size: 100%;
+	opacity: 0.9;
+}
+
+.chefs-title > h2 {
+	margin-left: 8rem;
+}
+
+.chefs-container {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	justify-content: center;
+	margin-bottom: 2.5rem;
+}
+
+.chef-box {
+	background-color: white;
+	border-radius: 8px;
+	border: 3px solid rgb(54, 54, 54);
+	margin: 1.5rem 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.chef-name {
+	font-family: 'Lato', sans-serif;
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-bottom: 4%;
+	text-transform: uppercase;
+}
+
+.chef-picture {
+	width: 16rem;
+	height: auto;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+}
+
+.see-more-chef-btn {
+	display:inline-block;
+	padding:0.35em 1.2em;
+	border:0.15em solid rgb(54, 54, 54);
+	margin:0 0.3em 1.5em 0;
+	border-radius:0.4em;
+	box-sizing: border-box;
+	text-decoration:none;
+	font-family:'Lato', sans-serif;
+	font-size: 0.8rem;
+	font-weight:500;
+	color: black;
+	text-align:center;
+	transition: all 0.2s;
+	background-color:#FFFFFF;
+}
+
+.see-more-chef-btn a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.see-more-chef-btn:hover{
+	color:#000000;
+	background-color:#dfe6e9;
+}
+
+.see-more-chef-btn:focus {
+	outline: 0;
+}
+
+.separator-chef-profile {
+	width: 25%;
+	margin-bottom: 10%;
+}
+
+/********************
+*** CHEFS PROFILE ***
+********************/
+
+.chef-profile-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.chef-profile-box {
+	display: flex;
+	
+}
+
+.chef-profile-image {
+	width: 21.5rem;
+	height: auto;
+	margin: 3rem;
+	border:0.3em solid rgb(54, 54, 54);
+	border-radius: 10px;
+}
+
+.chef-profile-info {
+	margin: 3rem 3rem;
+	font-family:'Asap', sans-serif;
+	font-size: 1.2rem;
+}
+
+.chef-name-profile {
+	font-size: 2.5rem;
+	text-decoration: underline;
+	font-family:'Baloo 2', sans-serif;
+	font-weight: bold;
+}
+
+.chef-profile-info > p {
+	font-size: 1.7rem;
+}
+
+.menus-title-profile {
+	font-size: 2rem;
+	font-family:'Baloo 2', sans-serif;
+	text-align: center;
+}
+
+.chef-profile-edit-button, .chef-profile-create-menu-button {
+	border-radius: 0.5rem;
+	border: 2px solid black;
+	margin: 2rem;
+	background-color: rgb(54, 54, 54);
+}
+
+.chef-profile-edit-button > a, .chef-profile-create-menu-button > a {
+	text-decoration: none;
+	font-size: 1rem;
+	color: white;
+}
+
+.chef-profile-edit-button:active, .chef-profile-create-menu-button:active {
+	box-shadow: 1px 2px 1px gray;
+	transform: translateY(2px);
+}
+
+.chef-profile-edit-button:focus, .chef-profile-create-menu-button:focus {
+	outline: 0;
+}
+
+/*******************
+*** CHEFS UPDATE ***
+*******************/
+
+.update-chef-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Baloo 2', cursive;
+	background-image: url('../images/fire.jpg');
+	background-repeat: space;
+	background-size: 100%;
+}
+
+.update-chef-container > h2 {
+	font-size: 5rem;
+	color: white;
+	text-decoration: underline;
+	margin: 2rem 0 2rem 0;
+}
+
+.update-chef-box {
+	margin: 1rem 0 3rem 0;
+	border: 1px solid rgb(54, 54, 54);
+	background-color: rgb(54, 54, 54);
+	border-radius: 3rem;
+	width: 22rem;
+	height: auto;
+	font-size: 1.4rem;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.update-chef-box > form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 2rem;
+}
+
+.update-chef-box > form > label {
+	margin-top: 1rem;
+}
+
+.update-chef-box > form > input {
+	margin-top: 0.5rem;
+	width: 14rem;
+	height: 2rem;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+}
+
+.update-account-button {
+	font-size: 1.2rem;
+	margin: 2rem 0 1rem 0;
+	width: 10rem;
+	height: 3rem;
+	border-radius: 2rem;
+	background-color: white;
+}
+
+.update-account-button > a {
+	text-decoration: none;
+	font-family: 'Baloo 2', cursive;
+	font-size: 1.3rem;
+}
+
+.update-account-button:focus {
+	outline: 0;
+}
+
+.update-account-button:active {
+	box-shadow: 1px 2px 1px black;
+	transform: translateY(2px);
+}

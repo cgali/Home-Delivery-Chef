@@ -1,0 +1,98 @@
+/*****************
+**** ABOUT US ****
+*****************/
+
+.about-us-container {
+	display: flex;
+	flex-direction: column;
+	margin: 0 6%;
+	align-items: center;
+}
+
+.about-us-presentation, .about-us-presentation-final {
+	font-size: 1.5rem;
+	margin: 0 2rem;
+	text-align: center;
+	font-family:'Asap', sans-serif;
+}
+
+.about-us-presentation-final {
+	margin: 1rem 0 5rem 0;
+	text-decoration: underline;
+}
+
+.about-us-profiles {
+	display: flex;
+	margin: 2rem 2rem;
+}
+
+.about-us-profile-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-right: 1rem;
+	border: 3px solid rgb(54, 54, 54);
+	border-radius: 5px;
+}
+
+.about-us-profile-box-description {
+	padding: 0rem 1.5rem 1.5rem;
+	font-family: 'Lato', sans-serif;
+	text-align: justify;
+	font-size: 1.2rem;
+	width: 20rem;
+}
+
+.about-us-profile-box-img {
+	margin-top: 1.5rem;
+	width: 20rem;
+	border-radius: 3px;
+}
+
+.about-us-profile-box-name {
+	font-size: 2rem;
+	font-family:'Baloo 2', sans-serif;
+}
+
+/*****************
+** HOW IT WORKS **
+*****************/
+
+.how-it-works-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.how-works-description {
+	font-size: 2.2rem;
+	color: #576574;
+}
+
+.how-works-number {
+	font-size: 3rem;
+	font-weight: 900;
+	color: black;
+	margin-right: 2rem;
+}
+
+.how-it-works-image {
+	border-radius: 6px;
+}
+
+.how-it-works-info-box {
+	display: flex;
+	margin: 2rem 5rem;
+}
+
+.how-it-works-info-box > img {
+	width: 20rem;
+	margin: 0 1rem;
+}
+
+.how-it-works-info-box > p {
+	font-family:'Lato', sans-serif;
+}
+
+.how-it-works-info-box:last-child {
+	margin-bottom: 5rem;
+}
