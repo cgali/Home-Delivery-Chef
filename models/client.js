@@ -12,6 +12,9 @@ const clientSchema = new Schema(
 	hashedPassword: {
 		type: String,
 		required: true
+	},
+	cart: {
+		type: Array,
 	}
 },
 {
