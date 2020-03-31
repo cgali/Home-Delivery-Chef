@@ -54,7 +54,9 @@
 		<p class="menu-info-properties"><strong>Price: </strong>{{ foundMenu.price }}€</p>
 		<div class="menu-info-general-button-user">
 			{{#if @root.currentClient }}
-				<a class="menu-info-buy-button" href="<!MISSING CART ROUTE>">Add to Cart +</a>
+				<form action="/client/{{ foundMenu._id }}/addToCart" method="post"></form>
+					<button class="menu-info-buy-button">">Add to Cart +</button>
+				</form>
 			{{/if}}
 		</div>
 			
