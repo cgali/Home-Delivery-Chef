@@ -8,7 +8,6 @@
 	background-image: url('../images/blacktable2.jpeg');
 	background-repeat: space;
 	background-size: 100%;
-	opacity: 0.8;
 	padding-top: 1rem;
 	display: flex;
 	flex-direction: column;
@@ -119,7 +118,6 @@
 	background-image: url('../images/blacktable2.jpeg');
 	background-repeat: space;
 	background-size: 100%;
-	opacity: 0.8;
 	padding-top: 1rem;
 	display: flex;
 	flex-direction: column;

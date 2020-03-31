@@ -101,8 +101,12 @@
 }
 
 .chef-profile-box {
+	margin-top: 2rem;
 	display: flex;
-	
+	border: 2px solid rgb(116, 116, 116);
+	border-radius: 3rem;
+	border-style: double;
+	border-width: 0.5rem;
 }
 
 .chef-profile-image {
