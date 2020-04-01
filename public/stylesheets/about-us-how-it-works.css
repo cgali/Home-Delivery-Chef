@@ -64,29 +64,31 @@
 }
 
 .how-works-description {
-	font-size: 2.2rem;
-	color: #576574;
+	font-size: 1.8rem;
+	color: white;
+	font-family: 'Lora', serif;
+	margin-left: 5rem;
+	margin-right: 5rem;
+	margin-bottom: 3rem;
 }
 
 .how-works-number {
+	font-family: 'Bebas Neue', cursive;
 	font-size: 3rem;
 	font-weight: 900;
-	color: black;
-	margin-right: 2rem;
+	color: white;
+	margin: 3rem 2rem 0rem 5rem;
 }
 
 .how-it-works-image {
-	border-radius: 6px;
+	border-radius: 0px;
+	width: 20rem;
 }
 
 .how-it-works-info-box {
-	display: flex;
+	background-color: black;
 	margin: 2rem 5rem;
-}
-
-.how-it-works-info-box > img {
-	width: 20rem;
-	margin: 0 1rem;
+	display: flex;
 }
 
 .how-it-works-info-box > p {
@@ -94,5 +96,9 @@
 }
 
 .how-it-works-info-box:last-child {
+	margin-bottom: 5rem;
+}
+
+.last-box {
 	margin-bottom: 5rem;
 }
