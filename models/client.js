@@ -14,8 +14,12 @@ const clientSchema = new Schema(
 		required: true
 	},
 	cart: {
-		type: Array,
-	}
+		name: { type: String },
+
+		price: { type: String },
+
+		image: { type: String },
+	},
 },
 {
 	timestamps: {

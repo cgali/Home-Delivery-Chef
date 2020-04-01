@@ -4,7 +4,7 @@ const Client = require('../models/client');
 
 const router = express.Router();
 
-// POST delete to cart
+// POST delete cart items
 router.post('/:id/deleteAll', (req, res) => {
 	const { currentClient } = req.session;
   const { id } = req.params;
@@ -26,10 +26,10 @@ router.post('/:id/deleteAll', (req, res) => {
 router.get('/:id', (req, res) => {
   const { currentClient } = req.session;
   const { id } = req.params;
-  console.log(id)
+  // console.log(id)
   Menus.findById(id)
   .then ((menus) => {
-    console.log(menus)
+    // console.log(menus)
     res.render('cart', { currentClient, menus });
   })
 	
@@ -39,11 +39,19 @@ router.get('/:id', (req, res) => {
 router.post('/:id/addToCart', (req, res) => {
 	const { currentClient } = req.session;
   const { id } = req.params;
-  
+  console.log('THE ID IS: ', id)
+
 	Client.findById(currentClient._id)
 		.then((client) => {
-      client.cart.push(id)
-      client.save()
+      Menus.find({ _id:id })
+      .then (menu => {
+        console.log('CLIENT: ', client)
+        // console.log(menu)
+        client.cart.image.push(menu[0].starter.image)
+        client.cart.name.push(menu[0].title)
+        client.cart.price.push(menu[0].price)
+        client.save()
+      })
     })
     .then(() => {
       res.redirect(`/cart/${id}`)
