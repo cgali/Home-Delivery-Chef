@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Chef = require('../models/chef');
 
 mongoose
-	.connect('mongodb+srv://chefapp:1234@module2project-ko7or.gcp.mongodb.net/HomeDeliveryChef?retryWrites=true&w=majority', {
+	.connect(`${process.env.DBURL}`, {
 		useCreateIndex: true,
 		useNewUrlParser: true,
 		useUnifiedTopology: true
