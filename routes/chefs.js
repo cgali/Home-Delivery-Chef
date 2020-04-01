@@ -63,4 +63,14 @@ router.post('/:id', (req, res) => {
   })
 })
 
+// POST /chefs/:id/delete
+router.post('/:id/delete', (req, res, next) => {
+	const { id } = req.params;
+	Chefs.findByIdAndDelete(id)
+		.then(() => {
+			res.redirect('/');
+		})
+		.catch(next);
+});
+
 module.exports = router;

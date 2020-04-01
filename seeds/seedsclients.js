@@ -18,15 +18,15 @@ mongoose
 const clients = [
 	{
 		email: 'carles@gmail.com',
-		hashedPassword: '1'
+		hashedPassword: '$2b$10$IXz/ETka.Jk2l6t3py/L1.dkWRVadSaZg41Utnl5zYcOMfvSY7AQ6'
 	},
 	{
 		email: 'carla@gmail.com',
-		hashedPassword: '2'
+		hashedPassword: '$2b$10$IXz/ETka.Jk2l6t3py/L1.dkWRVadSaZg41Utnl5zYcOMfvSY7AQ6'
 	},
 	{
 		email: 'pablo@gmail.com',
-		hashedPassword: '3'
+		hashedPassword: '$2b$10$IXz/ETka.Jk2l6t3py/L1.dkWRVadSaZg41Utnl5zYcOMfvSY7AQ6'
 	}
 ];
 

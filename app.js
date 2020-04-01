@@ -23,6 +23,7 @@ const cart = require('./routes/cart');
 // Example to insert seeds:
 // const Menus = require('./models/menu');
 // const seeds = require('./seeds/seedsmenus');
+// const seedsClients = require('./seeds/seedsclients');
 
 //Connect to DB
 mongoose
@@ -43,11 +44,11 @@ mongoose
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-hbs.registerHelper('if_equal', function(a, b, opts) {
-  if(a == b) 
-      return opts.fn(this);
-  else
-      return opts.inverse(this);
+hbs.registerHelper('if_equal', function (a, b, opts) {
+	if (a == b)
+		return opts.fn(this);
+	else
+		return opts.inverse(this);
 });
 
 app.use(
