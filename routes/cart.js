@@ -4,7 +4,7 @@ const Client = require('../models/client');
 
 const router = express.Router();
 
-// // POST delete cart items
+// POST delete cart items
 // router.post('/:id/deleteAll', (req, res) => {
 // 	const { currentClient } = req.session;
 //   const { id } = req.params;
@@ -25,14 +25,7 @@ const router = express.Router();
 // GET Cart page 
 router.get('/:id', (req, res) => {
   const { currentClient } = req.session;
-  const { id } = req.params;
-  // console.log(id)
-  Menus.findById(id)
-  .then ((menus) => {
-    // console.log(menus)
-    res.render('cart', { currentClient, menus });
-  })
-	
+    res.render('cart', { currentClient,  });
 });
 
 // POST add to cart
@@ -46,7 +39,7 @@ router.post('/:id/addToCart', (req, res) => {
       Menus.find({ _id:id })
       .then (menu => {
         console.log('CLIENT: ', client)
-        // console.log(menu)
+        console.log(menu)
         client.cart.image.push(menu[0].starter.image)
         client.cart.name.push(menu[0].title)
         client.cart.price.push(menu[0].price)

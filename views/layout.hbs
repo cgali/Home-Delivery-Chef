@@ -41,7 +41,7 @@
 				<li><a href="/chefs/{{ currentChef._id }}"><button class="layout-button-account">My account</button></a></li>
 				<li><a href="/logout"><button class="layout-button-logout-chef">Logout</button></a></li>
       {{else if currentClient}}
-				<li><a href="/cart"><button class="layout-button-cart">Cart <img class="cart-image" src="/images/cart.png" alt="cart"></button></a></li>
+				<li><a href="/cart/{{ currentClient._id }}"><button class="layout-button-cart">Cart <img class="cart-image" src="/images/cart.png" alt="cart"></button></a></li>
 				<li><a href="/logout"><button class="layout-button-logout">Logout</button></a></li>
       {{else}}
         <div class="login-signup-btn-container">

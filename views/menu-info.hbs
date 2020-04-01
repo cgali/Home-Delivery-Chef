@@ -9,9 +9,7 @@
 				<h3 class="menu-info-name">{{ foundMenu.starter.name }}</h3>
 				<p class="menu-info-dish-properties"><strong class="strong-title">Description: </strong>{{ foundMenu.starter.description }}</p>
 				<p class="menu-info-dish-properties"><strong class="strong-title">Ingredients: </strong>
-				{{#each foundMenu.starter.ingredients }}
-					<li>{{ this }}.</li>
-				{{/each }}
+				<p>{{ foundMenu.starter.ingredients }}.</p>
 				</p>
 			</div>
 		</div>
@@ -24,9 +22,7 @@
 				<h3 class="menu-info-name">{{ foundMenu.mainCourse.name }}</h3>
 				<p class="menu-info-dish-properties"><strong class="strong-title">Description: </strong>{{ foundMenu.mainCourse.description }}</p>
 				<p class="menu-info-dish-properties"><strong class="strong-title">Ingredients: </strong>
-				{{#each foundMenu.mainCourse.ingredients }}
-					<li>{{ this }}.</li>
-				{{/each }}
+				<p>{{ foundMenu.mainCourse.ingredients }}.</p>
 				</p>
 			</div>
 		</div>
@@ -39,10 +35,7 @@
 				<h3 class="menu-info-name">{{ foundMenu.dessert.name }}</h3>
 				<p class="menu-info-dish-properties"><strong class="strong-title">Description: </strong>{{ foundMenu.dessert.description }}</p>
 				<p class="menu-info-dish-properties"><strong class="strong-title">Ingredients: </strong>
-				{{#each foundMenu.dessert.ingredients }}
-					<li>{{ this }}.</li>
-				{{/each }}
-				</p>
+				<p>{{ foundMenu.dessert.ingredients }}.</p>
 			</div>
 		</div>
 	</div>

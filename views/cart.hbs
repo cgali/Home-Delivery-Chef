@@ -1,9 +1,21 @@
 <h2>Cart</h2>
 
+
+{{ currentClient.cart }}
 <ul>
-    <li>
-        {{#each currentClient.cart }}
-				<li>{{ this }}</li>
-		{{/each}}
-    </li>
+{{#each currentClient.cart.image }}
+	<li>{{ this }}</li>
+{{/each}}
+
+{{#each currentClient.cart.name }}
+	<li>{{ this }}</li>
+{{/each}}
+
+{{#each currentClient.cart.price }}
+	<li>{{ this }}</li>
+{{/each}}
 </ul>
+
+<form action="/cart/{{ currentClient._id }}/deleteAll" method="post">
+	<button class="menu-info-delete-button">Delete Your Menu</button>
+</form>

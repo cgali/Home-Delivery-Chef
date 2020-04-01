@@ -33,17 +33,6 @@ router.get('/:id', (req, res) => {
   .catch(err => console.log('Error while listing chefs: ', err));
 });
 
-router.get('/:id', (req, res) => {
-  const { currentChef, currentClient } = req.session;
-  const { id } = req.params;
-  Chefs.findById(id)
-   .then(foundChef => {
-    console.log('Rendering ONE chef');
-    res.render('chefprofile', { foundChef, currentChef, currentClient });
-  })
-  .catch(err => console.log('Error while listing chefs: ', err));
-});
-
 // GET /chefs/:id/update
 router.get('/:id/updatechef', (req, res, next) => {
   const { currentChef } = req.session;
@@ -73,5 +62,15 @@ router.post('/:id', (req, res) => {
       res.redirect(`/chefs/${id}`);
   })
 })
+
+// POST /chefs/:id/delete
+router.post('/:id/delete', (req, res, next) => {
+	const { id } = req.params;
+	Chefs.findByIdAndDelete(id)
+		.then(() => {
+			res.redirect('/');
+		})
+		.catch(next);
+});
 
 module.exports = router;

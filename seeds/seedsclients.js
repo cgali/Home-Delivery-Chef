@@ -9,7 +9,7 @@ mongoose
 	})
 	.then(x => {
 		console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
-		return Client.insertMany(clients);
+		// return Client.insertMany(clients);
 	})
 	.catch(err => {
 		console.error('Error connecting to mongo', err)
@@ -18,15 +18,30 @@ mongoose
 const clients = [
 	{
 		email: 'carles@gmail.com',
-		hashedPassword: '1'
+		hashedPassword: '$2b$10$IXz/ETka.Jk2l6t3py/L1.dkWRVadSaZg41Utnl5zYcOMfvSY7AQ6',
+		cart: {
+			name: [],
+			price: [],
+			image: [],
+		}
 	},
 	{
 		email: 'carla@gmail.com',
-		hashedPassword: '2'
+		hashedPassword: '$2b$10$IXz/ETka.Jk2l6t3py/L1.dkWRVadSaZg41Utnl5zYcOMfvSY7AQ6',
+		cart: {
+			name: '',
+			price: '',
+			image: '',
+		}
 	},
 	{
 		email: 'pablo@gmail.com',
-		hashedPassword: '3'
+		hashedPassword: '$2b$10$IXz/ETka.Jk2l6t3py/L1.dkWRVadSaZg41Utnl5zYcOMfvSY7AQ6',
+		cart: {
+			name: '',
+			price: '',
+			image: '',
+		}
 	}
 ];
 
