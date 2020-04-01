@@ -3,7 +3,7 @@
 
 {{ currentClient.cart }}
 <ul>
-{{#each currentClient.cart.image }}
+{{#each currentClient.cart[2] }}
 	<li>{{ this }}</li>
 {{/each}}
 
