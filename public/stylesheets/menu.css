@@ -209,6 +209,7 @@
 	text-align:center;
 	transition: all 0.2s;
 	background-color: rgb(54, 54, 54);
+	cursor: pointer;
 }
 
 .menu-info-edit-button > a, .menu-info-delete-button > a, .menu-info-buy-button > a {

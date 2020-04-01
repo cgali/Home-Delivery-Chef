@@ -25,7 +25,7 @@ const router = express.Router();
 // GET Cart page 
 router.get('/:id', (req, res) => {
   const { currentClient } = req.session;
-    res.render('cart', { currentClient,  });
+    res.render('cart', { currentClient });
 });
 
 // POST add to cart
