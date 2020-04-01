@@ -1,7 +1,17 @@
 <h2>Cart</h2>
 
+
+{{ currentClient.cart }}
 <ul>
-{{#each currentClient.cart }}
+{{#each currentClient.cart.image }}
+	<li>{{ this }}</li>
+{{/each}}
+
+{{#each currentClient.cart.name }}
+	<li>{{ this }}</li>
+{{/each}}
+
+{{#each currentClient.cart.price }}
 	<li>{{ this }}</li>
 {{/each}}
 </ul>

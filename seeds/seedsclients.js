@@ -20,9 +20,9 @@ const clients = [
 		email: 'carles@gmail.com',
 		hashedPassword: '$2b$10$IXz/ETka.Jk2l6t3py/L1.dkWRVadSaZg41Utnl5zYcOMfvSY7AQ6',
 		cart: {
-			name: '',
-			price: '',
-			image: '',
+			name: [],
+			price: [],
+			image: [],
 		}
 	},
 	{

@@ -14,11 +14,11 @@ const clientSchema = new Schema(
 		required: true
 	},
 	cart: {
-		name: { type: String },
+		name: { type: Array },
 
-		price: { type: String },
+		price: { type: Array },
 
-		image: { type: String },
+		image: { type: Array },
 	},
 },
 {
