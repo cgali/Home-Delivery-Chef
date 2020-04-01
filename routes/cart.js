@@ -4,23 +4,23 @@ const Client = require('../models/client');
 
 const router = express.Router();
 
-// POST delete cart items
-router.post('/:id/deleteAll', (req, res) => {
-	const { currentClient } = req.session;
-  const { id } = req.params;
+// // POST delete cart items
+// router.post('/:id/deleteAll', (req, res) => {
+// 	const { currentClient } = req.session;
+//   const { id } = req.params;
   
-	Client.findById(currentClient._id)
-		.then((client) => {
-      client.cart.deleteOne()
-      client.save()
-    })
-    .then(() => {
-      res.redirect(`/cart/${id}`)
-    })
-		.catch(() => {
+// 	Client.findById(currentClient._id)
+// 		.then((client) => {
+//       client.cart.deleteOne()
+//       client.save()
+//     })
+//     .then(() => {
+//       res.redirect(`/cart/${id}`)
+//     })
+// 		.catch(() => {
 
-		})
-})
+// 		})
+// })
 
 // GET Cart page 
 router.get('/:id', (req, res) => {
