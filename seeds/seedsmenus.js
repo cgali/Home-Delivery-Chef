@@ -120,7 +120,7 @@ const menus = [
         },
         time: 150,
         chef_id: '5e6faddee4c68221b0d1955a',
-        cuisine: ['Mediterranean'],
+        cuisine: ['Italian'],
         price: 90,
     },
 
@@ -172,7 +172,7 @@ const menus = [
         },
         time: 120,
         chef_id: '5e6faddee4c68221b0d1955b',
-        cuisine: ['Mediterranean'],
+        cuisine: ['Greek'],
         price: 70,
     },
 
