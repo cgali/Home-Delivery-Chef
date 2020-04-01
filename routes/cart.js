@@ -5,27 +5,32 @@ const Client = require('../models/client');
 const router = express.Router();
 
 // POST delete cart items
-// router.post('/:id/deleteAll', (req, res) => {
-// 	const { currentClient } = req.session;
-//   const { id } = req.params;
+router.post('/:id/deleteAll', (req, res) => {
+	const { currentClient } = req.session;
   
-// 	Client.findById(currentClient._id)
-// 		.then((client) => {
-//       client.cart.deleteOne()
-//       client.save()
-//     })
-//     .then(() => {
-//       res.redirect(`/cart/${id}`)
-//     })
-// 		.catch(() => {
-
-// 		})
-// })
+	Client.findById(currentClient._id)
+		.then((client) => {
+      console.log(client)
+      client.cart.name.deleteOne()
+      client.save()
+    })
+    .then(() => {
+      res.redirect(`/cart/${currentClient._id}`)
+    })
+		.catch(() => {
+		})
+})
 
 // GET Cart page 
 router.get('/:id', (req, res) => {
   const { currentClient } = req.session;
-    res.render('cart', { currentClient });
+  const { id } = req.params;
+  console.log(id)
+  Client.findById(id)
+    .then(client => {
+      req.session.currentClient = client;
+      res.render('cart', { currentClient });
+    })
 });
 
 // POST add to cart
@@ -47,7 +52,7 @@ router.post('/:id/addToCart', (req, res) => {
       })
     })
     .then(() => {
-      res.redirect(`/cart/${id}`)
+      res.redirect(`/cart/${currentClient._id}`)
     })
 		.catch(() => {
 

@@ -1,5 +1,8 @@
+require('dotenv').config();
+
 const mongoose = require('mongoose');
 const Client = require('../models/client');
+
 
 mongoose
 	.connect(`${process.env.DBURL}`, {

@@ -1,21 +1,37 @@
-<h2>Your Cart</h2>
+<div class="menus-title"><h2>Cart</h2></div>
+<div class="cart-container">
+	<hr class="separator-cart-buttons">
+	<div class="cart-box">
+		<ul class="cart-menu image-box">
+			{{#each currentClient.cart.image }}
+				<li><img class="cart-menu-image" src="{{ this }}" alt="menu-image"></li>
+			{{/each}}
+		</ul>
 
-{{ currentClient.cart }}
+		<ul class="cart-menu name-box">
+			{{#each currentClient.cart.name }}
+				<li>{{ this }}</li>
+			{{/each}}
+		</ul>
 
-<ul>
-{{#each currentClient.cart.name }}
-	<li>{{ this }}</li>
-{{/each}}
-
-{{#each currentClient.cart.name }}
-	<li>{{ this }}</li>
-{{/each}}
-
-{{#each currentClient.cart.price }}
-	<li>{{ this }}</li>
-{{/each}}
-</ul>
-
-<form action="/cart/{{ currentClient._id }}/deleteAll" method="post">
-	<button class="menu-info-delete-button">Delete Your Menu</button>
-</form>
+		<ul class="cart-menu price-box">
+			{{#each currentClient.cart.price }}
+				<li>{{ this }} €</li>
+			{{/each}}
+		</ul>
+	</div>
+	<hr class="separator-cart-buttons">
+	<div class="total-price-box">
+		<p>Total price:</p><p id="price">0</p><p>€</p>
+	</div>
+	
+	<div class="buttons-cart">
+		<form action="/cart/{{ currentClient._id }}/deleteAll" method="post">
+			<button class="menu-info-delete-button">Delete Your Cart</button>
+		</form>
+		<form action="/cart/{{ currentClient._id }}/deleteAll" method="post">
+			<button class="menu-info-delete-button">Checkout</button>
+		</form>
+	</div>
+	
+</div>
