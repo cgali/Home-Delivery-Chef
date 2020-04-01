@@ -4,32 +4,63 @@ const Client = require('../models/client');
 
 const router = express.Router();
 
+// // POST delete cart items
+// router.post('/:id/deleteAll', (req, res) => {
+// 	const { currentClient } = req.session;
+//   const { id } = req.params;
+  
+// 	Client.findById(currentClient._id)
+// 		.then((client) => {
+//       client.cart.deleteOne()
+//       client.save()
+//     })
+//     .then(() => {
+//       res.redirect(`/cart/${id}`)
+//     })
+// 		.catch(() => {
+
+// 		})
+// })
+
 // GET Cart page 
-router.get('/', (req, res) => {
-	const { currentClient } = req.session;
-	res.render('cart', { currentClient });
+router.get('/:id', (req, res) => {
+  const { currentClient } = req.session;
+  const { id } = req.params;
+  // console.log(id)
+  Menus.findById(id)
+  .then ((menus) => {
+    // console.log(menus)
+    res.render('cart', { currentClient, menus });
+  })
+	
 });
 
 // POST add to cart
 router.post('/:id/addToCart', (req, res) => {
 	const { currentClient } = req.session;
-	const { id } = req.params;
-
-
-
+  const { id } = req.params;
+  console.log('THE ID IS: ', id)
 
 	Client.findById(currentClient._id)
 		.then((client) => {
-      client.cart.push(id)
-      return client.save()
+      Menus.find({ _id:id })
+      .then (menu => {
+        console.log('CLIENT: ', client)
+        // console.log(menu)
+        client.cart.image.push(menu[0].starter.image)
+        client.cart.name.push(menu[0].title)
+        client.cart.price.push(menu[0].price)
+        client.save()
+      })
     })
     .then(() => {
-      res.redirect('/cart');
+      res.redirect(`/cart/${id}`)
     })
 		.catch(() => {
 
 		})
 })
+
 
 
 module.exports = router;
