@@ -1,26 +1,28 @@
 <div class="chef-profile-container">
 <div class="chef-profile-box">
-	<div>
+	<div class="chef-profile-image-box">
 		<img class="chef-profile-image" src="{{ foundChef.image }}" alt="Profile image">
 	</div>
 	<div class="chef-profile-info">
 		<h2 class="chef-name-profile">{{ foundChef.name }} {{ foundChef.surname }}</h2>
-		<p>{{ foundChef.yearsOfExperience }} Years of cooking experience.</p>
-		<p>Spoken languages:</p>
+		<hr>
+		<p class="years-experience">{{ foundChef.yearsOfExperience }} Years of cooking experience.</p>
+		<p class="spoken-languages">Spoken languages:</p>
 		<ul>
 			{{#each foundChef.languages }}
 				<li>{{ this }}</li>
 			{{/each}}
 		</ul>
 		{{#if_equal foundChef._id currentChef._id}}
-			<button class="chef-profile-edit-button"><a href="/chefs/{{ foundChef._id }}/updatechef">Edit Your Profile</a></button>
+			<a href="/chefs/{{ foundChef._id }}/updatechef"><button class="chef-profile-edit-button">Edit Your Profile</button></a>
 		{{/if_equal}}
 		{{#if_equal foundChef._id currentChef._id}}
-			<button class="chef-profile-create-menu-button"><a href="/menus/add">Create new menu</a></button>
+			<a href="/menus/add"><button class="chef-profile-create-menu-button">Create new menu</button></a>
 		{{/if_equal}}
 		</div>
 	</div>
 	<h3 class="menus-title-profile">{{ foundChef.name }}'s Menus</h3>
+	<hr class="menus-title-separator">
 	<div class="menus-container">
 		{{#each menus }}
 			<div class="menus-box">
