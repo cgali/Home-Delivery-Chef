@@ -10,12 +10,16 @@
 	justify-content: center;
 	font-size: 1.6rem;
 	font-family: 'Lora', sans-serif;
-	margin-left: 7rem;
+	margin-left: 4.5rem;
 }
 
 .cart-titles p {
-	margin-right: 9rem;
+	margin-right: 6rem;
 }
+.cart-titles p:last-child {
+	margin-left: 2rem;
+}
+
 
 .cart-box {
 	display: flex;
@@ -47,16 +51,12 @@
 	margin: 0 2rem;
 }
 
-.price-box {
-	padding-right: 1.8rem;
-}
-
 .name-box > li, .price-box > li{
 	margin-bottom: 6.5rem;
 	padding: 0 2rem;
 	line-height: 3rem;
-	border-bottom: 2px solid rgb(54, 54, 54);
-	border-top: 2px solid rgb(54, 54, 54);
+	border-bottom: 2px solid black;
+	border-top: 2px solid black;
 }
 
 .name-box > li:first-child, .price-box > li:first-child {
@@ -67,26 +67,34 @@
 	margin-bottom: 2.5rem;
 }
 
+.price-box {
+	padding-right: 1.8rem;
+}
 .separator-cart-buttons {
-	width: 40rem;
+	width: 42rem;
 	height: 2px;
 	background-color: rgb(85, 85, 85);
+	margin-left: 26%;
 }
 
 .total-price-box {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	margin-top: 2rem;
+	margin: 2rem 0 0 28%;
 }
 
 .total-price-box p {
 	margin: 0.5rem;
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 }
 
 .buttons-cart {
 	display: flex;
 	justify-content: center;
 	margin: 2rem;
+}
+
+.buttons-cart form {
+	margin-left: 1rem;
 }
