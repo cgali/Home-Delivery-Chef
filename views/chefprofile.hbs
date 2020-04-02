@@ -33,7 +33,7 @@
 				<p class="menus-price">- {{ this.price }}€ -</p>
 				<hr class="separator-menus-profile final">
         		{{#if @root.currentClient }}
-				<form action="/cart/{{ foundMenu._id }}/addToCart" method="post">
+				<form action="/cart/{{ this._id }}/addToCart" method="post">
 					<button class="menu-info-buy-button" type="submit">Add to Cart +</button>
 				</form>
         		{{/if}}
