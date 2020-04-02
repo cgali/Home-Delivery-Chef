@@ -2,6 +2,19 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height: auto;
+}
+
+.cart-titles {
+	display: flex;
+	justify-content: center;
+	font-size: 1.6rem;
+	font-family: 'Lora', sans-serif;
+	margin-left: 7rem;
+}
+
+.cart-titles p {
+	margin-right: 9rem;
 }
 
 .cart-box {

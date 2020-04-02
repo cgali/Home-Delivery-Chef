@@ -42,15 +42,15 @@
 }
 
 .homepage-order-button {
-		cursor: pointer;
-		padding: 15px 20px; 
-		margin: 45px 0px;
-		text-transform: uppercase;
+	cursor: pointer;
+	padding: 15px 20px; 
+	margin: 45px 0px;
+	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-size: 0.9rem;
-		font-weight: 700;
-		-webkit-transition: all 0.3s;
-		-moz-transition: all 0.3s;
+	font-weight: 700;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
 	transition: all 0.3s;
 	border: 1px solid white;
 	background: black;
@@ -107,12 +107,12 @@
 
 .third-section-signature {
 	width: 12rem;
-	margin-left: 15rem;
+	margin: 2rem 0 0 15rem;
 }
 
 .third-section-quotation {
 	width: 8rem;
-	margin: 3rem 0 0 0;
+	margin: 5rem 0 0 0;
 }
 
 .homepage-fourth-section {

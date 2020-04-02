@@ -29,6 +29,7 @@ router.get('/:id', (req, res) => {
   Client.findById(id)
     .then(client => {
       req.session.currentClient = client;
+      console.log('SESION GET: ', req.session.currentClient)
       res.render('cart', { currentClient });
     })
 });
@@ -37,25 +38,26 @@ router.get('/:id', (req, res) => {
 router.post('/:id/addToCart', (req, res) => {
 	const { currentClient } = req.session;
   const { id } = req.params;
-  console.log('THE ID IS: ', id)
+  // console.log('THE ID IS: ', id)
 
 	Client.findById(currentClient._id)
 		.then((client) => {
       Menus.find({ _id:id })
       .then (menu => {
-        console.log('CLIENT: ', client)
-        console.log(menu)
+        // console.log('CLIENT: ', client)
+        // console.log(menu)
         client.cart.image.push(menu[0].starter.image)
         client.cart.name.push(menu[0].title)
         client.cart.price.push(menu[0].price)
         client.save()
+        .then((client) => {
+          req.session.currentClient = client;
+          console.log('SESION POST: ', req.session.currentClient)
+          res.redirect(`/cart/${currentClient._id}`)
+        })
       })
     })
-    .then(() => {
-      res.redirect(`/cart/${currentClient._id}`)
-    })
 		.catch(() => {
-
 		})
 })
 
