@@ -236,6 +236,12 @@
 	font-size: 1rem;
 }
 
+.tablinks-first {
+	color: white;
+	font-size: 1rem;
+	background-color: black !important;
+}
+
 .tablinks:focus {
 	outline: 0;
 	background-color: black;

@@ -225,6 +225,12 @@
 .menu-info-edit-button:focus, .menu-info-delete-button:focus, .menu-info-buy-button:focus {
 	outline: 0;
 }
+
+.link-chef-from-menu {
+	text-decoration: none;
+	color: white;
+}
+
 /******************
 *** CREATE MENU ***
 *** UPDATE MENU ***
