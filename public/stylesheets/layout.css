@@ -324,6 +324,11 @@ h3 {
 	font-family: 'Bebas Neue', cursive;
 }
 
+.layout-footer-mailto {
+	text-decoration: none;
+	color: white;
+}
+
 .secure-payment-img {
 	width: 15rem;
 }

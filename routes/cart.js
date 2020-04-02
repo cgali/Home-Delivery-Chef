@@ -24,14 +24,7 @@ router.post('/:id/deleteAll', (req, res) => {
 // GET Cart page 
 router.get('/:id', (req, res) => {
   const { currentClient } = req.session;
-  const { id } = req.params;
-  console.log(id)
-  Client.findById(id)
-    .then(client => {
-      req.session.currentClient = client;
-      console.log('SESION GET: ', req.session.currentClient)
-      res.render('cart', { currentClient });
-    })
+  res.render('cart', { currentClient });
 });
 
 // POST add to cart
