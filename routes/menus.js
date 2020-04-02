@@ -1,5 +1,6 @@
 const express = require('express');
 const Menus = require('../models/menu');
+const Chefs   = require('../models/chef');
 
 const router = express.Router();
 
@@ -24,12 +25,17 @@ router.get('/add', (req, res) => {
 router.get('/:id', (req, res) => {
     const { currentChef, currentClient } = req.session;
     const { id } = req.params;
+    let foundMenu;
     Menus.findById(id)
-        .then(foundMenu => {
-            console.log('Rendering ONE Menu');
-            res.render('menu-info', { foundMenu, currentChef, currentClient });
-        })
-        .catch(err => console.log('Error while listing Menus Information: ', err));
+    .then(menu => {
+			console.log('Rendering ONE Menu');
+			foundMenu = menu;
+			return Chefs.findById({ _id:foundMenu.chef_id })
+		}).then(chefCreator => {
+			console.log('chefCreator: ', chefCreator);
+			res.render('menu-info', { chefCreator, foundMenu, currentChef, currentClient });
+		})
+    .catch(err => console.log('Error while listing Menus Information: ', err));
 });
 
 // POST delete menu
