@@ -79,6 +79,7 @@
 	padding-right: 1.8rem;
 }
 .separator-cart-buttons {
+	display: flex;
 	width: 42rem;
 	height: 2px;
 	background-color: rgb(85, 85, 85);

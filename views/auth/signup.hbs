@@ -1,10 +1,33 @@
+{{!-- USER CLIENT--}}
+<div id="Client" class="tabcontent">
+  <div class="signup-container">
+    <h2>Welcome! Sign Up here:</h2>
+    <div class="tab">
+      <button class="tablinks-first" onclick="openLogintwo(event, 'Client')">I'm a Client</button>
+      <button class="tablinks" onclick="openLogin(event, 'Chef')">I'm a Chef</button>
+    </div>
+    <div class="signup-form-box-client">
+      {{#if error}}
+        <div class="error-message">{{ error }}</div>
+      {{/if}}
+      <form id="form" action="/signup-client" method="POST">
+        <label for="email">Email</label>
+        <input type="text" name="email" placeholder="hello@helloworld.com">
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Insert a password">
+        <button class="create-account-button" type="submit">Create Account</button>
+      </form>
+    </div>
+  </div>
+</div>
+
 {{!-- USER CHEF --}}
-<div id="Chef" class="tabcontent">
+<div id="Chef" class="tabcontent-two">
   <div class="signup-container">
     <h2>Welcome Chef! Sign Up here:</h2>
     <div class="tab">
-      <button class="tablinks" onclick="openLoginTwo(event, 'Chef')">I'm a Chef</button>
-      <button class="tablinks" onclick="openLogin(event, 'Client')">I'm a Client</button>
+      <button class="tablinks" onclick="openLoginTwo(event, 'Client')">I'm a Client</button>
+      <button class="tablinks-second" onclick="openLogin(event, 'Chef')">I'm a Chef</button>
     </div>
     <div class="signup-form-box">
       {{#if error}}
@@ -25,7 +48,7 @@
               <input type="text" name="image" placeholder="URL of your profile image">
             </div>
             <div class="signup-form-label-input-box">
-              <label for="yearsOfExperience">Year of experience:</label>
+              <label for="yearsOfExperience">Years of experience:</label>
               <input type="number" name="yearsOfExperience" min="0" max="60">
             </div>
             <div class="signup-form-label-input-box">
@@ -46,25 +69,4 @@
     </div>
   </div>
 </div>
-{{!-- USER CLIENT--}}
-<div id="Client" class="tabcontent-two">
-  <div class="signup-container">
-    <h2>Welcome! Sign Up here:</h2>
-    <div class="tab">
-      <button class="tablinks" onclick="openLoginTwo(event, 'Chef')">I'm a Chef</button>
-      <button class="tablinks" onclick="openLogin(event, 'Client')">I'm a Client</button>
-    </div>
-    <div class="signup-form-box-client">
-      {{#if error}}
-        <div class="error-message">{{ error }}</div>
-      {{/if}}
-      <form id="form" action="/signup-client" method="POST">
-        <label for="email">Email</label>
-        <input type="text" name="email" placeholder="hello@helloworld.com">
-        <label for="password">Password</label>
-        <input type="password" name="password" placeholder="Insert a password">
-        <button class="create-account-button" type="submit">Create Account</button>
-      </form>
-    </div>
-  </div>
-</div>
+
