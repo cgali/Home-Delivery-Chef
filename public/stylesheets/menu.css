@@ -173,6 +173,7 @@
 	border-radius: 1rem;
 	padding: 0 2.5rem;
 	margin-bottom: 3rem;
+	height: auto;
 	font-family:'Asap', sans-serif;
 	font-size: 1.2rem;
 	color: white;
@@ -229,6 +230,11 @@
 .link-chef-from-menu {
 	text-decoration: none;
 	color: white;
+}
+
+.link-chef-from-menu:hover {
+	font-size: 1.3rem;
+	color: #EC9116;
 }
 
 /******************
