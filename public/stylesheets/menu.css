@@ -192,11 +192,15 @@
 .menu-info-general-button-user {
 	display: flex;
 	justify-content: center;
-	margin: 1rem 0 0 15%;
+	margin: 1rem 0 0 4%;
+}
+
+.menu-info-buy-button {
+	width: 8.6rem;
 }
 
 .menu-info-edit-button, .menu-info-delete-button, .menu-info-buy-button {
-	display:inline-block;
+	display: flex;
 	padding:0.35em 1.2em;
 	border:0.15em solid white;
 	margin-bottom: 1.5em;

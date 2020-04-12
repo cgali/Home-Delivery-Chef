@@ -28,13 +28,13 @@ const menus = [
         },
         mainCourse: {
             name: 'Vrigatoni',
-            image: '../images/Menus/Sofie/veganrigattoni.jpg',
+            image: '../images/Menus/Sofie/Veganrigattoni.jpg',
             description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry. Lorem Ipsum has been the industrystandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
             ingredients: ['change1', 'change2', 'change3', 'change4', 'change5', 'change6'],
         },
         dessert: {
             name: 'Carrot bites',
-            image: '../images/Menus/Sofie/carrotbites.jpg',
+            image: '../images/Menus/Sofie/Carrotbites.jpg',
             description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry. Lorem Ipsum has been the industrystandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
             ingredients: ['change1', 'change2', 'change3', 'change4', 'change5', 'change6'],
         },
@@ -62,7 +62,7 @@ const menus = [
 
         dessert: {
             name: 'Carrot cake',
-            image: '../images/Menus/Sofie/carrotcake.jpg',
+            image: '../images/Menus/Sofie/Carrotcake.jpg',
             description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry. Lorem Ipsum has been the industrystandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
             ingredients: ['change1', 'change2', 'change3', 'change4', 'change5', 'change6'],
         },
