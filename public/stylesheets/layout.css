@@ -271,7 +271,7 @@ h3 {
 
 .footer {
 	/* background: linear-gradient(0deg, black, black, rgb(12, 12, 12), rgb(24, 24, 24), rgb(36, 36, 36), rgb(37, 37, 37)); */
-	height: 30rem;
+	height: auto;
 	width: auto;
 	color: #d1d8e0;
 	display: flex;
